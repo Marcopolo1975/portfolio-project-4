@@ -1,6 +1,9 @@
 from django.db import models
 from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
+from django_extensions.db.fields import AutoSlugField
+from .validators import textfield_not_empty
+from django.urls import reverse
 
 STATUS = ((0, "Draft"), (1, "Published"))
 
@@ -64,5 +67,36 @@ class Comment(models.Model):
 
     def __str__(self):
         return f"Comment {self.body} by {self.author}"
+    
+class AddPost(models.Model):
+    """Model for Post"""
+    title = models.CharField(max_length=50, unique=True)
+    slug = AutoSlugField(populate_from='title', unique=True)
+    author = models.ForeignKey(
+        User, on_delete=models.CASCADE, related_name="posts")
+    created_on = models.DateTimeField(auto_now=True)
+    updated_on = models.DateTimeField(auto_now=True)
+    preparation_time = models.CharField(max_length=10, default=0)
+    cook_time = models.CharField(max_length=10, default=0)
+    description = models.TextField()
+    ingredients = models.TextField(validators=[textfield_not_empty])
+    method = models.TextField(validators=[textfield_not_empty])
+    image = CloudinaryField('image', default='placeholder')
+    status = models.IntegerField(choices=STATUS, default=1)
+    bookmarks = models.ManyToManyField(
+        User, related_name='bookmark', default=None, blank=True)
+
+    class Meta:
+        """To display the posts by created_on in descending order"""
+        ordering = ['-created_on']
+
+    def get_absolute_url(self):
+        """Get url after user adds/edits post"""
+        return reverse('post_detail', kwargs={'slug': self.slug})
+
+    def __str__(self):
+        return f"{self.title}"
+
+
     
     
