@@ -45,6 +45,21 @@ body {
 .image-container {
     position: relative;
 }
+/* Container holding the image and the text */
+.container {
+    position: relative;
+    text-align: center;
+    color:white;
+    max-width: 100%;
+}
+/* Centered text */
+.centered {
+    font-size: 150%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 
 .image-flash {
     position: absolute;
