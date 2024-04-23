@@ -1,5 +1,6 @@
 body {
     background-color: #F9FAFC;
+    padding-top: 70px;
 }
 
 
@@ -19,6 +20,13 @@ body {
 .thin {
     font-size: 1.4rem;
     font-weight: 300;
+}
+
+.navbar{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
 }
 
 .navbar-text {
