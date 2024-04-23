@@ -54,7 +54,7 @@ body {
     position: relative;
 }
 /* Container holding the image and the text */
-.container {
+.container-wall {
     position: relative;
     text-align: center;
     color:white;
