@@ -1,6 +1,6 @@
 body {
     background-color: #F9FAFC;
-    padding-top:0;
+    
 }
 
 
@@ -8,7 +8,7 @@ body {
     font-family: Lato, sans-serif;
     font-size: 2.4rem;
     font-weight: 700;
-    color: white;
+    color:#141313;
     text-decoration: underline;
     text-decoration-color: red;
     
@@ -33,6 +33,7 @@ body {
 .navbar-dark {
     font-weight: bolder;
     text-shadow:1px 1px #141313;
+    
 }
 
 .navbar-text {
@@ -51,6 +52,7 @@ body {
 
 .main-bg {
     background-color: #F9FAFC;
+    
 }
 
 .card {
@@ -62,14 +64,15 @@ body {
     position: relative;
 }
 /* Container holding the image and the text */
-.container-wall {
+#homepage-header {
     position: relative;
     text-align: center;
-    color:white;
     max-width: 100%;
+    
 }
 /* Centered text */
 .centered {
+    color: #F9FAFC;
     font-size: 150%;
     position: absolute;
     top: 50%;
