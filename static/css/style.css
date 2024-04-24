@@ -8,9 +8,10 @@ body {
     font-family: Lato, sans-serif;
     font-size: 2.4rem;
     font-weight: 700;
-    color: #4A4A4F;
+    color: white;
     text-decoration: underline;
     text-decoration-color: red;
+    
 }
 
 .red-o {
@@ -27,11 +28,17 @@ body {
     top: 0;
     width: 100%;
     z-index: 9999;
-    opacity: 30%;
+    
+}
+.navbar-dark {
+    font-weight: bolder;
+    text-shadow:1px 1px #141313;
 }
 
 .navbar-text {
     margin-top: 20px;
+    font-weight: bolder;
+    
     }
 
 .light-bg {
