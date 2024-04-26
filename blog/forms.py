@@ -16,7 +16,7 @@ class PostForm(forms.ModelForm):
     """ Create Post Form """
     def __init__(self, *args, **kwargs):
         super(PostForm, self).__init__(*args, **kwargs)
-        self.fields['description'].widget = forms.Textarea(attrs={'rows': 3})
+        #self.fields[''].widget = forms.Textarea(attrs={'rows': 3})
 
     class Meta:
         """

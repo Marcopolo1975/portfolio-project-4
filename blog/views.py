@@ -1,9 +1,10 @@
 from django.shortcuts import render,  get_object_or_404, reverse
 from django.views import generic
-from django.contrib import messages
+from django.contrib import messages 
 from django.http import HttpResponseRedirect
 from .models import Post, Comment
 from .forms import CommentForm, PostForm
+from slugify import slugify
 
 
 
@@ -106,8 +107,10 @@ def post(request):
            if post_form.is_valid():
               post = post_form.save(commit=False)
               post.author = request.user
+              post.slug = slugify(post.title)
+              post.status = 1
               post_form.save()
-              messages.add_newpost(request, messages.SUCCESS, "Post created successfully awaiting admins approval")
+              messages.SUCCESS(request, messages.SUCCESS, "Post created successfully awaiting admins approval")
    # addpost = AddPost.objects.all().order_by('-updated_on').first()
     
 
