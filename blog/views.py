@@ -110,7 +110,7 @@ def post(request):
               post.slug = slugify(post.title)
               post.status = 1
               post_form.save()
-              messages.SUCCESS(request, messages.SUCCESS, "Post created successfully awaiting admins approval")
+              messages.add_message(request, messages.SUCCESS, "Post created successfully ")
    # addpost = AddPost.objects.all().order_by('-updated_on').first()
     
 
