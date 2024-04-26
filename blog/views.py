@@ -3,8 +3,8 @@ from django.views import generic
 from django.contrib import messages
 from django.http import HttpResponseRedirect
 from .models import Post, Comment
-from .forms import CommentForm
-from .forms import PostForm
+from .forms import CommentForm, PostForm
+
 
 
 
@@ -98,4 +98,23 @@ def comment_delete(request, slug, comment_id):
             messages.add_message(request, messages.ERROR, 'You can only delete your own comments!')
 
         return HttpResponseRedirect(reverse('post_detail', args=[slug]))
+    
+def post(request):
+        post_form = PostForm()
+        if request.method == "POST":
+           post_form = PostForm(data=request.POST)
+           if post_form.is_valid():
+            post_form.save()
+            messages.add_newpost(request, messages.SUCCESS, "Post created successfully awaiting admins approval")
+   # addpost = AddPost.objects.all().order_by('-updated_on').first()
+    
+
+        return render(
+        request,
+        "post/post.html",
+        {
+           # "addpost": addpost,
+            "post_form": post_form
+        },
+    )
     
