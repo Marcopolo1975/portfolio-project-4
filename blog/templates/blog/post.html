@@ -38,6 +38,10 @@
             <h2>Add a new Post</h2>
               {% if user.is_authenticated %}
                 <p>Posting as: {{ user.username }}</p>
+
+                <!-- add your form here. Your submit button should 
+                                                have the classes of btn, btn-secondary -->
+
                 <form method="post" action="{% url 'post' %}">
                     {{ post_form | crispy }}
                     {% csrf_token %}
@@ -49,10 +53,8 @@
          </div>
  </div>
 
-            <!-- add your form here. Your submit button should 
-                                have the classes of btn, btn-secondary -->
-
-                <button class="btn btn-secondary" type="submit">Submit</button>
+            
+            
             </form>
         </div>
     </div>
