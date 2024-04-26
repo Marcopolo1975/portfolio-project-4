@@ -104,14 +104,16 @@ def post(request):
         if request.method == "POST":
            post_form = PostForm(data=request.POST)
            if post_form.is_valid():
-            post_form.save()
-            messages.add_newpost(request, messages.SUCCESS, "Post created successfully awaiting admins approval")
+              post = post_form.save(commit=False)
+              post.author = request.user
+              post_form.save()
+              messages.add_newpost(request, messages.SUCCESS, "Post created successfully awaiting admins approval")
    # addpost = AddPost.objects.all().order_by('-updated_on').first()
     
 
         return render(
         request,
-        "post/post.html",
+        "blog/post.html",
         {
            # "addpost": addpost,
             "post_form": post_form
