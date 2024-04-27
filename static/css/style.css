@@ -24,7 +24,7 @@ body {
 
 .navbar{
     position: fixed;
-    top: 0;
+    top: 0%;
     min-height: 50px;
     width: 100%;
     z-index: 9999;

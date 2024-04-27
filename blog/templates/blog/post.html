@@ -3,24 +3,8 @@
 {% load crispy_forms_tags %}
 
 {% block content %}
-<div class="container mt-5">
-    <div class="row">
-        <div class="col-12 col-md-4 text-center">
-        <div class="image-container">
-            {% if "placeholder" in post.featured_image.url %}
-            <img class="card-img-top" src="{% static 'images/default.jpg' %}" alt="placeholder image">
-            {% else %}
-            <img class="card-img-top" src=" {{ post.featured_image.url }}" alt="{{ post.title }}">
-            {% endif %}
-           <!--<div class="image-flash">
-                <p class="author">Author: {{ post.author }}</p>
-            </div>-->
-        </div>
-        <div class="col-12 col-md-8">
-            <h2>{{ post.title }}</h2>
-            {{ post.content | safe }}
-        </div>
-    </div>
+<div class="container mt-5"></div>
+    
     <div class="row">
         <div class="col text-right">
             <!-- Updated on field goes in here -->
@@ -31,11 +15,9 @@
 
     <!--creat your new post and loging-->
 
-    
-
     <div class="row justify-content-center">
-        <div class="col-12 col-md-6 my-5">
-            <h2>Add a new Post</h2>
+            <div class="col-12 col-md-6 my-5">
+             <h2>Add a new Post</h2>
               {% if user.is_authenticated %}
                 <p>Posting as: {{ user.username }}</p>
 
@@ -53,10 +35,6 @@
          </div>
  </div>
 
-            
-            
-            </form>
-        </div>
-    </div>
+    
 </div>
 {% endblock content %}
