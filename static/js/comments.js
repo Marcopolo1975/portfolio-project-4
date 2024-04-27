@@ -44,3 +44,11 @@ for (let button of deleteButtons) {
         deleteModal.show();
     });
 }
+
+for (let button of deleteButtons) {
+    button.addEventListener("click", (e) => {
+        let postId = e.target.getAttribute("post_id");
+        deleteConfirm.href = `delete_post/${postId}`;
+        deleteModal.show();
+    });
+}
