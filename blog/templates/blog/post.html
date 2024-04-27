@@ -5,14 +5,6 @@
 {% block content %}
 <div class="container mt-5"></div>
     
-    <div class="row">
-        <div class="col text-right">
-            <!-- Updated on field goes in here -->
-
-            <p class="text-end"><em>Updated on: {{ post.updated_on }}</em></p>
-        </div>
-    </div>
-
     <!--creat your new post and loging-->
 
     <div class="row justify-content-center">
@@ -22,13 +14,13 @@
                 <p>Posting as: {{ user.username }}</p>
 
                 <!-- add your form here. Your submit button should 
-                                                have the classes of btn, btn-secondary -->
+                 have the classes of btn, btn-secondary -->
 
                 <form method="post" action="{% url 'post' %}">
                     {{ post_form | crispy }}
                     {% csrf_token %}
-                        <button id="submitButton" type="submit" class="btn btn-signup btn-lg">Submit</button>
-                    </form>
+                    <button id="submitButton" type="submit" class="btn btn-signup btn-lg">Submit</button>
+                </form>
               {% else %}
               <p>Log in to add your post</p>
               {% endif %}
