@@ -19,13 +19,9 @@
                 {% else %}
                 <img class="card-img-top" src=" {{ post.featured_image.url }}" alt="{{ post.title }}">
                 {% endif %}
-                <!--<div class="image-flash">
-                    <p class="author">Author: {{ post.author }}</p>
-                </div>-->
+               
             </div>
-            <!--<div class="d-none d-md-block col-md-6 masthead-image">
-                <img src="{% static 'images/default.jpg' %}" class="scale" alt="placeholder">
-            </div>-->
+            
         </div>
     </div>
 </div>
@@ -42,6 +38,13 @@
             </div>
         </div>
     </div>
+
+    <!--edit or delete your post-->
+    {% if user.is_authenticated and post.author == user %}
+    <button class="btn btn-edit" post_id="{{ post.id }}">Edit</button>
+    <button class="btn btn-delete" post_id="{{ post.id }}">Delete</button>
+   
+    {% endif %}
 
 <!-- Delete Post confirmation modal -->
 <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
