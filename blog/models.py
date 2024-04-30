@@ -17,7 +17,17 @@ class Post(models.Model):
     status = models.IntegerField(choices=STATUS, default=0)
     excerpt = models. CharField(blank=True)
     updated_on = models.DateTimeField(auto_now_add=True)
+    likes = models.ManyToManyField(User, related_name='post_likes',
+                                   blank=True)
      # …
+     
+    def number_of_likes(self):
+        """
+        This function returns the like count.
+        """
+
+        return self.likes.count()
+
 
     class Meta:
         ordering = ["-created_on"]

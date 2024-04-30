@@ -161,3 +161,23 @@ def post_delete(request, slug, post_id):
 
         return HttpResponseRedirect(reverse('post_detail', args=[slug]))
     
+    
+class post_likes(generic.DetailView):
+    """
+    This class handles the like functionality on the site with the
+    support from a help method.
+    """
+
+    def post(self, request, slug):
+        """
+        This function toggles the like (add/remove) for the
+        specific, existing user on the specific review.
+        """
+
+        post = get_object_or_404(Post, slug=slug)
+        if post.likes.filter(id=request.user.id).exists():
+            post.likes.remove(request.user)
+        else:
+            post.likes.add(request.user)
+        return HttpResponseRedirect(reverse('post_details', args=[slug]))
+    
