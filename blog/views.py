@@ -113,7 +113,7 @@ def post(request):
               messages.add_message(request, messages.SUCCESS, "Post created successfully ")
    # addpost = AddPost.objects.all().order_by('-updated_on').first()
     
-
+        post_form = PostForm()
         return render(
         request,
         "blog/post.html",
@@ -131,7 +131,7 @@ def post_edit(request, slug, post_id):
 
           queryset = Post.objects.filter(status=1)
           post = get_object_or_404(queryset, slug=slug)
-          post = get_object_or_404(Comment, pk=post_id)
+          post = get_object_or_404(Post, pk=post_id)
           post_form = PostForm(data=request.POST, instance=post)
 
         if post_form.is_valid() and post.author == request.user:

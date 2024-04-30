@@ -1,5 +1,5 @@
 const editButtons = document.getElementsByClassName("btn-edit");
-const commentText = document.getElementById("id_body");
+const commentText = document.getElementById("id_post");
 const commentForm = document.getElementById("postForm");
 const submitButton = document.getElementById("submitButton");
 
@@ -20,9 +20,9 @@ const deleteConfirm = document.getElementById("deleteConfirm");
 for (let button of editButtons) {
     button.addEventListener("click", (e) => {
         let postId = e.target.getAttribute("post_id");
-        let postContent = document.getElementById(`post${postId}`).innerText;
+        let postContent = document.getElementById(`post${postId}`).postForm;
         postText.value = postContent;
-        submitButton.innerText = "Update";
+        submitButton.postForm = "Update";
         postForm.setAttribute("action", `edit_post/${postId}`);
     });
 }
