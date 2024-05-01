@@ -15,7 +15,7 @@ urlpatterns = [
      path('<slug:slug>/delete_post/<int:post_id>',
          views.post_delete, name='post_delete'),
      path('like/<slug:slug>', views.like_post.as_view(),
-          name='postlikes'),
+          name='like_post'),
     
     
     

@@ -41,14 +41,14 @@
     
 <!-- like post section-->
     {% if user.is_authenticated %}
-    <form class="review-detail-heart-likes" action="{% url 'like_post' post.slug %}" method="POST">
+    <form class="review-detail-heart-like" action="{% url 'like_post' post.slug %}" method="POST">
         {% csrf_token %}
         {% if liked %}
-        <button type="submit" name="post_id" value="{{ post.slug }}" class="btn-like"><i
+        <button type="submit" name="post_id" value="{{ post.slug }}" class="btn-like">like<i
                 class="fas fa-heart heart-like"></i></button>
         {% else %}
         <button type="submit" name="post_id" value="{{ post.slug }}" class="btn-like"><i
-                class="far fa-heart heart-like"></i></button>
+                class="far fa-heart heart-like"></i>   like this post</button>
         {% endif %}
     </form>
     {% endif %}
