@@ -17,7 +17,7 @@ class Post(models.Model):
     status = models.IntegerField(choices=STATUS, default=0)
     excerpt = models. CharField(blank=True)
     updated_on = models.DateTimeField(auto_now_add=True)
-    likes = models.ManyToManyField(User, related_name='postlikes',
+    likes = models.ManyToManyField(User, related_name='likepost',
                                    blank=True)
      # …
      

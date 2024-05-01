@@ -162,7 +162,7 @@ def post_delete(request, slug, post_id):
         return HttpResponseRedirect(reverse('post_detail', args=[slug]))
     
     
-class post_likes(generic.DetailView):
+class like_post(generic.DetailView):
     """
     This class handles the like functionality on the site with the
     support from a help method.
