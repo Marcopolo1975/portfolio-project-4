@@ -204,7 +204,14 @@ body {
 .mb-4 {
     display:flex;
     justify-content: center;
+   
+    
  }
+
+.mt-auto {
+background-color: #eff1f2;
+}
+
 
  .line {
     margin-top: 70px;
