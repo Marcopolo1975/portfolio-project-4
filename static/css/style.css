@@ -26,12 +26,12 @@ body {
     font-weight: 300;
 }
 
-.navbar{
+/*.navbar{
     position: fixed;
     top: 0%;
     min-height: 50px;
     width: 100%;
-    z-index: 9999;
+    z-index: 9999;*/
     
 }
 .navbar-dark {
@@ -147,7 +147,7 @@ body {
 
 .post-title {
     margin-top: 10%;
-    margin-left: 5%;
+    margin-left: 0%;
 }
 
 .post-subtitle {
