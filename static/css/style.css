@@ -21,8 +21,9 @@ body {
     
 }
 
-.green-o {
-    color: #188181;
+.blue-o {
+    color: #0b08ef;
+    font-weight: bold;
 }
 
 
@@ -75,6 +76,7 @@ body {
 
 .bg-image {
     position:relative;
+    margin-top: 50px;
      }
 
 
@@ -205,6 +207,7 @@ body {
 
  .line {
     margin-top: 70px;
+
  }
 hr {
     margin: 30px 0;
