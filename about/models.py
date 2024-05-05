@@ -5,6 +5,7 @@ from cloudinary.models import CloudinaryField
 
 
 class About(models.Model):
+    """Model for About"""
     title = models.CharField(max_length=200, unique=True)
     profile_image = CloudinaryField('image', default='placeholder')
     updated_on = models.DateTimeField(auto_now=True)
@@ -15,6 +16,7 @@ class About(models.Model):
 
 
 class CollaborateRequest(models.Model):
+    """Model for CollaborateRequest"""
     name = models.CharField(max_length=200)
     email = models.EmailField()
     message = models.TextField()

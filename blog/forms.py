@@ -6,6 +6,7 @@ from django_summernote.widgets import SummernoteWidget
 
 
 class CommentForm(forms.ModelForm):
+    """ Create Comment Form """
     class Meta:
         model = Comment
         fields = ('body',)
