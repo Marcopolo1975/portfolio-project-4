@@ -4,13 +4,12 @@ from cloudinary.models import CloudinaryField
 
 STATUS = ((0, "Draft"), (1, "Published"))
 
+
 # Create your models here.
 class Post(models.Model):
     title = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=200, unique=True)
-    author = models.ForeignKey(
-    User, on_delete=models.CASCADE, related_name="blog_posts"
-)
+    author = models.ForeignKey(User, on_delete=models.CASCADE, related_name="blog_posts")
     featured_image = CloudinaryField('image', default='default.jpg')
     content = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
@@ -19,8 +18,8 @@ class Post(models.Model):
     updated_on = models.DateTimeField(auto_now_add=True)
     likes = models.ManyToManyField(User, related_name='likepost',
                                    blank=True)
-     # …
-     
+    # …
+
     def number_of_likes(self):
         """
         This function returns the like count.
@@ -28,15 +27,14 @@ class Post(models.Model):
 
         return self.likes.count()
 
-
     class Meta:
         ordering = ["-created_on"]
         ordering = ["-updated_on"]
-        
 
     def __str__(self):
         return f"{self.title} | written by {self.author}"
-    
+
+
 class Event(models.Model):
     event_name = models.CharField(max_length=200, unique=True)
     location = models.CharField(max_length=200)
@@ -59,10 +57,10 @@ class Ticket(models.Model):
         related_name="event_tickets"
     )
 
-
-def __str__(self):
+    def __str__(self):
         return f"Ticket for {self.ticket_holder}"
-    
+
+
 class Comment(models.Model):
     post = models.ForeignKey(
         Post, on_delete=models.CASCADE, related_name="comments")
@@ -71,10 +69,9 @@ class Comment(models.Model):
     body = models.TextField()
     approved = models.BooleanField(default=False)
     created_on = models.DateTimeField(auto_now_add=True)
+
     class Meta:
         ordering = ["created_on"]
 
     def __str__(self):
         return f"Comment {self.body} by {self.author}"
-    
-    
