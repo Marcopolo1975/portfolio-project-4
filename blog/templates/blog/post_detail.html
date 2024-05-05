@@ -44,7 +44,7 @@
     <form class="review-detail-heart-like" action="{% url 'like_post' post.slug %}" method="POST">
         {% csrf_token %}
         {% if liked %}
-        <button type="submit" name="post_id" value="{{ post.slug }}" class="btn-like">like<i
+        <button type="submit" name="post_id" value="{{ post.slug }}" class="btn-like">Unlike<i
                 class="fas fa-heart heart-like"></i></button>
         {% else %}
         <button type="submit" name="post_id" value="{{ post.slug }}" class="btn-like"><i
@@ -55,7 +55,7 @@
 
     <!--edit or delete your post-->
     {% if user.is_authenticated and post.author == user %}
-    <button class="btn btn-edit" post_id="{{ post.id }}">Edit</button>
+<a class="btn btn-edit" href="{% url 'post_edit' post.id%}">Edit</a>
     <button class="btn btn-delete" post_id="{{ post.id }}">Delete</button>
    
     {% endif %}

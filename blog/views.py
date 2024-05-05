@@ -35,6 +35,7 @@ def post_detail(request, slug):
     queryset = Post.objects.filter(status=1)
     post = get_object_or_404(queryset, slug=slug)
     comments = post.comments.all().order_by("-created_on")
+    liked = post.likes.filter(id=request.user.id).exists()
     comment_count = post.comments.filter(approved=True).count()
     if request.method == "POST":
        comment_form = CommentForm(data=request.POST)
@@ -59,6 +60,7 @@ def post_detail(request, slug):
         "comments": comments,
         "comment_count": comment_count,
         "comment_form": comment_form,
+        'liked': liked
     },
     )
     
@@ -123,27 +125,33 @@ def post(request):
         },
     )
         
-def post_edit(request, slug, post_id):
+def post_edit(request, post_id):
         """
         view to edit post
         """
+        post = get_object_or_404(Post, pk=post_id)
+        post_form = PostForm(instance=post)
         if request.method == "POST":
+            post_form = PostForm(data=request.POST, instance=post)
+            if post_form.is_valid() and post.author == request.user:
+                post = post_form.save(commit=False)
+                post.post = post
+                post.approved = False
+                post.save()
+                messages.add_message(request, messages.SUCCESS, 'Post Updated!')
+                return HttpResponseRedirect(reverse('post_detail', args=[post.slug]))
+            else:
+                messages.add_message(request, messages.ERROR, 'Error updating Post!')
 
-          queryset = Post.objects.filter(status=1)
-          post = get_object_or_404(queryset, slug=slug)
-          post = get_object_or_404(Post, pk=post_id)
-          post_form = PostForm(data=request.POST, instance=post)
-
-        if post_form.is_valid() and post.author == request.user:
-            post = post_form.save(commit=False)
-            post.post = post
-            post.approved = False
-            post.save()
-            messages.add_message(request, messages.SUCCESS, 'Post Updated!')
-        else:
-            messages.add_message(request, messages.ERROR, 'Error updating Post!')
-
-        return HttpResponseRedirect(reverse('post_detail', args=[slug]))
+        return render(
+        request,
+        "blog/post_edit.html",
+        {
+            "post_form": post_form,
+            "post": post
+        },
+    )
+        
     
 def post_delete(request, slug, post_id):
         """
@@ -179,5 +187,5 @@ class like_post(generic.DetailView):
             post.likes.remove(request.user)
         else:
             post.likes.add(request.user)
-        return HttpResponseRedirect(reverse('post_details', args=[slug]))
+        return HttpResponseRedirect(reverse('post_detail', args=[slug]))
     
