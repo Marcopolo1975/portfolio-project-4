@@ -101,14 +101,14 @@ body {
     
 }
 
-.masthead {
+.posthead {
     overflow: hidden;
     position: relative;
     display: inline-block;
     width: 100%;
 }
 
-.masthead-text {
+.posthead-text {
     position: relative;
 }
 
