@@ -4,46 +4,52 @@
 
 {% block content %}
 <div class="container mt-5">
-   <!--<hr class="line">-->
-    <div class="row">
-        <div class="col-12 col-md-4 text-center">
+
+    <div class="card h-100  border-0 shadow p-3 bg-white rounded" style="max-width: 100%;">
+      <div class="row g-0">
+            <div class="col-md-4">
             {% if "placeholder" in about.profile_image.url %}
             <img src="{% static 'images/nobody.jpg' %}" width="75%" alt="placeholder image">
             {% else %}
             <img src="{{ about.profile_image.url }}" width="75%" alt="{{ about.title }}">
             {% endif %}
-        </div>
-        <div class="col-12 col-md-8">
-            <h2>{{ about.title }}</h2>
-            {{ about.content | safe }}
-        </div>
-    </div>
-    <div class="row">
-        <div class="col text-right">
-            <!-- Updated on field goes in here -->
+            </div>
+              <div class="col-md-8">
+                  <div class="card-body">
+                            <h2>{{ about.title }}</h2>
+                            {{ about.content | safe }}
+                 </div>
+             </div>
 
-            <p class="text-end"><em>Updated on: {{ about.updated_on }}</em></p>
-        </div>
+                <div class="row">
+                    <div class="col text-right">
+                        <!--Updated on field goes in here -->
+            
+                        <p class="text-end"><em>Updated on: {{ about.updated_on }}</em></p>
+                    </div>
+                </div>
+     </div>
     </div>
-    <div class="row justify-content-center">
-        <div class="col-12 col-md-6 my-5">
-            <h2>Let's collaborate!</h2>
-            <p>So you like our travel blog and would like to collaborate with us? That’s fantastic! 
-                This page is specifically dedicated to those of you who are interested in working with us. 
-                Therefore, we warmly invite you to read it thoroughly before reaching out to us because it 
-                contains valuable information for you, such as: the type of services we offer; what you
-                can expect from us in terms of work and quality; and the different collaboration possibilities
-                 for you to consider.!</p>
+      <div>
+          <div class="row justify-content-center">
+                <div class="col-12 col-md-6 my-5">
+                    <h2>Let's collaborate!</h2>
+                    <p>So you like our travel blog and would like to collaborate with us? That’s fantastic! 
+                        This page is specifically dedicated to those of you who love traveling. 
+                        Therefore, we warmly wellcome you to our travelers community. this blog
+                        contains valuable information for you, and the different collaboration possibilities.
+                        </p>
 
-            <!-- add your form here. Your submit button should 
-                                have the classes of btn, btn-secondary -->
+                    <!-- add your form here. Your submit button should 
+                                        have the classes of btn, btn-secondary -->
 
-        <form method="post">
-            {{ collaborate_form | crispy }}
-            {% csrf_token %}
-            <button class="btn btn-secondary" type="submit">Submit</button>
-        </form>
-        </div>
-    </div>
+                    <form method="post">
+                        {{ collaborate_form | crispy }}
+                        {% csrf_token %}
+                        <button class="btn btn-secondary" type="submit">Submit</button>
+                    </form>
+             </div>
+          </div>
+     </div>
 </div>
 {% endblock content %}
