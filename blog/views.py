@@ -101,7 +101,7 @@ def comment_delete(request, slug, comment_id):
 
         return HttpResponseRedirect(reverse('post_detail', args=[slug]))
     
-def post(request):
+def add_post(request):
         post_form = PostForm()
         if request.method == "POST":
            post_form = PostForm(data=request.POST)
@@ -117,7 +117,7 @@ def post(request):
         post_form = PostForm()
         return render(
         request,
-        "blog/post.html",
+        "blog/add_post.html",
         {
            # "addpost": addpost,
             "post_form": post_form
