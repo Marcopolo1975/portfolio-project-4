@@ -48,7 +48,7 @@
                 class="fas fa-heart heart-like"></i>  Unlike</button>
         {% else %}
         <button type="submit" name="post_id" value="{{ post.slug }}" class="btn-like"><i
-                class="far fa-heart heart-like"></i>   like this post</button>
+                class="far fa-heart heart-like"></i> {{ like_count }}  like this post</button>
         {% endif %}
     </form>
     {% endif %}

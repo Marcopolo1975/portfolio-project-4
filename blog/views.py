@@ -33,6 +33,7 @@ def post_detail(request, slug):
 
     queryset = Post.objects.filter(status=1)
     post = get_object_or_404(queryset, slug=slug)
+    like_count = post.likes.filter().count()
     comments = post.comments.all().order_by("-created_on")
     liked = post.likes.filter(id=request.user.id).exists()
     comment_count = post.comments.filter(approved=True).count()
@@ -59,7 +60,8 @@ def post_detail(request, slug):
         "comments": comments,
         "comment_count": comment_count,
         "comment_form": comment_form,
-        'liked': liked
+        'liked': liked,
+         "like_count":like_count
     },
     )
     
@@ -180,11 +182,12 @@ class like_post(generic.DetailView):
         This function toggles the like (add/remove) for the
         specific, existing user on the specific review.
         """
-
         post = get_object_or_404(Post, slug=slug)
         if post.likes.filter(id=request.user.id).exists():
             post.likes.remove(request.user)
         else:
             post.likes.add(request.user)
         return HttpResponseRedirect(reverse('post_detail', args=[slug]))
+     
+        
     
