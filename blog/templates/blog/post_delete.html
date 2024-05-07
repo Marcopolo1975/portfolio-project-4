@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<div class="container mt-5"></div>
+
+<!--creat your new post and loging-->
+
+<div class="row justify-content-center">
+    <div class="col-12 col-md-6 my-5">
+        <h2>Delete Post</h2>
+        {% if user.is_authenticated %}
+        <p>Posting as: {{ user.username }}</p>
+
+        <!-- add your form here. Your submit button should 
+                 have the classes of btn, btn-secondary -->
+
+        <form method="post" action="{% url 'post_delete' post.id %}">
+            {% csrf_token %}
+            <button id="submitButton" type="submit" class="btn btn-signup btn-lg">Submit</button>
+        </form>
+        {% else %}
+        <p>Log in to delete your post</p>
+        {% endif %}
+    </div>
+</div>
+
+
+</div>
+{% endblock content %}

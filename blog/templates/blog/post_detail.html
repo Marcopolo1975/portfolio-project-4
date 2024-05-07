@@ -54,32 +54,11 @@
     {% endif %}
 
     <!--edit or delete your post-->
-    {% if user.is_authenticated and post.author == user %}
+   {% if user.is_authenticated and post.author == user %}
 <a class="btn btn-edit" href="{% url 'post_edit' post.id%}">Edit</a>
-    <button class="btn btn-delete" post_id="{{ post.id }}">Delete</button>
+<a class="btn btn-delete" href="{% url 'post_delete' post.id%}">Delete</a>
    
     {% endif %}
-
-<!-- Delete Post confirmation modal -->
-<div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="deleteModalLabel">Delete Post?</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                Are you sure you want to delete your Post?
-                This action cannot be undone.
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <a id="deleteConfirm" href="#" class="btn
-          btn-danger">Delete</a>
-            </div>
-        </div>
-    </div>
-</div>
 
 
     <!-- Displaying count of comments -->
