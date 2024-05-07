@@ -11,7 +11,8 @@
     <div class="col-12 col-md-6 my-5">
         <h2>Delete Post</h2>
         {% if user.is_authenticated %}
-        <p>Posting as: {{ user.username }}</p>
+        <p>Are you sure you want to delete this Post?: {{ user.username }}</p>
+      
 
         <!-- add your form here. Your submit button should 
                  have the classes of btn, btn-secondary -->
