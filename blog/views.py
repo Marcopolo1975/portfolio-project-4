@@ -154,7 +154,7 @@ def post_edit(request, post_id):
     )
         
     
-def post_delete(request, slug, post_id):
+#def post_delete(request, slug, post_id):
         """
         view to delete post
         """
@@ -189,5 +189,27 @@ class like_post(generic.DetailView):
             post.likes.add(request.user)
         return HttpResponseRedirect(reverse('post_detail', args=[slug]))
      
+    
+
+
+def post_delete(request, post_id):
+    # Fetch the post object using the post_id, or return a 404 error if it doesn't exist
+    post = get_object_or_404(Post, id=post_id)
+
+    # Check if the current user is the author of the post
+    if request.user == post.author:
+        # If the request method is POST, it means the user has confirmed the deletion
+        if request.method == 'POST':
+            # Delete the post
+            post.delete()
+            # Redirect the user to a relevant page, e.g., the homepage
+            return HttpResponseRedirect('home')
+        # If the request method is not POST, render a confirmation template
+        else:
+            return render(request, 'blog/post_delete.html', {'post': post})
+    else:
+        # If the current user is not the author of the post, return a 403 Forbidden error
+        return render(request, '403.html')  # You should have a custom template for 403 Forbidden errors
+
         
     

@@ -19,7 +19,7 @@
 
         <form method="post" action="{% url 'post_delete' post.id %}">
             {% csrf_token %}
-            <button id="submitButton" type="submit" class="btn btn-signup btn-lg">Submit</button>
+            <button id="deleteButton" type="submit" class="btn btn-delete btn-lg">Delete</button>
         </form>
         {% else %}
         <p>Log in to delete your post</p>
