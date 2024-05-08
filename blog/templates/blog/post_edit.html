@@ -3,30 +3,28 @@
 {% load crispy_forms_tags %}
 
 {% block content %}
-<div class="container mt-5"></div>
+<div class="container">
 
-<!--creat your new post and loging-->
+        <!--creat your new post and loging-->
 
-<div class="row justify-content-center">
-    <div class="col-12 col-md-6 my-5">
-        <h2>Edit Post</h2>
-        {% if user.is_authenticated %}
-        <p>Posting as: {{ user.username }}</p>
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-6 my-1">
+            <h2>Edit Post</h2>
+                {% if user.is_authenticated %}
+                <p>Posting as: {{ user.username }}</p>
 
-        <!-- add your form here. Your submit button should 
-                 have the classes of btn, btn-secondary -->
+                <!-- add your form here. Your submit button should 
+                        have the classes of btn, btn-secondary -->
 
-        <form method="post" action="{% url 'post_edit' post.id %}">
-            {{ post_form | crispy }}
-            {% csrf_token %}
-            <button id="submitButton" type="submit" class="btn btn-signup btn-lg">Submit</button>
-        </form>
-        {% else %}
-        <p>Log in to add your post</p>
-        {% endif %}
+                <form method="post" action="{% url 'post_edit' post.id %}">
+                    {{ post_form | crispy }}
+                    {% csrf_token %}
+                    <button id="submitButton" type="submit" class="btn btn-signup btn-lg">Submit</button>
+                </form>
+                {% else %}
+                <p>Log in to add your post</p>
+                {% endif %}
+        </div>
     </div>
-</div>
-
-
 </div>
 {% endblock content %}
