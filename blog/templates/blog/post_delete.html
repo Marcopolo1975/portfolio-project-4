@@ -11,7 +11,7 @@
     <div class="col-12 col-md-6 my-5">
         <h2>Delete Post</h2>
         {% if user.is_authenticated %}
-        <p>Are you sure you want to delete this Post?: {{ user.username }}</p>
+        <p>{{ user.username }}: Are you sure you want to delete this Post?</p>
       
 
         <!-- add your form here. Your submit button should 
@@ -19,7 +19,7 @@
 
         <form method="post" action="{% url 'post_delete' post.id %}">
             {% csrf_token %}
-            <button id="deleteButton" type="submit" class="btn btn-delete btn-lg">Delete</button>
+            <button id="deleteButton" type="submit" class="btn btn-delete btn-md">Delete</button>
         </form>
         {% else %}
         <p>Log in to delete your post</p>

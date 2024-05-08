@@ -103,7 +103,7 @@ def comment_delete(request, slug, comment_id):
 
         return HttpResponseRedirect(reverse('post_detail', args=[slug]))
     
-def add_post(request):
+def add_post(request,):
         post_form = PostForm()
         if request.method == "POST":
            post_form = PostForm(data=request.POST)
@@ -114,6 +114,7 @@ def add_post(request):
               post.status = 1
               post_form.save()
               messages.add_message(request, messages.SUCCESS, "Post created successfully ")
+              return HttpResponseRedirect(reverse('home'))
    # addpost = AddPost.objects.all().order_by('-updated_on').first()
     
         post_form = PostForm()
@@ -193,6 +194,9 @@ class like_post(generic.DetailView):
 
 
 def post_delete(request, post_id):
+    """
+    view to delete post
+    """
     # Fetch the post object using the post_id, or return a 404 error if it doesn't exist
     post = get_object_or_404(Post, id=post_id)
 
@@ -202,14 +206,12 @@ def post_delete(request, post_id):
         if request.method == 'POST':
             # Delete the post
             post.delete()
+            messages.add_message(request, messages.SUCCESS, 'Post deleted!')
             # Redirect the user to a relevant page, e.g., the homepage
-            return HttpResponseRedirect('home')
+            return HttpResponseRedirect(reverse('home'))
         # If the request method is not POST, render a confirmation template
         else:
             return render(request, 'blog/post_delete.html', {'post': post})
-    else:
-        # If the current user is not the author of the post, return a 403 Forbidden error
-        return render(request, '403.html')  # You should have a custom template for 403 Forbidden errors
-
+        
         
     
