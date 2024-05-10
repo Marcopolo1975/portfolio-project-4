@@ -24,7 +24,7 @@ class PostForm(forms.ModelForm):
         Get Post model, choose fields to display and add summernote widget
         """
         model = Post
-        fields = ['title', 'featured_image', 'excerpt', 'content' ]
+        fields = ['title', 'image', 'excerpt', 'content' ]
         widgets = {
             'method': SummernoteWidget(),
         }
