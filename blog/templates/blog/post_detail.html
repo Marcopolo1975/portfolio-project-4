@@ -39,28 +39,33 @@
         </div>
     </div>
     
-<!-- like post section-->
-    {% if user.is_authenticated %}
-    <form class="review-detail-heart-like" action="{% url 'like_post' post.slug %}" method="POST">
-        {% csrf_token %}
-        {% if liked %}
-        <button type="submit" name="post_id" value="{{ post.slug }}" class="btn-like"><i
-                class="fas fa-heart heart-like"></i>  Unlike</button>
-        {% else %}
-        <button type="submit" name="post_id" value="{{ post.slug }}" class="btn-like"><i
-                class="far fa-heart heart-like"></i> {{ like_count }}  like this post</button>
+    <!-- like post section-->
+    <div>
+        {% if user.is_authenticated %}
+        <form class="review-detail-heart-like" action="{% url 'like_post' post.slug %}" method="POST">
+            {% csrf_token %}
+            {% if liked %}
+            <button type="submit" name="post_id" value="{{ post.slug }}" class="btn-like"><i
+                    class="fas fa-heart heart-like"></i>  Unlike</button>
+            {% else %}
+            <button type="submit" name="post_id" value="{{ post.slug }}" class="btn-like"><i
+                    class="far fa-heart heart-like"></i> {{ like_count }}  like this post</button>
+            {% endif %}
+        </form>
+    
         {% endif %}
-    </form>
-    {% endif %}
+    </div>
+    <br>
+            <!--edit or delete your post-->
+    <div>
+         {% if user.is_authenticated and post.author == user %}
+            <a class="btn btn-edit" href="{% url 'post_edit' post.id%}">Edit</a>
+            <a class="btn btn-delete" href="{% url 'post_delete' post.id%}">Delete</a>
+        
+        {% endif %}
+    </div>
 
-    <!--edit or delete your post-->
-   {% if user.is_authenticated and post.author == user %}
-<a class="btn btn-edit" href="{% url 'post_edit' post.id%}">Edit</a>
-<a class="btn btn-delete" href="{% url 'post_delete' post.id%}">Delete</a>
-   
-    {% endif %}
-
-
+   <hr>
     <!-- Displaying count of comments -->
     <div class="row">
         <div class="col-12">
@@ -69,7 +74,7 @@
             </strong>
         </div>
         <div class="col-12">
-            <hr>
+        
         </div>
     </div>
     <!-- Displaying Comments -->
