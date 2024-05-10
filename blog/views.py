@@ -1,6 +1,7 @@
 from django.shortcuts import render,  get_object_or_404, reverse
 from django.views import generic, View
 from django.contrib import messages 
+from django.http import JsonResponse
 from django.http import HttpResponseRedirect
 from .models import Post, Comment
 from .forms import CommentForm, PostForm
@@ -172,13 +173,13 @@ def post_edit(request, post_id):
         return HttpResponseRedirect(reverse('post_detail', args=[slug]))
     
     
-class like_post(generic.DetailView):
-    """
-    This class handles the like functionality on the site with the
-    support from a help method.
-    """
+#class like_post(generic.DetailView):
+#    """
+#    This class handles the like functionality on the site with the
+#    support from a help method.
+#    """
 
-    def post(self, request, slug):
+#    def post(self, request, slug):
         """
         This function toggles the like (add/remove) for the
         specific, existing user on the specific review.
@@ -213,5 +214,23 @@ def post_delete(request, post_id):
         else:
             return render(request, 'blog/post_delete.html', {'post': post})
         
+def post_like(request, post_id):
+    post = get_object_or_404(Post, pk=post_id)
+
+    if request.method == 'POST':
+        action = request.POST.get('action')
+
+        if action == 'thumbs_up':
+            post.thumbs_up += 1
+            post.save()
+            return JsonResponse({'status': 'success', 'message': 'Thumbs up given successfully'})
+        elif action == 'thumbs_down':
+            post.thumbs_down += 1
+            post.save()
+            return JsonResponse({'status': 'success', 'message': 'Thumbs down given successfully'})
+        else:
+            return JsonResponse({'status': 'error', 'message': 'Invalid action'})
+    else:
+        return JsonResponse({'status': 'error', 'message': 'Only POST requests are allowed'})
         
     

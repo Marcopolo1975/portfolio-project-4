@@ -40,9 +40,9 @@
     </div>
     
     <!-- like post section-->
-    <div>
+    <!--<div>
         {% if user.is_authenticated %}
-        <form class="review-detail-heart-like" action="{% url 'like_post' post.slug %}" method="POST">
+        <form class="review-detail-heart-like" action="{% url 'post_like' post.slug %}" method="POST">
             {% csrf_token %}
             {% if liked %}
             <button type="submit" name="post_id" value="{{ post.slug }}" class="btn-like"><i
@@ -52,9 +52,9 @@
                     class="far fa-heart heart-like"></i> {{ like_count }}  like this post</button>
             {% endif %}
         </form>
-    
+
         {% endif %}
-    </div>
+    </div>-->
     <br>
             <!--edit or delete your post-->
     <div>

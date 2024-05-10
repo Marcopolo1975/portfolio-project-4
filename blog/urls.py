@@ -14,8 +14,8 @@ urlpatterns = [
          views.post_edit, name='post_edit'),
     path('post_delete/<int:post_id>',
          views.post_delete, name='post_delete'),
-     path('like/<slug:slug>', views.like_post.as_view(),
-          name='like_post'),
+     path('like/<slug:slug>', views.post_like,
+          name='post_like'),
     
     
     
