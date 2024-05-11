@@ -18,9 +18,12 @@
                 <!-- add your form here. Your submit button should 
                         have the classes of btn, btn-secondary -->
 
-                <form method="post" action="{% url 'post_delete' post.id %}">
+                <form class="text-center" method="POST">
                     {% csrf_token %}
-                    <button id="deleteButton" type="submit" class="btn btn-delete btn-md">Delete</button>
+                    <div>
+                        <button class="btn btn-danger m-2" type="submit">Delete</button>
+                        <a class="btn btn-outline-dark m-2" href="{%  url 'post_detail' post.slug  %}">Cancel</a>
+                    </div>
                 </form>
                 {% else %}
                 <p>Log in to delete your post</p>
