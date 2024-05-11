@@ -5,7 +5,7 @@
 {% cloudinary photo.image %}
 
 <div class="masthead">
-   <!--<hr class="line">-->
+    <!--<hr class="line">-->
     <div class="container">
         <div class="row g-0">
             <div class="col-md-6 masthead-text">
@@ -23,9 +23,9 @@
                 {% else %}
                 <img class="card-img-top" src=" {{ post.image.url }}" alt="{{ post.title }}">
                 {% endif %}
-               
+
             </div>
-            
+
         </div>
     </div>
 </div>
@@ -42,38 +42,39 @@
             </div>
         </div>
     </div>
-     
-    
+
+
     <!-- like post section-->
-    <!--<div>
+    <div>
         {% if user.is_authenticated %}
         <form class="review-detail-heart-like" action="{% url 'post_like' post.slug %}" method="POST">
             {% csrf_token %}
+            {{ like_count }} likes this post
             {% if liked %}
             <button type="submit" name="post_id" value="{{ post.slug }}" class="btn-like"><i
-                    class="fas fa-heart heart-like"></i>  Unlike</button>
+                    class="fas  fa-thumbs-down "></i> Unlike</button>
             {% else %}
             <button type="submit" name="post_id" value="{{ post.slug }}" class="btn-like"><i
-                    class="far fa-heart heart-like"></i> {{ like_count }}  like this post</button>
+                    class="far fa-thumbs-up"></i> </button>
             {% endif %}
         </form>
 
         {% endif %}
-    </div>-->
+    </div>
     <br>
-            <!--edit or delete your post-->
+    <!--edit or delete your post-->
     <div>
-         {% if user.is_authenticated and post.author == user %}
-           <!-- <a class="btn btn-edit" href="{% url 'post_edit' post.id%}">Edit</a>
+        {% if user.is_authenticated and post.author == user %}
+        <!-- <a class="btn btn-edit" href="{% url 'post_edit' post.id%}">Edit</a>
             <a class="btn btn-delete" href="{% url 'post_delete' post.id%}">Delete</a>-->
-            
-                    <a class="btn btn-edit m-1" href="{% url 'post_edit' post.id%}">Edit</a>
-                    <a class="btn btn-danger m-2"  href="{%  url 'post_delete' post.id%}">Delete</a>
-                    
+
+        <a class="btn btn-edit m-1" href="{% url 'post_edit' post.id%}">Edit</a>
+        <a class="btn btn-danger m-2" href="{%  url 'post_delete' post.id%}">Delete</a>
+
         {% endif %}
     </div>
 
-   <hr>
+    <hr>
     <!-- Displaying count of comments -->
     <div class="row">
         <div class="col-12">
@@ -82,7 +83,7 @@
             </strong>
         </div>
         <div class="col-12">
-        
+
         </div>
     </div>
     <!-- Displaying Comments -->
