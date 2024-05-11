@@ -155,44 +155,6 @@ def post_edit(request, post_id):
         },
     )
         
-    
-#def post_delete(request, slug, post_id):
-        """
-        view to delete post
-        """
-        queryset = Post.objects.filter(status=1)
-        post = get_object_or_404(queryset, slug=slug)
-        post = get_object_or_404(Post, pk=post_id)
-
-        if post.author == request.user:
-            post.delete()
-            messages.add_message(request, messages.SUCCESS, 'Post deleted!')
-        else:
-            messages.add_message(request, messages.ERROR, 'You can only delete your own Post!')
-
-        return HttpResponseRedirect(reverse('post_detail', args=[slug]))
-    
-    
-#class like_post(generic.DetailView):
-#    """
-#    This class handles the like functionality on the site with the
-#    support from a help method.
-#    """
-
-#    def post(self, request, slug):
-        """
-        This function toggles the like (add/remove) for the
-        specific, existing user on the specific review.
-        """
-        post = get_object_or_404(Post, slug=slug)
-        if post.likes.filter(id=request.user.id).exists():
-            post.likes.remove(request.user)
-        else:
-            post.likes.add(request.user)
-        return HttpResponseRedirect(reverse('post_detail', args=[slug]))
-     
-    
-
 
 def post_delete(request, post_id):
     """
