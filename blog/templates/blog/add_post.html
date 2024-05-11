@@ -11,12 +11,13 @@
             <div class="col-10 col-md-6 my-5">
                 <h2>Add a new Post</h2>
                  {% if user.is_authenticated %}
+                 {% load cloudinary %}
                 <p>Posting as: {{ user.username }}</p>
 
                 <!-- add your form here. Your submit button should 
                  have the classes of btn, btn-secondary -->
 
-                     <form method="post" action="{% url 'add_post' %}">
+                     <form method="post" action="{% url 'add_post' %}" enctype="multipart/form-data">
                            {{ post_form | crispy }}
                            {% csrf_token %}
                            <button id="submitButton" type="submit" class="btn btn-signup btn-lg">Submit</button>
