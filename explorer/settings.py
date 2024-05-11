@@ -35,7 +35,7 @@ SECRET_KEY = 'django-insecure--h2wowbq%09hj@qqd-5tj*2)-+_-nu0*8^+tctou*nidd!tas1
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost','.herokuapp.com', '127.0.0.1']
+ALLOWED_HOSTS = ['localhost','.herokuapp.com', '127.0.0.1', '8000-marcopolo19-portfoliopr-ga6mrx1s6ab.ws-eu111.gitpod.io']
 
 
 # Application definition
@@ -116,12 +116,19 @@ DATABASES = {
 }
 
 if 'test' in sys.argv:
-    DATABASES['default']['ENGINE'] = 'django.db.backends.sqlite3'
+    print(os.path.join(BASE_DIR, 'db.sqlite3'))
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        }
+    }
     
 CSRF_TRUSTED_ORIGINS = [
     "https://*.codeanyapp.com",
     "https://*.herokuapp.com",
-    'http://*localhost'
+    'http://*localhost',
+    'https://8000-marcopolo19-portfoliopr-ga6mrx1s6ab.ws-eu111.gitpod.io',
 ]
 
 # Password validation

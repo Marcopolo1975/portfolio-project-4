@@ -16,7 +16,7 @@
                 <!-- add your form here. Your submit button should 
                         have the classes of btn, btn-secondary -->
 
-                <form method="post" action="{% url 'post_edit' post.id %}">
+                <form method="post" action="{% url 'post_edit' post.id %}" enctype="multipart/form-data">
                     {{ post_form | crispy }}
                     {% csrf_token %}
                     <button id="submitButton" type="submit" class="btn btn-signup btn-lg">Submit</button>

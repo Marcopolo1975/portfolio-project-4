@@ -107,7 +107,7 @@ def comment_delete(request, slug, comment_id):
 def add_post(request,):
         post_form = PostForm()
         if request.method == "POST":
-           post_form = PostForm(data=request.POST)
+           post_form = PostForm(request.POST, request.FILES)
            if post_form.is_valid():
               post = post_form.save(commit=False)
               post.author = request.user
@@ -135,7 +135,7 @@ def post_edit(request, post_id):
         post = get_object_or_404(Post, pk=post_id)
         post_form = PostForm(instance=post)
         if request.method == "POST":
-            post_form = PostForm(data=request.POST, instance=post)
+            post_form = PostForm(request.POST, request.FILES, instance=post)
             if post_form.is_valid() and post.author == request.user:
                 post = post_form.save(commit=False)
                 post.post = post
@@ -214,22 +214,15 @@ def post_delete(request, post_id):
         else:
             return render(request, 'blog/post_delete.html', {'post': post})
         
-def post_like(request, post_id):
-    post = get_object_or_404(Post, pk=post_id)
-
+def post_like(request, slug):
+    post = get_object_or_404(Post, slug=slug)
     if request.method == 'POST':
-        action = request.POST.get('action')
-
-        if action == 'thumbs_up':
-            post.thumbs_up += 1
-            post.save()
-            return JsonResponse({'status': 'success', 'message': 'Thumbs up given successfully'})
-        elif action == 'thumbs_down':
-            post.thumbs_down += 1
-            post.save()
-            return JsonResponse({'status': 'success', 'message': 'Thumbs down given successfully'})
+        if request.user in post.likes.all():
+            post.likes.remove(request.user)
         else:
-            return JsonResponse({'status': 'error', 'message': 'Invalid action'})
+            post.likes.add(request.user)
+        post.save()
+        return HttpResponseRedirect(reverse('post_detail', args=[post.slug]))
     else:
         return JsonResponse({'status': 'error', 'message': 'Only POST requests are allowed'})
         
