@@ -35,8 +35,10 @@ def post_detail(request, slug):
     queryset = Post.objects.all()
     post = get_object_or_404(queryset, slug=slug)
     like_count = post.likes.filter().count()
+    unlike_count = post.unlikes.filter().count()
     comments = post.comments.all().order_by("-created_on")
     liked = post.likes.filter(id=request.user.id).exists()
+    unliked = post.unlikes.filter(id=request.user.id).exists()
     comment_count = post.comments.filter(approved=True).count()
     if request.method == "POST":
        comment_form = CommentForm(data=request.POST)
@@ -62,6 +64,8 @@ def post_detail(request, slug):
         "comment_count": comment_count,
         "comment_form": comment_form,
         'liked': liked,
+        'unliked': unliked,
+        "unlike_count": unlike_count,
          "like_count":like_count
     },
     )
@@ -182,10 +186,28 @@ def post_like(request, slug):
         if request.user in post.likes.all():
             post.likes.remove(request.user)
         else:
+         if request.user not in post.unlikes.all():
             post.likes.add(request.user)
         post.save()
+        #else:
+        #messages.add_message(request, messages.ERROR, 'You uliked this post, unable to like!')
         return HttpResponseRedirect(reverse('post_detail', args=[post.slug]))
     else:
         return JsonResponse({'status': 'error', 'message': 'Only POST requests are allowed'})
-        
     
+def post_unlike(request, slug):
+    post = get_object_or_404(Post, slug=slug)
+    if request.method == 'POST':
+        if request.user in post.unlikes.all():
+            post.unlikes.remove(request.user)   
+        else:
+         if request.user not in post.likes.all():
+            post.unlikes.add(request.user)
+        post.save()
+    #else:
+        #messages.add_message(request, messages.ERROR, 'You liked this post, unable to unlike!')
+    
+        return HttpResponseRedirect(reverse('post_detail', args=[post.slug]))
+    else:
+        return JsonResponse({'status': 'error', 'message': 'you liked this post, unable to unlike'})
+  

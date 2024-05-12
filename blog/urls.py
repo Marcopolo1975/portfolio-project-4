@@ -16,6 +16,8 @@ urlpatterns = [
          views.post_delete, name='post_delete'),
      path('like/<slug:slug>', views.post_like,
           name='post_like'),
+     path('unlike/<slug:slug>', views.post_unlike,
+          name='post_unlike'),
     
     
     

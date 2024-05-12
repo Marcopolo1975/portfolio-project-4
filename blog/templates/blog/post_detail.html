@@ -49,16 +49,33 @@
         {% if user.is_authenticated %}
         <form class="review-detail-heart-like" action="{% url 'post_like' post.slug %}" method="POST">
             {% csrf_token %}
-            {{ like_count }} likes this post
+            {{ like_count }} likes 
             {% if liked %}
             <button type="submit" name="post_id" value="{{ post.slug }}" class="btn-like"><i
-                    class="fas  fa-thumbs-down "></i> Unlike</button>
+                    class="fas  fa-thumbs-up "></i></button>
             {% else %}
             <button type="submit" name="post_id" value="{{ post.slug }}" class="btn-like"><i
                     class="far fa-thumbs-up"></i> </button>
             {% endif %}
         </form>
 
+        {% endif %}
+    </div>
+    <div>
+        {% if user.is_authenticated %}
+        <form class="review-detail-heart-like" action="{% url 'post_unlike' post.slug %}" method="POST">
+            {% csrf_token %}
+            {{ unlike_count }} unlikes
+            {% if unliked %}
+            <button type="submit" name="post_id" value="{{ post.slug }}" class="btn-like"><i
+                    class="fas  fa-thumbs-down "></i></button>
+            {% else %}
+            <button type="submit" name="post_id" value="{{ post.slug }}" class="btn-like"><i
+                 class="far fa-thumbs-down"></i>
+            </button>
+            {% endif %}
+        </form>
+        
         {% endif %}
     </div>
     <br>
