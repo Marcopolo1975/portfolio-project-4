@@ -32,7 +32,7 @@ def post_detail(request, slug):
     :template:`blog/post_detail.html`
     """
 
-    queryset = Post.objects.all()
+    queryset =  Post.objects.filter(status=1)
     post = get_object_or_404(queryset, slug=slug)
     like_count = post.likes.filter().count()
     unlike_count = post.unlikes.filter().count()
@@ -97,7 +97,7 @@ def comment_delete(request, slug, comment_id):
         view to delete comment
         """
         queryset = Post.objects.filter(status=1)
-        comment = get_object_or_404(queryset, slug=slug)
+        post = get_object_or_404(queryset, slug=slug)
         comment = get_object_or_404(Comment, pk=comment_id)
 
         if comment.author == request.user:
