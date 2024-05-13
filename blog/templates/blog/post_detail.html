@@ -10,10 +10,10 @@
         <div class="row g-0">
             <div class="col-md-6 masthead-text">
                 <!-- Post title goes in these h1 tags -->
-                <h1 class="post-title">{{ post.title }}</h1>
+                <h2 class="post-title">{{ post.title }}</h2>
                 <!-- Post author goes before the | the post's created date goes after -->
-                <p class="post-subtitle">{{ post.author }} |Created on {{ post.created_on }}</p>
-                <p class="post-subtitle">{{ post.author }} |Updated on {{ post.updated_on }}</p>
+                <p class="post-subtitle">{{ post.author }} |Posted on {{ post.created_on }}</p>
+                <!--<p class="post-subtitle">{{ post.author }} |Updated on {{ post.updated_on }}</p>-->
             </div>
             <div class="image-container">
                 {% load cloudinary %}
@@ -32,7 +32,7 @@
 
 <div class="container">
     <div class="row">
-        <div class="col card mb-4  mt-3 left  top">
+        <div class="col card mb-4 left  top">
             <div class="card-body">
                 <!-- The post content goes inside the card-text. -->
                 <!-- Use the | safe filter inside the template tags -->
@@ -85,8 +85,8 @@
         <!-- <a class="btn btn-edit" href="{% url 'post_edit' post.id%}">Edit</a>
             <a class="btn btn-delete" href="{% url 'post_delete' post.id%}">Delete</a>-->
 
-        <a class="btn btn-edit m-1" href="{% url 'post_edit' post.id%}">Edit</a>
-        <a class="btn btn-danger m-2" href="{%  url 'post_delete' post.id%}">Delete</a>
+        <a class="btn btn-danger" href="{%  url 'post_delete' post.id%}">Delete</a>
+        <a class="btn btn-edit" href="{% url 'post_edit' post.id%}">Edit</a>
 
         {% endif %}
     </div>
