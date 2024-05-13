@@ -186,7 +186,8 @@ def post_like(request, slug):
         if request.user in post.likes.all():
             post.likes.remove(request.user)
         else:
-         if request.user not in post.unlikes.all():
+         if request.user in post.unlikes.all():
+            post.unlikes.remove(request.user)
             post.likes.add(request.user)
         post.save()
         #else:
@@ -201,7 +202,8 @@ def post_unlike(request, slug):
         if request.user in post.unlikes.all():
             post.unlikes.remove(request.user)   
         else:
-         if request.user not in post.likes.all():
+         if request.user in post.likes.all():
+            post.likes.remove(request.user)
             post.unlikes.add(request.user)
         post.save()
     #else:
