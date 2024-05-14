@@ -73,6 +73,10 @@ font-family: "Roboto Slab", serif;
     background-color: transparent;
 }
 
+.card-body{
+         padding: 0;
+}
+
 .image-container {
     position: relative;
     margin-bottom: 10px;
