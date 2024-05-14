@@ -218,3 +218,166 @@ Custom Error Pages were created to give the user more information on the error a
 - 403 Page Forbidden - Looks like you're trying to access forbidden content. Please log out and sign in to the correct account.
 - 404 Page Not Found - The page you're looking for doesn't exist.
 - 500 Server Error - The Easy Eater is currently unable to handle this request
+
+## Features
+
+### Header
+
+![header]()
+
+**Logo**
+- A customised logo was created using Photoshop.
+- This logo is positioned in the top left of the navigation bar. The logo is linked to the home page for ease of navigation for the user.
+
+**Navigation Bar**
+
+- The navigation bar is present at the top of every page and includes all links to the various other pages.
+- The  navigation link is a drop down menu which includes the Sign up and Log in links. 
+
+
+![header]()
+
+- The options to Sign up or Log in will change to the option to log out once a user has logged in.
+- The navigation bar is fully responsive, collapsing into a hamburger menu when the screen size becomes too small.
+- Hovering over the links will lighten the font.
+
+
+### Footer
+
+![header]()
+
+- The footer section includes links to Facebook, Instagram, Twitter and Youtube.
+- Clicking the links in the footer opens a separate browser tab to avoid pulling the user away from the site.
+
+### Home Page
+
+
+![header](docs/readme_images/features/call_out.png)
+
+- The home page includes an attractive banner section which encourages the user to sign up to the site with the message "let's discover the world!" and an image of famous Travel destinations.
+- The navbar includes a sign up button which takes the user to the sign up page.
+![header]()
+
+**About Section**
+
+![header]()
+
+- The About  section gives a brief overview of what the site. and introduction of the  site owner  and goals of the site.
+
+### User Account Pages
+
+**Sign Up**
+
+![header]()
+
+**Log In**
+
+![header]()
+
+**Log Out**
+
+![header]()
+
+- Django allauth was installed and used to create the Sign up, Log in and Log out functionality. 
+- Success messages inform the user if they have logged in/ logged out successfully.
+
+###  Posts Pages
+
+![header]()
+
+- The landing  page displays 6 Posts with images and title and few lines of details. with a status of published with the most recent recipes displayed first.
+- The Post cards are paginated after every 6 Posts. 
+- Each card displays the Post image, Title and Author name and created date. 
+- Clicking anywhere inside the post card or Read more button will take you directly to that posts's detailed page.
+
+### Post Detail Page
+
+
+![header]()
+
+- The Post header section at the top of the page shows the Post image, title, author, create date and time.
+
+![header]()
+- Post details a located right below the post image
+- below the post details there are delete button and edit button are located.
+- the poast owner can edit or delete his post.
+- below the post details there are thumbs up and thumbs down buttons, use can like or dislike a psot.
+
+![header]()
+
+- Edit Post Button - Clicking the button opens the update Post form prepopulated with the current Post details.
+- Delete Post Button - Clicking the button opens the confirm delete Post page. 
+
+**Comments Section**
+
+![header]()
+
+![header]()
+
+- The comments section lists all comments left by users for that particular Post.
+- Comments can only be left if a user is logged in. Any comments left by the user that is currently signed in can be updated or deleted using the buttons in the comments page. 
+    
+![header]()
+
+![header]()
+
+- The user receives a success message notifying them that the comment has been successfully added, updated or deleted.
+- The user cant delete or edit other users commnets, user must login to edit or delete his comment.
+
+### Add Post Form
+
+![header]()
+
+- If the user is logged in, then they can add a Post by clicking the link on the navigation bar.
+- The form fields for 'title' and 'image' detail text and excerpt, fields.
+- The user can upload a photo if they wish. If they choose not to, a default image displays as their Post image.
+- Failing to fill out the Post Title, Description, details,  results in the form failing and rendering a message stating which fields you have missed.
+- The user cannot add a post without logging in.
+- The user will receive a success message notifying them that the has been successfully created.
+
+### Update Post Form
+
+![header]()
+
+- If the user is logged in and is the author or the Post they can choose to edit the Post by clicking the edit button on the Post detail page. 
+- The form opens with all fields populated with the original content.
+- the Edit and delete buttons are not displayed if the user is not Author of the post-
+- The user will receive a success message notifying them that the Post has been successfully updated.
+
+### Delete Post
+
+ ![header](docs/readme_images/features/delete_recipe.png)
+
+- If the user is logged in and is the author or the recipe they can choose to delete the Post by clicking the delete button on the Post detail page.  
+- The user is asked to confirm if they wish to delete the Post or cancel.
+- The user will receive a success message notifying them that the Post has been successfully deleted.
+
+
+
+### Like or unlike Post 
+
+![header](docs/readme_images/features/my_bookmarks.png)
+
+- Below the post details there are 2 buttons located in thumbs-up and thumb-down form.
+- The user can like or dislike the Post, the number of likes or dislikes are displayed near buttons.
+
+### Error Pages
+
+Custom Error Pages were created to give the user more information on the error and to guide them back to the site.
+
+![header]()
+
+- 400 Bad Request - The Easy Eater is unable to handle this request.
+- 403 Page Forbidden - Looks like you're trying to access forbidden content. Please log out and sign in to the correct account.
+- 404 Page Not Found - The page you're looking for doesn't exist.
+- 500 Server Error - The Easy Eater is currently unable to handle this request
+
+### Future Features
+The following user stories were scoped out of the project due to time constraints. It is intended that these user stories will be implemented at a later date. 
+
+The following user stories were scoped out of the project due to time constraints. It is intended that these user stories will be implemented at a later date. 
+
+- As a Site User, I can bookmark a posts so that i can view my favorite posts later.
+- As a Site User, I can share the posts to the outher socialmedia platforms. 
+- As a Site User, I can search and filter posts so that I can find the one I want.
+
