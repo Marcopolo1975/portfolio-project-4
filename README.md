@@ -165,7 +165,28 @@ The Georgia serif and Roboto Slab serif font is the main font used for the body 
 ![Registration Page]()
 </details>
 
-<summary>Login & logout</summary>
+<details>
+<summary>Login&Logout page</summary>
 
-![Login & logout]()
+![Login&Logout page]()
 </details>
+
+## Agile Methodology
+
+Github projects was used to manage the development process using an agile approach. Please see link to project board [here]()
+
+The 16 user stories were documented within the Github project as Milestones. A Github Issue was created for each User Story which was then allocated to a milestone. Each User Story has defined acceptance criteria to make it clear when the User Story has been completed. The acceptance criteria are further broken down into tasks to facilitate the User Story's execution.
+
+## Data Model
+I used principles of Object-Oriented Programming throughout this project and Django’s Class-Based Generic Views.  
+
+Django AllAuth was used for the user authentication system.
+
+In order for the users to create Post a custom Post model was required. The Post author is a foreign key to the User model given a post can only have one author.
+
+The Comment model allows users to comment on individual Post and the Post is a foreign key in the comment model given a comment can only be linked to one Post. 
+
+
+The diagram below details the database schema.
+
+![Database Schema](docs/readme_images/database_schema.png)
