@@ -190,3 +190,31 @@ The Comment model allows users to comment on individual Post and the Post is a f
 The diagram below details the database schema.
 
 ![Database Schema](docs/readme_images/database_schema.png)
+
+## Testing
+
+Testing and results can be found [here]()
+
+## Security Features and Defensive Design
+
+### User Authentication
+
+- Django's user authentication is used to make sure that any requests to access secure pages by non-authenticated users are redirected to the login page. 
+- Django's UserPassesTest is used to limit access based on certain permissions i.e. to ensure users can only edit/delete recipes and comments for which they are the author. If the user doesn't pass the test they are shown an HTTP 403 Forbidden error.
+
+### Form Validation
+If incorrect or empty data is added to a form, the form won't submit and a warning will appear to the user informing them what field raised the error. 
+
+### Database Security
+The database url and secret key are stored in the env.py file to prevent unwanted connections to the database and this was set up before the first push to Github.
+
+Cross-Site Request Forgery (CSRF) tokens were used on all forms throughout this site.
+
+### Custom error pages:
+
+Custom Error Pages were created to give the user more information on the error and to provide them with buttons to guide them back to the site.
+
+- 400 Bad Request - The Easy Eater is unable to handle this request.
+- 403 Page Forbidden - Looks like you're trying to access forbidden content. Please log out and sign in to the correct account.
+- 404 Page Not Found - The page you're looking for doesn't exist.
+- 500 Server Error - The Easy Eater is currently unable to handle this request
