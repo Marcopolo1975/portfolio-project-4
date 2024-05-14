@@ -105,6 +105,67 @@ user satisfaction:
 
 The following user stories were scoped out of the project due to time constraints. It is intended that these user stories will be implemented at a later date. 
 
-- As a Site User, I can bookmark a posts so that i can view ma favorite post later.
+- As a Site User, I can bookmark a posts so that i can view my favorite posts later.
 - As a Site User, I can share the posts to the outher socialmedia platforms. 
 - As a Site User, I can search and filter posts so that I can find the one I want.
+
+### Design
+
+The site has a very simple and clean design which was purposely chosen in order to keep in theme with the site's goal. i.e. invoking a sense of calm in the user and reducing stress. 
+
+#### Colour Scheme
+Colour palette from Coolors
+
+![Colour Palette](docs/readme_images/colour_scheme.png)
+
+The colour scheme of the site is mainly pale white , Blue and green . The colours chosen are quite neutral and calming. 
+
+Great care was taken to establish a good contrast between background colours and text at all times to ensure maximum user accessibility. 
+
+#### Imagery
+The mostely images are from user posts , uploaded to cloudinary DB. logo and main Banner and i have created myself.
+#### Fonts
+The Georgia serif and Roboto Slab serif font is the main font used for the body of the website with the Playfair Display font used for the main headings on the home page. These fonts were imported via Google Fonts. Sans Serif is the backup font, in case for any reason the main font isn't being imported into the site correctly.
+
+#### Wireframes
+
+<details>
+
+ <summary>Landing Page</summary>
+
+![Landing Page]()
+</details>
+
+<details>
+
+<summary> Posts Pages</summary>
+
+![Posts Pages]()
+</details>
+
+
+<details>
+
+<summary>Add Post</summary>
+
+![Add Post]()
+</details>
+
+<details>
+
+<summary>About Page</summary>
+
+![About Page]()
+</details>
+
+<details>
+
+<summary>Registration Page</summary>
+
+![Registration Page]()
+</details>
+
+<summary>Login & logout</summary>
+
+![Login & logout]()
+</details>
