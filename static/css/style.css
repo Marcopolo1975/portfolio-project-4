@@ -29,16 +29,15 @@ h2{
 .brand {
     font-family:Georgia,
         serif;
-   /* font-size: 2.4rem;
-    font-weight: 700;*/
     color:#034f55;
     
 }
 
 .blue-o {
-    font-family: "Georgia", serif;
+    font-family: monospace;
     color: #0b08ef;
-    font-weight: bold;
+    font-style: italic;
+    
 }
 
 
