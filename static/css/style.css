@@ -14,7 +14,10 @@ body {
 .h1 {
     font-family:"Roboto Slab",
         serif;;
-   
+}
+
+.h1:hover {
+    color: #0b08ef;
 }
 
 h2{
