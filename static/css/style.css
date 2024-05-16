@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;500&family=Open+Sans:wght@300;500&family=Playfair+Display:wght@600&display=swap');
 
 body {
-    font-family: 'Georgia', sans-serif;
+    font-family: "Roboto Slab",serif;;
     font-weight: 300;
     height: 100%;
     background-color: #a8d8f6;
@@ -12,12 +12,14 @@ body {
     
 }
 .h1 {
-    font-family:Georgia, serif;
+    font-family:"Roboto Slab",
+        serif;;
    
 }
 
 h2{
-   font-family: "Georgia", serif;
+   font-family: "Roboto Slab",
+    serif;;
 }
 
 
@@ -27,14 +29,15 @@ h2{
 
 
 .brand {
-    font-family:Georgia,
+    font-family:"Roboto Slab",
         serif;
     color:#034f55;
     
 }
 
 .blue-o {
-   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   font-family:"Roboto Slab",
+    serif;;
     color: #0b08ef;
     font-style: italic;
     font-weight: bold;
@@ -136,7 +139,8 @@ h2{
 }
 
 .post-title {
-    font-family:"Georgia", serif;
+    font-family:"Roboto Slab",
+        serif;;
     margin-left: 0%;
 }
 
