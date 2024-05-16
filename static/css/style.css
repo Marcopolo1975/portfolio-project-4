@@ -195,9 +195,13 @@ h2{
 }
 
 /* social media links*/
-.mb-4 {
+.mb-2 {
     display:flex;
     justify-content: center;
+ }
+
+.mb-2 i:hover {
+     color: #142a2b;
  }
 
  .line {
