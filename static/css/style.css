@@ -34,9 +34,10 @@ h2{
 }
 
 .blue-o {
-    font-family:sans-serif;
+   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: #0b08ef;
     font-style: italic;
+    font-weight: bold;
     
 }
 
