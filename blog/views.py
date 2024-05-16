@@ -42,11 +42,12 @@ def post_detail(request, slug):
     if request.method == "POST":
         comment_form = CommentForm(data=request.POST)
         if comment_form.is_valid():
-           comment = comment_form.save(commit=False)
-           comment.author = request.user
-           comment.post = post
-           comment.save()
-           messages.add_message(request, messages.SUCCESS,'Comment submitted and awaiting approval')
+            comment = comment_form.save(commit=False)
+            comment.author = request.user
+            comment.post = post
+            comment.save()
+            messages.add_message(request, messages.SUCCESS,
+                                 'Comment submitted and awaiting approval')
 
     comment_form = CommentForm()
 
@@ -82,9 +83,11 @@ def comment_edit(request, slug, comment_id):
             comment.post = post
             comment.approved = False
             comment.save()
-            messages.add_message(request, messages.SUCCESS, 'Comment Updated!')
+            messages.add_message(request, messages.SUCCESS,
+                                 'Comment Updated!')
         else:
-            messages.add_message(request, messages.ERROR, 'Error updating comment!')
+            messages.add_message(request, messages.ERROR,
+                                 'Error updating comment!')
 
         return HttpResponseRedirect(reverse('post_detail', args=[slug]))
 
@@ -98,10 +101,12 @@ def comment_delete(request, slug, comment_id):
     comment = get_object_or_404(Comment, pk=comment_id)
 
     if comment.author == request.user:
-            comment.delete()
-            messages.add_message(request, messages.SUCCESS, 'Comment deleted!')
+        comment.delete()
+        messages.add_message(request, messages.SUCCESS,
+                             'Comment deleted!')
     else:
-            messages.add_message(request, messages.ERROR, 'You can only delete your own comments!')
+        messages.add_message(request, messages.ERROR,
+                             'You can only delete your own comments!')
 
     return HttpResponseRedirect(reverse('post_detail', args=[slug]))
 
@@ -116,31 +121,36 @@ def add_post(request,):
         post.slug = slugify(post.title)
         post.status = 1
         post_form.save()
-        messages.add_message(request, messages.SUCCESS, "Post created successfully ")
+        messages.add_message(request, messages.SUCCESS,
+                             "Post created successfully ")
         return HttpResponseRedirect(reverse('home'))
     # addpost = AddPost.objects.all().order_by('-updated_on').first()
 
     post_form = PostForm()
     return render(request, "blog/add_post.html", {"post_form": post_form},
-    )
+                  )
+
 
 def post_edit(request, post_id):
     """
     view to edit post
     """
-    post=get_object_or_404(Post, pk=post_id)
-    post_form=PostForm(instance=post)
+    post = get_object_or_404(Post, pk=post_id)
+    post_form = PostForm(instance=post)
     if request.method == "POST":
-        post_form=PostForm(request.POST, request.FILES, instance=post)
+        post_form = PostForm(request.POST, request.FILES, instance=post)
     if post_form.is_valid() and post.author == request.user:
-        post=post_form.save(commit=False)
-        post.post=post
-        post.approved=False
+        post = post_form.save(commit=False)
+        post.post = post
+        post.approved = False
         post.save()
-        messages.add_message(request, messages.SUCCESS, 'Post Updated!')
-        return HttpResponseRedirect(reverse('post_detail', args=[post.slug]))
+        messages.add_message(request, messages.SUCCESS,
+                             'Post Updated!')
+        return HttpResponseRedirect(reverse('post_detail',
+                                    args=[post.slug]))
     else:
-            messages.add_message(request, messages.ERROR, 'Error updating Post!')
+        messages.add_message(request, messages.ERROR,
+                             'Error updating Post!')
 
     return render(
         request,
@@ -152,48 +162,57 @@ def post_delete(request, post_id):
     """
     view to delete post
     """
-    # Fetch the post object using the post_id, or return a 404 error if it doesn't exist
-    post=get_object_or_404(Post, id=post_id)
+    # Fetch the post object using the post_id,
+    # or return a 404 error if it doesn't exist
+    post = get_object_or_404(Post, id=post_id)
 
     # Check if the current user is the author of the post
     if request.user == post.author:
-        # If the request method is POST, it means the user has confirmed the deletion
+        # If the request method is POST,
+        # it means the user has confirmed the deletion
         if request.method == 'POST':
             # Delete the post
             post.delete()
-            messages.add_message(request, messages.SUCCESS, 'Post deleted!')
+            messages.add_message(request, messages.SUCCESS,
+                                 'Post deleted!')
             # Redirect the user to a relevant page, e.g., the homepage
             return HttpResponseRedirect(reverse('home'))
         # If the request method is not POST, render a confirmation template
         else:
-            return render(request, 'blog/post_delete.html', {'post': post})
+            return render(request, 'blog/post_delete.html',
+                          {'post': post})
+
 
 def post_like(request, slug):
-    post=get_object_or_404(Post, slug=slug)
+    post = get_object_or_404(Post, slug=slug)
     if request.method == 'POST':
         if request.user in post.likes.all():
             post.likes.remove(request.user)
         else:
-         if request.user not in post.likes.all():
-            post.unlikes.remove(request.user)
-            post.likes.add(request.user)
-            post.save()
-        return HttpResponseRedirect(reverse('post_detail', args=[post.slug]))
+            if request.user not in post.likes.all():
+                post.unlikes.remove(request.user)
+                post.likes.add(request.user)
+                post.save()
+        return HttpResponseRedirect(reverse('post_detail',
+                                    args=[post.slug]))
     else:
-            return JsonResponse({'status': 'error', 'message': 'Only POST requests are allowed'})
+        return JsonResponse({'status': 'error', 'message':
+                            'Only POST requests are allowed'})
+
 
 def post_unlike(request, slug):
-     post=get_object_or_404(Post, slug=slug)
-     if request.method == 'POST':
+    post = get_object_or_404(Post, slug=slug)
+    if request.method == 'POST':
         if request.user in post.unlikes.all():
             post.unlikes.remove(request.user)
         else:
-           if request.user not in post.unlikes.all():
-            post.likes.remove(request.user)
-            post.unlikes.add(request.user)
-            post.save()
+            if request.user not in post.unlikes.all():
+                post.likes.remove(request.user)
+                post.unlikes.add(request.user)
+                post.save()
 
-
-        return HttpResponseRedirect(reverse('post_detail', args=[post.slug]))
-     else:
-        return JsonResponse({'status': 'error', 'message': 'you liked this post, unable to unlike'})
+        return HttpResponseRedirect(reverse('post_detail',
+                                    args=[post.slug]))
+    else:
+        return JsonResponse({'status': 'error', 'message':
+                            'you liked this post, unable to unlike'})
