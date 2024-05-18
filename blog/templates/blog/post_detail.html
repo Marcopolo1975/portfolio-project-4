@@ -60,7 +60,7 @@
         </form>
         <form class="review-detail-heart-like" action="{% url 'post_unlike' post.slug %}" method="POST">
             {% csrf_token %}
-            {{ unlike_count }} unlikes
+            {{ unlike_count }} dislikes
             {% if unliked %}
             <button type="submit" name="post_id" value="{{ post.slug }}" class="btn-like"><i
                     class="fas  fa-thumbs-down "></i></button>
