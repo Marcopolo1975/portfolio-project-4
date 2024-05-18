@@ -91,6 +91,7 @@ h2{
 .image-container {
     position: relative;
     margin-bottom: 10px;
+    border-radius: 0, 20px;
 }
 
 .bg-image {
