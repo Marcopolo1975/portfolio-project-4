@@ -4,7 +4,7 @@ The Explorer Blog App is a web application designed for travel enthusiasts to sh
 
 The live link can be found here - [The Explorer Blog]()
 
-![Colour Palette](docs/readme_images/site_mockup.png)
+![Colour Palette](static/ images/Screenshot 2024-05-18 093829.png)
 
 ## Table of Contents
 
