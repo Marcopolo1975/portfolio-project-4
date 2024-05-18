@@ -1,25 +1,33 @@
 
 body {
-    font-family: serif;
+    font-family:"Roboto Serif",
+        serif;
+    color: #808080;
     font-weight: 300;
     height: 100%;
-    background-color: #a8d8f6;
     margin-top: 50px;
-    margin-bottom: 100px;
-    
-}
-.h1 {
-    font-family:
-        serif;
+    margin-bottom: 100px;  
 }
 
-.h1:hover {
+.h2 {
+    font-family:
+        "Roboto Serif", serif;
+        color: #445261;
+}
+
+.h2:hover {
     color: #0b08ef;
 }
 
 h2{
    font-family: 
-    serif;;
+        "Roboto Serif",serif;
+        color: #445261;
+}
+
+p {
+    font-family: "Roboto Serif",
+        serif;
 }
 
 
@@ -28,18 +36,10 @@ h2{
 }
 
 
-.brand {
-    font-family:
-        serif;
-    color:#034f55;
-    
-}
-
 .blue-o {
-   font-family:
-    serif;;
+   font-family:"Exo",
+    sans-serif;
     color: #0b08ef;
-    font-style: italic;
     font-weight: bold;
     
 }
@@ -79,6 +79,10 @@ h2{
 .card {
     border: none;
     background-color: transparent;
+}
+
+.card-title{
+    color:#445261;
 }
 
 .card-body{
@@ -141,12 +145,13 @@ h2{
 
 .post-title {
     font-family:
-        serif;;
+    "Roboto Serif", serif;
+        color:#445261;
     margin-left: 0%;
 }
 
 .post-subtitle {
-    color: lightgray;
+    color: #808080;
     font-size: smaller;
 }
 
