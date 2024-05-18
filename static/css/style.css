@@ -1,7 +1,6 @@
-/* Google Fonts */
-
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;500&family=Open+Sans:wght@300;500&family=Playfair+Display:wght@600&display=swap');
-
+ <!-- Google Fonts CSS -->
+    <link rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
 body {
     font-family: "Roboto Slab",serif;;
     font-weight: 300;
