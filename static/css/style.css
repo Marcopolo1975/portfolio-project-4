@@ -1,8 +1,6 @@
- <!-- Google Fonts CSS -->
-    <link rel="preconnect">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+
 body {
-    font-family: "Roboto Slab",serif;;
+    font-family: serif;
     font-weight: 300;
     height: 100%;
     background-color: #a8d8f6;
@@ -11,8 +9,8 @@ body {
     
 }
 .h1 {
-    font-family:"Roboto Slab",
-        serif;;
+    font-family:
+        serif;
 }
 
 .h1:hover {
@@ -20,7 +18,7 @@ body {
 }
 
 h2{
-   font-family: "Roboto Slab",
+   font-family: 
     serif;;
 }
 
@@ -31,14 +29,14 @@ h2{
 
 
 .brand {
-    font-family:"Roboto Slab",
+    font-family:
         serif;
     color:#034f55;
     
 }
 
 .blue-o {
-   font-family:"Roboto Slab",
+   font-family:
     serif;;
     color: #0b08ef;
     font-style: italic;
@@ -142,7 +140,7 @@ h2{
 }
 
 .post-title {
-    font-family:"Roboto Slab",
+    font-family:
         serif;;
     margin-left: 0%;
 }
