@@ -223,19 +223,19 @@ Custom Error Pages were created to give the user more information on the error a
 
 ### Header
 
-![header]()
+
 
 **Logo**
+
+![header](docs/images/logo.png)
 - A customised logo was created using Photoshop.
 - This logo is positioned in the top left of the navigation bar. The logo is linked to the home page for ease of navigation for the user.
 
 **Navigation Bar**
 
+![header](docs/images/navbar.png)
 - The navigation bar is present at the top of every page and includes all links to the various other pages.
 - The  navigation link is a drop down menu which includes the Sign up and Log in links. 
-
-
-![header]()
 
 - The options to Sign up or Log in will change to the option to log out once a user has logged in.
 - The navigation bar is fully responsive, collapsing into a hamburger menu when the screen size becomes too small.
@@ -244,7 +244,7 @@ Custom Error Pages were created to give the user more information on the error a
 
 ### Footer
 
-![header]()
+![header](docs/images/footer.png)
 
 - The footer section includes links to Facebook, Instagram, Twitter and Youtube.
 - Clicking the links in the footer opens a separate browser tab to avoid pulling the user away from the site.
@@ -252,15 +252,15 @@ Custom Error Pages were created to give the user more information on the error a
 ### Home Page
 
 
-![header](docs/readme_images/features/call_out.png)
+![header](docs/images/landing.png)
 
 - The home page includes an attractive banner section which encourages the user to sign up to the site with the message "let's discover the world!" and an image of famous Travel destinations.
 - The navbar includes a sign up button which takes the user to the sign up page.
-![header]()
+
 
 **About Section**
 
-![header]()
+![header](docs/images/about.png)
 
 - The About  section gives a brief overview of what the site. and introduction of the  site owner  and goals of the site.
 
@@ -268,22 +268,22 @@ Custom Error Pages were created to give the user more information on the error a
 
 **Sign Up**
 
-![header]()
+![header](docs/images/signup.png)
 
 **Log In**
 
-![header]()
+![header](docs/images/signin.png)
 
 **Log Out**
 
-![header]()
+![header](docs/images/signout.png)
 
 - Django allauth was installed and used to create the Sign up, Log in and Log out functionality. 
 - Success messages inform the user if they have logged in/ logged out successfully.
 
 ###  Posts Pages
 
-![header]()
+![header](docs/images/posts1.png) ![header](docs/images/posts.png)
 
 - The landing  page displays 6 Posts with images and title and few lines of details. with a status of published with the most recent recipes displayed first.
 - The Post cards are paginated after every 6 Posts. 
@@ -293,7 +293,7 @@ Custom Error Pages were created to give the user more information on the error a
 ### Post Detail Page
 
 
-![header]()
+![header](docs/images/postdetail.png)
 
 - The Post header section at the top of the page shows the Post image, title, author, create date and time.
 
@@ -310,7 +310,7 @@ Custom Error Pages were created to give the user more information on the error a
 
 **Comments Section**
 
-![header]()
+![header](docs/images/comments.png)
 
 ![header]()
 
@@ -326,7 +326,7 @@ Custom Error Pages were created to give the user more information on the error a
 
 ### Add Post Form
 
-![header]()
+![header](docs/images/addpost.png)
 
 - If the user is logged in, then they can add a Post by clicking the link on the navigation bar.
 - The form fields for 'title' and 'image' detail text and excerpt, fields.
@@ -337,7 +337,7 @@ Custom Error Pages were created to give the user more information on the error a
 
 ### Update Post Form
 
-![header]()
+![header](docs/images/updatepost.png)
 
 - If the user is logged in and is the author or the Post they can choose to edit the Post by clicking the edit button on the Post detail page. 
 - The form opens with all fields populated with the original content.
@@ -346,7 +346,7 @@ Custom Error Pages were created to give the user more information on the error a
 
 ### Delete Post
 
- ![header](docs/readme_images/features/delete_recipe.png)
+ ![header](docs/images/deletepost.png) ![header](docs/images/deletepost2.png)
 
 - If the user is logged in and is the author or the recipe they can choose to delete the Post by clicking the delete button on the Post detail page.  
 - The user is asked to confirm if they wish to delete the Post or cancel.
@@ -354,9 +354,9 @@ Custom Error Pages were created to give the user more information on the error a
 
 
 
-### Like or unlike Post 
+### Like or dislike Post 
 
-![header](docs/readme_images/features/my_bookmarks.png)
+![header](docs/images/likes.png)
 
 - Below the post details there are 2 buttons located in thumbs-up and thumb-down form.
 - The user can like or dislike the Post, the number of likes or dislikes are displayed near buttons.
