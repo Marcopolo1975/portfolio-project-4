@@ -109,6 +109,9 @@ The following user stories were scoped out of the project due to time constraint
 - As a Site User, I can share the posts to the outher socialmedia platforms. 
 - As a Site User, I can search and filter posts so that I can find the one I want.
 
+
+[Back to top](<#table-of-content>)
+
 ### Design
 
 The site has a very simple and clean design which was purposely chosen in order to keep in theme with the site's goal. i.e. invoking a sense of calm in the user and reducing stress. 
@@ -171,6 +174,8 @@ The Georgia serif and Roboto Slab serif font is the main font used for the body 
 ![Login&Logout page](docs/images/signinwir.png) ![Login&Logout page](docs/images/signoutwir.png)
 </details>
 
+[Back to top](<#table-of-content>)
+
 ## Agile Methodology
 
 Github projects was used to manage the development process using an agile approach. Please see link to project board [here](https://github.com/users/Marcopolo1975/projects/6/views/1)
@@ -190,6 +195,8 @@ The Comment model allows users to comment on individual Post and the Post is a f
 The diagram below details the database schema.
 
 ![Database Schema](docs/readme_images/database_schema.png)
+
+[Back to top](<#table-of-content>)
 
 ## Testing
 
@@ -277,6 +284,8 @@ Custom Error Pages were created to give the user more information on the error a
 - 403 Page Forbidden - Looks like you're trying to access forbidden content. Please log out and sign in to the correct account.
 - 404 Page Not Found - The page you're looking for doesn't exist.
 - 500 Server Error - The Easy Eater is currently unable to handle this request
+
+[Back to top](<#table-of-content>)
 
 ## Features
 
@@ -426,6 +435,8 @@ The following user stories were scoped out of the project due to time constraint
 - As a Site User, I can share the posts to the outher socialmedia platforms. 
 - As a Site User, I can search and filter posts so that I can find the one I want.
 
+[Back to top](<#table-of-content>)
+
 ## Deployment - Heroku
 
 To deploy this page to Heroku from its GitHub repository, the following steps were taken:
@@ -471,6 +482,8 @@ Add the following Config Vars in Heroku:
 - Go to the deploy tab on Heroku and connect to GitHub, then to the required repository. 
 - Scroll to the bottom of the deploy page and either click Enable Automatic Deploys for automatic deploys or Deploy Branch to deploy manually. Manually deployed branches will need re-deploying each time the repo is updated.
 - Click View to view the deployed site.
+
+[Back to top](<#table-of-content>)
 
 The site is now live and operational.
 ## Forking this repository
@@ -533,6 +546,7 @@ To clone this repository follow the below steps:
 - [AutoSlugField](https://django-extensions.readthedocs.io/en/latest/field_extensions.html)
 - [Code Institute - Blog Walkthrough Project](https://github.com/Code-Institute-Solutions/Django3blog)
 
+[Back to top](<#table-of-content>)
 
 ## Acknowledgments
 
