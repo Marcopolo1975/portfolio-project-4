@@ -296,15 +296,10 @@ Custom Error Pages were created to give the user more information on the error a
 ![header](docs/images/postdetail.png)
 
 - The Post header section at the top of the page shows the Post image, title, author, create date and time.
-
-![header]()
 - Post details a located right below the post image
 - below the post details there are delete button and edit button are located.
 - the poast owner can edit or delete his post.
 - below the post details there are thumbs up and thumbs down buttons, use can like or dislike a psot.
-
-![header]()
-
 - Edit Post Button - Clicking the button opens the update Post form prepopulated with the current Post details.
 - Delete Post Button - Clicking the button opens the confirm delete Post page. 
 
@@ -312,15 +307,8 @@ Custom Error Pages were created to give the user more information on the error a
 
 ![header](docs/images/comments.png)
 
-![header]()
-
 - The comments section lists all comments left by users for that particular Post.
-- Comments can only be left if a user is logged in. Any comments left by the user that is currently signed in can be updated or deleted using the buttons in the comments page. 
-    
-![header]()
-
-![header]()
-
+- Comments can only be left if a user is logged in. Any comments left by the user that is currently signed in can be updated or deleted using the buttons in the comments page.     
 - The user receives a success message notifying them that the comment has been successfully added, updated or deleted.
 - The user cant delete or edit other users commnets, user must login to edit or delete his comment.
 
@@ -364,8 +352,6 @@ Custom Error Pages were created to give the user more information on the error a
 ### Error Pages
 
 Custom Error Pages were created to give the user more information on the error and to guide them back to the site.
-
-![header]()
 
 - 400 Bad Request - The Easy Eater is unable to handle this request.
 - 403 Page Forbidden - Looks like you're trying to access forbidden content. Please log out and sign in to the correct account.
