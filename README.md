@@ -23,7 +23,6 @@ The live link can be found here - [The Explorer Blog](https://explorer-blog-530c
     + [User Authentication](#user-authentication)
     + [Form Validation](#form-validation)
     + [Database Security](#database-security)
-    + [Custom error pages:](#custom-error-pages-)
   * [Features](#features)
     + [Header](#header)
     + [Footer](#footer)
