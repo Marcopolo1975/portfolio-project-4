@@ -16,10 +16,10 @@ import sys
 from django.contrib.messages import constants as messages
 import dj_database_url
 if os.path.isfile('env.py'):import env
-SECRET_KEY = os.environ.get("SECRET_KEY") 
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) 
+SECRET_KEY = os.environ.get("SECRET_KEY")
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')  
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -35,8 +35,7 @@ SECRET_KEY = 'django-insecure--h2wowbq%09hj@qqd-5tj*2)-+_-nu0*8^+tctou*nidd!tas1
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost','.herokuapp.com', '127.0.0.1', '8000-marcopolo19-portfoliopr-ga6mrx1s6ab.ws-eu111.gitpod.io',
-'8000-marcopolo19-portfoliopr-b9z49nkeshi.ws-eu111.gitpod.io']
+ALLOWED_HOSTS = ['localhost', '.herokuapp.com', '127.0.0.1', '8000-marcopolo19-portfoliopr-ga6mrx1s6ab.ws-eu111.gitpod.io', '8000-marcopolo19-portfoliopr-b9z49nkeshi.ws-eu111.gitpod.io']
 
 
 # Application definition
@@ -105,12 +104,12 @@ WSGI_APPLICATION = 'explorer.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-#DATABASES = {
+# DATABASES = {
 #    'default': {
 #        'ENGINE': 'django.db.backends.sqlite3',
 #        'NAME': BASE_DIR / 'db.sqlite3',
 #    }
-#}
+# }
 
 DATABASES = {
     'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
@@ -124,7 +123,7 @@ if 'test' in sys.argv:
             'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
         }
     }
-    
+
 CSRF_TRUSTED_ORIGINS = [
     "https://*.codeanyapp.com",
     "https://*.herokuapp.com",
@@ -167,9 +166,9 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-#STATIC_URL = '/static/'
-#STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'), ]
-#STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+# STATIC_URL = '/static/'
+# STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'), ]
+# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
