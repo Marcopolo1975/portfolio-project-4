@@ -217,16 +217,42 @@ When validating my own code the W3C CSS Validator reports no errors.
 [Back to top](<#table-of-content>)
 
 ### PEP Validation
-At the time of this project the website [pep8online](http://pep8online.com/) is currently offline. Usually I'm using that site to validate my Python code. Due to the site being offline I have followed Code Institutes workaround to add the PEP8 validator 'pycodestyle' to the Gitpod Workspace. I have tested the following Python files:
 
-* admin.py - No errors or warnings reported
-* forms.py - No errors or warnings reported
-* models.py - No errors or warnings reported
-* test_forms.py - No errors or warnings reported
-* urls.py - No errors or warnings reported
-* views.py - No errors or warnings reported
+All Python files were run through Pep8 with no errors found.
+
 
 [Back to top](<#table-of-content>)
+
+### Responsiveness Test
+The responsive design tests were carried out manually with [Google Chrome DevTools](https://developer.chrome.com/docs/devtools/) and [Responsive Design Checker](https://techsini.com/multi-mockup/index.php).
+
+| Desktop    | Display <1280px       | Display >1280px    |
+|------------|-----------------------|--------------------|
+| Render     | pass                  | pass               |
+| Images     | pass                  | pass               |
+| Links      | pass                  | pass               |
+
+| Tablet     | Samsung Galaxy Tab 10 | Amazon Kindle Fire | iPad Mini | iPad Pro |
+|------------|-----------------------|--------------------|-----------|----------|
+| Render     | pass                  | pass               | pass      | pass     |
+| Images     | pass                  | pass               | pass      | pass     |
+| Links      | pass                  | pass               | pass      | pass     |
+
+| Phone      | Galaxy S5/S6/S7       | iPhone 6/7/8       | iPhone 12pro         |
+|------------|-----------------------|--------------------|----------------------|
+| Render     | pass                  | pass               | pass      | pass     |
+| Images     | pass                  | pass               | pass      | pass     |
+| Links      | pass                  | pass               | pass      | pass     |
+
+[Back to top](<#table-of-content>)
+
+### Browser Compatibility
+* Google Chrome Version (106.0.5249.119)
+* Mozilla Firefox (version 105.0.3)
+* Min (version 1.26.0)
+* Apple Safari (version 16.0)
+* Microsoft Edge (version 106.0.1370.47)
+
 
 ## Security Features and Defensive Design
 
