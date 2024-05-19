@@ -6,7 +6,7 @@ The live link can be found here - [The Explorer Blog](https://explorer-blog-530c
 
 ![Colour Palette](docs/images/SiteMockup.png)
 
-## Table of Contents
+# Table of Content
 
 - [The Explorer Blog](#the-explorer-blog)
   * [User Experience (UX)](#user-experience-ux)
@@ -110,7 +110,7 @@ The following user stories were scoped out of the project due to time constraint
 - As a Site User, I can search and filter posts so that I can find the one I want.
 
 
-[Back to top](<##table-of-content>)
+[Back to top](<#table-of-content>)
 
 ### Design
 
@@ -174,7 +174,7 @@ The Georgia serif and Roboto Slab serif font is the main font used for the body 
 ![Login&Logout page](docs/images/signinwir.png) ![Login&Logout page](docs/images/signoutwir.png)
 </details>
 
-[Back to top](<##table-of-contents>)
+[Back to top](<#table-of-content>)
 
 ## Agile Methodology
 
@@ -196,8 +196,7 @@ The diagram below details the database schema.
 
 ![Database Schema](docs/readme_images/database_schema.png)
 
-[Back to top](<##table-of-contents>)
-
+[Back to top](<#table-of-content>)
 ## Testing
 
 ## Code Validation
@@ -246,7 +245,7 @@ The responsive design tests were carried out manually with [Google Chrome DevToo
 | Images     | pass                  | pass               | pass      | pass     |
 | Links      | pass                  | pass               | pass      | pass     |
 
-[Back to top](<##table-of-content>)
+[Back to top](<#table-of-content>)
 
 ### Browser Compatibility
 * Google Chrome Version (106.0.5249.119)
@@ -280,7 +279,7 @@ Custom Error Pages were created to give the user more information on the error a
 - 404 Page Not Found - The page you're looking for doesn't exist.
 - 500 Server Error - The Easy Eater is currently unable to handle this request
 
-[Back to top](<##table-of-contents>)
+[Back to top](<#table-of-content>)
 
 ## Features
 
@@ -430,7 +429,7 @@ The following user stories were scoped out of the project due to time constraint
 - As a Site User, I can share the posts to the outher socialmedia platforms. 
 - As a Site User, I can search and filter posts so that I can find the one I want.
 
-[Back to top](<##table-of-contents>)
+[Back to top](<#table-of-content>)
 
 ## Deployment - Heroku
 
@@ -541,7 +540,7 @@ To clone this repository follow the below steps:
 - [AutoSlugField](https://django-extensions.readthedocs.io/en/latest/field_extensions.html)
 - [Code Institute - Blog Walkthrough Project](https://github.com/Code-Institute-Solutions/Django3blog)
 
-[Back to top](<##table-of-contents>)
+[Back to top](<#table-of-content>)
 
 ## Acknowledgments
 
