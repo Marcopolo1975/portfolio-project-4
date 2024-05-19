@@ -148,11 +148,8 @@ def post_edit(request, post_id):
                              'Post Updated!')
         return HttpResponseRedirect(reverse('post_detail',
                                     args=[post.slug]))
-    else:
-        messages.add_message(request, messages.ERROR,
-                             'Error updating Post!')
-
-    return render(
+    else:      
+        return render(
         request,
         "blog/post_edit.html", {"post_form": post_form, "post": post},
     )

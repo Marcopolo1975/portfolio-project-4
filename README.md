@@ -326,7 +326,7 @@ Custom Error Pages were created to give the user more information on the error a
 
 ### Add Post Form
 
-![header](docs/images/addpost.png)
+![header](docs/images/addpost.png) ![header](docs/images/postcreated.png) 
 
 - If the user is logged in, then they can add a Post by clicking the link on the navigation bar.
 - The form fields for 'title' and 'image' detail text and excerpt, fields.
@@ -337,7 +337,7 @@ Custom Error Pages were created to give the user more information on the error a
 
 ### Update Post Form
 
-![header](docs/images/updatepost.png)
+![header](docs/images/updatepost.png) ![header](docs/images/postupdated.png) 
 
 - If the user is logged in and is the author or the Post they can choose to edit the Post by clicking the edit button on the Post detail page. 
 - The form opens with all fields populated with the original content.
@@ -351,7 +351,7 @@ Custom Error Pages were created to give the user more information on the error a
 - If the user is logged in and is the author or the recipe they can choose to delete the Post by clicking the delete button on the Post detail page.  
 - The user is asked to confirm if they wish to delete the Post or cancel.
 - The user will receive a success message notifying them that the Post has been successfully deleted.
-
+![header](docs/images/postdeleted.png)
 
 
 ### Like or dislike Post 
