@@ -133,14 +133,14 @@ The Georgia serif and Roboto Slab serif font is the main font used for the body 
 
  <summary>Landing Page</summary>
 
-![Landing Page]()
+![Landing Page](docs/images/landingwir.png)
 </details>
 
 <details>
 
 <summary> Posts Pages</summary>
 
-![Posts Pages]()
+![Posts Pages](docs/images/postdetailwir.png)
 </details>
 
 
@@ -148,27 +148,27 @@ The Georgia serif and Roboto Slab serif font is the main font used for the body 
 
 <summary>Add Post</summary>
 
-![Add Post]()
+![Add Post](docs/images/addpostwir.png)
 </details>
 
 <details>
 
 <summary>About Page</summary>
 
-![About Page]()
+![About Page](docs/images/aboutwir.png)
 </details>
 
 <details>
 
 <summary>Registration Page</summary>
 
-![Registration Page]()
+![Registration Page](docs/images/signupwir.png)
 </details>
 
 <details>
 <summary>Login&Logout page</summary>
 
-![Login&Logout page]()
+![Login&Logout page](docs/images/signinwir.png) ![Login&Logout page](docs/images/signoutwir.png)
 </details>
 
 ## Agile Methodology
