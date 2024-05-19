@@ -4,14 +4,16 @@ from django.urls import reverse
 from .forms import CommentForm
 from .models import Post
 
-# Create your tests here.
-class TestBlogViews(TestCase):
 
+# Create your tests here.
+
+class TestBlogViews(TestCase):
 
     def setUp(self):
         """Create a superuser and a blog post"""
         self.user = User.objects.create_superuser(
-            username="myUsername", password="myPassword", email="test@test.com")
+            username="myUsername", password="myPassword",
+                                            email="test@test.com")
         self.post = Post(title="Blog title", author=self.user,
                          slug="blog-title", excerpt="Blog excerpt",
                          content="Blog content", status=1)

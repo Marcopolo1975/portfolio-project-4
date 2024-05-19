@@ -148,11 +148,11 @@ def post_edit(request, post_id):
                              'Post Updated!')
         return HttpResponseRedirect(reverse('post_detail',
                                     args=[post.slug]))
-    else:      
+    else:
         return render(
-        request,
-        "blog/post_edit.html", {"post_form": post_form, "post": post},
-    )
+         request,
+         "blog/post_edit.html", {"post_form": post_form, "post": post},
+        )
 
 
 def post_delete(request, post_id):

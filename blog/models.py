@@ -11,7 +11,8 @@ class Post(models.Model):
     """Model for Post"""
     title = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=200, unique=True)
-    author = models.ForeignKey(User, on_delete=models.CASCADE, related_name="blog_posts")
+    author = models.ForeignKey(User, on_delete=models.CASCADE,
+                               related_name="blog_posts")
     image = CloudinaryField('image', default='placeholder')
     content = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
@@ -21,8 +22,7 @@ class Post(models.Model):
     likes = models.ManyToManyField(User, related_name='likepost',
                                    blank=True)
     unlikes = models.ManyToManyField(User, related_name='unlikepost',
-                                   blank=True)
-    # …
+                                                        blank=True)
 
     def number_of_likes(self):
         """
