@@ -28,8 +28,3 @@ class PostForm(forms.ModelForm):
         widgets = {
             'method': SummernoteWidget(),
         }
-
-#class AddPostForm(forms.ModelForm):
-   # class Meta:
-      # model = AddPost
-       # fields = ('title','title_image','content')

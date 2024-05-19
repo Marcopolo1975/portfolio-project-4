@@ -200,7 +200,7 @@ Testing and results can be found [here]()
 ### User Authentication
 
 - Django's user authentication is used to make sure that any requests to access secure pages by non-authenticated users are redirected to the login page. 
-- Django's UserPassesTest is used to limit access based on certain permissions i.e. to ensure users can only edit/delete recipes and comments for which they are the author. If the user doesn't pass the test they are shown an HTTP 403 Forbidden error.
+- Django's UserPassesTest is used to limit access based on certain permissions i.e. to ensure users can only edit/delete posts and comments for which they are the author. If the user doesn't pass the test they are shown an HTTP 403 Forbidden error.
 
 ### Form Validation
 If incorrect or empty data is added to a form, the form won't submit and a warning will appear to the user informing them what field raised the error. 
@@ -285,7 +285,7 @@ Custom Error Pages were created to give the user more information on the error a
 
 ![header](docs/images/posts1.png) ![header](docs/images/posts.png)
 
-- The landing  page displays 6 Posts with images and title and few lines of details. with a status of published with the most recent recipes displayed first.
+- The landing  page displays 6 Posts with images and title and few lines of details. with a status of published with the most recent posts displayed first.
 - The Post cards are paginated after every 6 Posts. 
 - Each card displays the Post image, Title and Author name and created date. 
 - Clicking anywhere inside the post card or Read more button will take you directly to that posts's detailed page.
@@ -336,7 +336,7 @@ Custom Error Pages were created to give the user more information on the error a
 
  ![header](docs/images/deletepost.png) ![header](docs/images/deletepost2.png)
 
-- If the user is logged in and is the author or the recipe they can choose to delete the Post by clicking the delete button on the Post detail page.  
+- If the user is logged in and is the author or the post they can choose to delete the Post by clicking the delete button on the Post detail page.  
 - The user is asked to confirm if they wish to delete the Post or cancel.
 - The user will receive a success message notifying them that the Post has been successfully deleted.
 ![header](docs/images/postdeleted.png)
