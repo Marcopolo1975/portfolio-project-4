@@ -193,7 +193,40 @@ The diagram below details the database schema.
 
 ## Testing
 
-Testing and results can be found [here]()
+## Code Validation
+The code on the 'Review | Alliance' site has been tested through W3C Markup Validation Service, W3C CSS Validation Service and JSHint. Errors were at first found on the site in the W3C Markup Validation Service but could quite easily be fixed (see bugs section). One error appeared as well in the W3C CSS Validation but that was connected to Font Awesome and not to the site code itself (see bugs section).
+
+### Markup Validation
+After fixing the inital errors that W3C Markup Validation Service reported, no errors were returned.
+
+<details><summary><b>HTML Validation Result</b></summary>
+
+![HTML Result Home Page](readme/assets/images/html_validation_no_error.png)
+</details><br/>
+
+[Back to top](<#table-of-content>)
+
+### CSS Validaton
+When validating my own code the W3C CSS Validator reports no errors.
+
+<details><summary><b>CSS Validation Result</b></summary>
+
+![CSS Result](readme/assets/images/css_validation_no_error.png)
+</details><br/>
+
+[Back to top](<#table-of-content>)
+
+### PEP Validation
+At the time of this project the website [pep8online](http://pep8online.com/) is currently offline. Usually I'm using that site to validate my Python code. Due to the site being offline I have followed Code Institutes workaround to add the PEP8 validator 'pycodestyle' to the Gitpod Workspace. I have tested the following Python files:
+
+* admin.py - No errors or warnings reported
+* forms.py - No errors or warnings reported
+* models.py - No errors or warnings reported
+* test_forms.py - No errors or warnings reported
+* urls.py - No errors or warnings reported
+* views.py - No errors or warnings reported
+
+[Back to top](<#table-of-content>)
 
 ## Security Features and Defensive Design
 
