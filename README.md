@@ -1,6 +1,6 @@
 # The Explorer blog
 
-The Explorer Blog App is a web application designed for travel enthusiasts to share their travel experiences, photos, and tips with a community of like-minded adventurers. Users can create and manage their own travel blogs, read and comment on posts from others, and discover new travel destinations. The app provides a platform for users to engage with each other's content through likes and comments, fostering a vibrant and interactive travel community.
+The Explorer Blog App is a web application designed for travel enthusiasts to share their travel experiences, photos, and tips with a community of like-minded adventurers. Users can create and manage their own Posts, read and comment on posts from others, and discover new travel destinations. The app provides a platform for users to engage with each other's content through likes and comments, fostering a vibrant and interactive travel community.
 
 The live link can be found here - [The Explorer Blog](https://explorer-blog-530c0b1471ba.herokuapp.com/)
 
@@ -120,14 +120,14 @@ Colour palette from Coolors
 
 ![Colour Palette](docs/images/coolors.png)
 
-The colour scheme of the site is mainly pale white , Blue and green . The colours chosen are quite neutral and calming. 
+The colour scheme of the site is  white , light gray and dark gray . The colours chosen are quite neutral and calming. 
 
 Great care was taken to establish a good contrast between background colours and text at all times to ensure maximum user accessibility. 
 
 #### Imagery
 The mostely images are from user posts , uploaded to cloudinary DB. logo and main Banner and i have created myself.
 #### Fonts
-The Georgia serif and Roboto Slab serif font is the main font used for the body of the website with the Playfair Display font used for the main headings on the home page. These fonts were imported via Google Fonts. Sans Serif is the backup font, in case for any reason the main font isn't being imported into the site correctly.
+The Roboto serif font is the main font used for the body of the website and for the main headings on the home page. This font was imported via Google Fonts. Sans Serif is the backup font, in case for any reason the main font isn't being imported into the site correctly.
 
 #### Wireframes
 
