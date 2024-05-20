@@ -1,4 +1,4 @@
-
+/* main styles*/
 body {
     font-family:"Roboto Serif",
         serif;
@@ -35,7 +35,7 @@ p {
     max-width:90%;
 }
 
-
+/*logo text*/
 .blue-o {
    font-family:"Exo",
     sans-serif;
@@ -50,7 +50,7 @@ p {
     font-weight: 300;
 }
 
-    
+  /* nav bar styles*/  
 .navbar-dark {
     font-weight: bolder;
     text-shadow:1px 1px #141313;
@@ -76,6 +76,7 @@ p {
     
 }
 
+/*post Cards */
 .card {
     border: none;
     background-color: transparent;
@@ -153,6 +154,8 @@ p {
     color: #808080;
     font-size: smaller;
  }
+
+/* buttons*/
 
 .btn-signup,
 .btn-edit {
