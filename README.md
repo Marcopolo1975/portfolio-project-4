@@ -193,7 +193,7 @@ The Comment model allows users to comment on individual Post and the Post is a f
 
 The diagram below details the database schema.
 
-![Database Schema](docs/readme_images/database_schema.png)
+![Database Schema](docs/images/drawSQL.png)
 
 [Back to top](<#table-of-content>)
 ## Testing
