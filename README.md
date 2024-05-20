@@ -244,7 +244,45 @@ The responsive design tests were carried out manually with [Google Chrome DevToo
 | Images     | pass                  | pass               | pass      | pass     |
 | Links      | pass                  | pass               | pass      | pass     |
 
+## Summernote Errors
+When validating the Add Recipe and Edit Recipe forms I received a number of errors which were caused by the installed Summernote library which runs when using the form on these pages. I could not rectify these errors given that they weren't in my own code therefore they are unresolved.
+## Fixed Errors
+When validating Html I received an error there were  extra </p> tags in the 'post detail' and in base.html files, field which had been created using the summernote editor. The issue was due to Summernote including <p> tags around the form field. I resolved the error by removing the surrounding </p> tags in my HTML when rendering a summernote field in my Recipe Detail page.
+
+CSS
+
 [Back to top](<#table-of-content>)
+
+## Fixed Bugs
+ - #### No Reverse Match Error
+     - **Bug**: When I first implemented the Add Post form I kept getting a no reverse match error
+                when trying to submit a new post due to the slug field not populating properly. 
+     - **Fix**: with help of my Mentor I learned about AutoSlugField which is a Django Model Field extension
+                which will automatically create a unique slug and you can choose which field to 
+                populate the slug from. Utilising this extension I was able to create a unique slug populated from the post title.
+
+- #### Cloudinary Images not Displaying
+     - **Bug**: Cloudinary images not displaying after uploading. 
+     - **Fix**: with help of my Mentor and  discussed the issue on slack I realised that I needed to include
+                enctype="multipart/form-data in the opening form HTML tag and this solved the problems 
+
+- #### Footer not staying at bottom of screen
+     - **Bug**: Footer not staying at the bottom of the screen when displaying on pages
+                without fullscreen content and didn't want to use a sticky footer. 
+     - **Fix**: page hight was set for smaller pages and make the page content 100% of the
+                viewport height less the height of the footer and this solved the problem.
+ 
+ - #### Edit or Delete Comments not working
+     - edit or delete comments function was throwing error, 
+     - **fix**: there was a typo in blog url for the delete or edit views. correction the view name solved the problem.
+     
+  - #### Responsiveness testing sites wrere unable to connect to Heroku App
+     - **Bug**: for testing the site responsiveness, while testing occurred an error that Heroku app refused to connect.
+     - **Fix**: I asked Help on slack community, i needed to add a chrome extension "Ignore X-Frame headers" that solved the problem.
+     
+
+### Unfixed bugs:
+There are no known unfixed bugs.
 
 ### Browser Compatibility
 * Google Chrome Version (106.0.5249.119)
@@ -543,7 +581,7 @@ To clone this repository follow the below steps:
 
 ## Acknowledgments
 
-Many thanks to my mentor Antonio for his support and advice throughout my Course spacialy for creating portfolio projects. 
-Thanks to The Code Institute slack community for their quick responses and very helpful feedback in particular Ian Meigh.
+Many thanks to my mentor Antonio for his support and guidance throughout my Course spacialy for creating portfolio projects. 
+Thanks to The Code Institute slack community for their quick responses and very helpful feedback in particular Tomas_K.
 
 
