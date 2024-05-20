@@ -118,7 +118,7 @@ The site has a very simple and clean design which was purposely chosen in order 
 #### Colour Scheme
 Colour palette from Coolors
 
-![Colour Palette](docs/images/colers.png)
+![Colour Palette](docs/images/coolors.png)
 
 The colour scheme of the site is mainly pale white , Blue and green . The colours chosen are quite neutral and calming. 
 
