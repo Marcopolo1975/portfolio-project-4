@@ -273,7 +273,7 @@ CSS
                 viewport height less the height of the footer and this solved the problem.
  
  - #### Edit or Delete Comments not working
-     - edit or delete comments function was throwing error, 
+     - **Bug**: edit or delete comments function was throwing error, 
      - **fix**: there was a typo in blog url for the delete or edit views. correction the view name solved the problem.
      
   - #### Responsiveness testing sites wrere unable to connect to Heroku App
