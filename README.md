@@ -254,12 +254,10 @@ Google Pagespeed insights Chrome Developer Tools was used to test the applicatio
 In general this is OK results. The performance is affected in a negative way by external scripts (connected to i.e. Bootstrap) and the lower result on SEO on the Index page and Admin Area Page is i.e. connected to the 'read more' links that is not a 100% optimal description from a SEO point of view. The lower accessibility result on the review details page is connected to the heading elements not being in sequentially-descending order, but this is an active design choice and not a big issue (but I thought it would be proper to highlight it here so that it's clear I'm aware of it).
 
 
-## Summernote Errors
-When validating the Add post and Edit post forms I received a number of errors which were caused by the installed Summernote library which runs when using the form on these pages. I could not rectify these errors given that they weren't in my own code therefore they are unresolved.
 ## Fixed Errors
-When validating Html I received an error there were  extra </p> tags in the 'post detail' and in base.html files, field which had been created using the summernote editor. The issue was due to Summernote including <p> tags around the form field. I resolved the error by removing the surrounding </p> tags in my HTML when rendering a summernote field in my post Detail page.
+When validating Html I received an error there were  extra </p> tags in the 'post detail' and in base.html files, field which had been created using the summernote editor. The issue was due to Summernote including < /p> tags around the form field. I resolved the error by removing the surrounding < /p> tags in my HTML when rendering a summernote field in my post Detail page.
 
-CSS
+
 
 [Back to top](<#table-of-content>)
 
