@@ -1,28 +1,28 @@
 /* main styles*/
 body {
-    font-family:"Roboto Serif",
+    font-family: "Roboto Serif",
         serif;
-    color: #808080;
+    color: #00000008;
     font-weight: 300;
     height: 100%;
     margin-top: 50px;
-    margin-bottom: 100px;  
+    margin-bottom: 100px;
 }
 
 .h2 {
     font-family:
         "Roboto Serif", serif;
-        color: #445261;
+    color: #445261;
 }
 
 .h2:hover {
     color: #0b08ef;
 }
 
-h2{
-   font-family: 
-        "Roboto Serif",serif;
-        color: #445261;
+h2 {
+    font-family:
+        "Roboto Serif", serif;
+    color: #445261;
 }
 
 p {
@@ -32,16 +32,16 @@ p {
 
 
 .container {
-    max-width:90%;
+    max-width: 90%;
 }
 
 /*logo text*/
 .blue-o {
-   font-family:"Exo",
-    sans-serif;
+    font-family: "Exo",
+        sans-serif;
     color: #0b08ef;
     font-weight: bold;
-    
+
 }
 
 
@@ -50,18 +50,18 @@ p {
     font-weight: 300;
 }
 
-  /* nav bar styles*/  
+/* nav bar styles*/
 .navbar-dark {
     font-weight: bolder;
-    text-shadow:1px 1px #141313;
-    
+    text-shadow: 1px 1px #141313;
+
 }
 
 .navbar-text {
     margin-top: 20px;
     font-weight: bolder;
-    
-    }
+
+}
 
 .light-bg {
     background-color: #fff;
@@ -72,8 +72,8 @@ p {
 }
 
 .main-bg {
-    background-color: #F9FAFC;
-    
+    background-color: #00000008;
+
 }
 
 /*post Cards */
@@ -82,12 +82,12 @@ p {
     background-color: transparent;
 }
 
-.card-title{
-    color:#445261;
+.card-title {
+    color: #445261;
 }
 
-.card-body{
-         padding: 0;
+.card-body {
+    padding: 0;
 }
 
 .image-container {
@@ -96,9 +96,9 @@ p {
 }
 
 .bg-image {
-    position:relative;
+    position: relative;
     margin-top: 50px;
-     }
+}
 
 
 .image-flash {
@@ -118,7 +118,7 @@ p {
 .author {
     color: #6c757d !important;
     margin: 4px;
-    
+
 }
 
 .posthead {
@@ -145,15 +145,15 @@ p {
 
 .post-title {
     font-family:
-    "Roboto Serif", serif;
-        color:#445261;
+        "Roboto Serif", serif;
+    color: #445261;
     margin-left: 0%;
 }
 
 .post-subtitle {
     color: #808080;
     font-size: smaller;
- }
+}
 
 /* buttons*/
 
@@ -208,34 +208,35 @@ p {
 
 /* social media links*/
 .mb-2 {
-    display:flex;
+    display: flex;
     justify-content: center;
- }
+}
 
 .mb-2 i:hover {
-     color: #142a2b;
- }
+    color: #142a2b;
+}
 
- .line {
+.line {
     margin-top: 70px;
 
- }
+}
+
 hr {
     margin: 10px 0;
     border: 5px;
     background: -webkit-gradient(linear, 0 0, 100% 0, from(transparent), to(transparent), color-stop(50%, rgb(0, 0, 0)));
-     }
+}
 
 
-     
-    /* Medium devices (tablets, 768px and up)*/
-         @media (min-width: 768px) {
- hr {
-     margin: 30px 0;
- }
 
-.container {
-         max-width: 80%;
- }
-                   
-         }
+/* Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) {
+    hr {
+        margin: 30px 0;
+    }
+
+    .container {
+        max-width: 80%;
+    }
+
+}
