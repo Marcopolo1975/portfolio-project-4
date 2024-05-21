@@ -247,8 +247,9 @@ The responsive design tests were carried out manually with [Google Chrome DevToo
 ### Pagespeed insights
 Google Pagespeed insights Chrome Developer Tools was used to test the application within the areas of *Performance*, *Accessibility*, *Best Practices* and *SEO*. I tested the 
 * Overall site performance for desktop - Performance: 99, Accessibility: 100, Best Practises: 100, SEO: 92
-  ![pagespeed](docs/images/pagespeed.png)
+![pagespeed](docs/images/pagespeed.png)
 * Overall site performance for mobiles - Performance: 99, Accessibility: 100, Best Practises: 100, SEO: 92
+![pagespeed](docs/images/pagespeed2.png)
 
 
 In general this is OK results. The performance is affected in a negative way by external scripts (connected to i.e. Bootstrap) and the lower result on SEO on the Index page and Admin Area Page is i.e. connected to the 'read more' links that is not a 100% optimal description from a SEO point of view. The lower accessibility result on the review details page is connected to the heading elements not being in sequentially-descending order, but this is an active design choice and not a big issue (but I thought it would be proper to highlight it here so that it's clear I'm aware of it).
