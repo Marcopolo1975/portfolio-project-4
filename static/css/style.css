@@ -9,7 +9,7 @@ body {
     margin-bottom: 100px;
 }
 
-.h2 {
+.h2, h3 {
     font-family:
         "Roboto Serif", serif;
     color: #445261;
