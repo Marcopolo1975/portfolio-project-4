@@ -337,10 +337,10 @@ Cross-Site Request Forgery (CSRF) tokens were used on all forms throughout this 
 
 Custom Error Pages were created to give the user more information on the error and to provide them with buttons to guide them back to the site.
 
-- 400 Bad Request - The Easy Eater is unable to handle this request.
+- 400 Bad Request - The Explorer Blog is unable to handle this request.
 - 403 Page Forbidden - Looks like you're trying to access forbidden content. Please log out and sign in to the correct account.
 - 404 Page Not Found - The page you're looking for doesn't exist.
-- 500 Server Error - The Easy Eater is currently unable to handle this request
+- 500 Server Error - The Explorer Blog is currently unable to handle this request
 
 [Back to top](<#table-of-content>)
 
@@ -490,10 +490,10 @@ Custom Error Pages were created to give the user more information on the error a
 
 Custom Error Pages were created to give the user more information on the error and to guide them back to the site.
 
-- 400 Bad Request - The Easy Eater is unable to handle this request.
+- 400 Bad Request - The explorer blog is unable to handle this request.
 - 403 Page Forbidden - Looks like you're trying to access forbidden content. Please log out and sign in to the correct account.
 - 404 Page Not Found - The page you're looking for doesn't exist.
-- 500 Server Error - The Easy Eater is currently unable to handle this request
+- 500 Server Error - The Explorer blog is currently unable to handle this request
 
 ### Future Features
 The following user stories were scoped out of the project due to time constraints. It is intended that these user stories will be implemented at a later date. 
