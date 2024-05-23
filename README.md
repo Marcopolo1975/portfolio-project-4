@@ -359,6 +359,7 @@ Custom Error Pages were created to give the user more information on the error a
 **Navigation Bar**
 
 ![header](docs/images/navbar.png)
+![header](docs/images/navbar2.png)
 - The navigation bar is present at the top of every page and includes all links to the various other pages.
 - The  navigation link is a drop down menu which includes the Sign up and Log in links. 
 
@@ -377,7 +378,7 @@ Custom Error Pages were created to give the user more information on the error a
 ### Home Page
 
 
-![header](docs/images/landing.png)
+![header](docs/images/home.png)
 
 - The home page includes an attractive banner section which encourages the user to sign up to the site with the message "let's discover the world!" and an image of famous Travel destinations.
 - The navbar includes a sign up button which takes the user to the sign up page.
@@ -408,12 +409,22 @@ Custom Error Pages were created to give the user more information on the error a
 
 ###  Posts Pages
 
-![header](docs/images/posts1.png) ![header](docs/images/posts.png)
+![header](docs/images/posts.png) ![header](docs/images/posts2.png)
 
 - The landing  page displays 6 Posts with images and title and few lines of details. with a status of published with the most recent posts displayed first.
 - The Post cards are paginated after every 6 Posts. 
 - Each card displays the Post image, Title and Author name and created date. 
 - Clicking anywhere inside the post card or Read more button will take you directly to that posts's detailed page.
+
+### My Posts Page
+
+![header](docs/images/myposts.png)
+
+- This page displays all Posts which the logged in user has created.
+- The Post cards are paginated after every 6 Posts. 
+- Each card displays the Post's image, Title and short description. 
+- Clicking on the Read More Button on the bottom of the card will take you directly to that Posts's detailed page.
+
 
 ### Post Detail Page
 
@@ -450,7 +461,7 @@ Custom Error Pages were created to give the user more information on the error a
 
 ### Update Post Form
 
-![header](docs/images/updatepost.png) ![header](docs/images/postupdated.png) 
+![header](docs/images/postupdate.png) ![header](docs/images/postupdated.png) 
 
 - If the user is logged in and is the author or the Post they can choose to edit the Post by clicking the edit button on the Post detail page. 
 - The form opens with all fields populated with the original content.
@@ -459,7 +470,7 @@ Custom Error Pages were created to give the user more information on the error a
 
 ### Delete Post
 
- ![header](docs/images/deletepost.png) ![header](docs/images/deletepost2.png)
+ ![header](docs/images/postdelete.png) ![header](docs/images/postupdated.png)
 
 - If the user is logged in and is the author or the post they can choose to delete the Post by clicking the delete button on the Post detail page.  
 - The user is asked to confirm if they wish to delete the Post or cancel.
