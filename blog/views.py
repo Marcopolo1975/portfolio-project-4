@@ -17,6 +17,15 @@ class PostList(generic.ListView):
     paginate_by = 6
 
 
+class UserPostList(generic.ListView):
+    queryset = Post.objects.filter(status=1)
+    template_name = "blog/user_posts.html"
+
+    def get_queryset(self):
+        queryset = Post.objects.filter(author=self.request.user)
+        return queryset
+
+
 def post_detail(request, slug):
     """
     Display an individual :model:`blog.Post`.

@@ -1,0 +1,98 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+<!-- index.html content starts here -->
+
+
+<div class="container-fluid">
+    <div class="row">
+        <h2>My Posts</h2>
+        <!-- Blog Entries Column -->
+        <div class="col-12 mt-0 left">
+            <div class="row gy-3">
+                {% for post in post_list %}
+                <!--<div class="col-md-4">
+                    <div class="card mb-4">-->
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                    <div class="card h-100 border-0 shadow p-3 bg-white rounded">
+                        <div class="card-body d-flex flex-column">
+                            <div class="image-container">
+                                {% if "placeholder" in post.image.url %}
+                                <img class="card-img-top" src="{{ post.image.url }}" alt="{{ post.title }}">
+                                {% else %}
+                                <img class="card-img-top rounded" style="height: 150px;" src="{{ post.image.url }}"
+                                    alt="{{ post.title }}">
+                                {% endif %}
+                                <div class="image-flash">
+                                    <!--<p class="author">Author: {{ post.author }}</p>-->
+                                </div>
+                            </div>
+
+                            <h4 class="card-title">{{ post.title }}</h4>
+                            <p class="card-text">{{ post.excerpt }}</p>
+
+
+                            <hr>
+                            <div class="card-bottom mt-auto">
+                                <p class="author text-muted">Author: {{ post.author }}</p>
+                                <p class="card-text text-muted">{{ post.created_on}}</p>
+                            </div>
+                        </div>
+
+                        <a href="{% url 'post_detail' post.slug %}" class="btn btn-outline-primary mt-2">Read More</a>
+                        <div>
+                            {% if user.is_authenticated and post.author == user %}
+                            <!-- <a class="btn btn-edit" href="{% url 'post_edit' post.id%}">Edit</a>
+                                <a class="btn btn-delete" href="{% url 'post_delete' post.id%}">Delete</a>-->
+
+                            <a class="btn btn-danger" href="{%  url 'post_delete' post.id%}">Delete</a>
+                            <a class="btn btn-edit" href="{% url 'post_edit' post.id%}">Edit</a>
+
+                            {% endif %}
+                        </div>
+                    </div>
+
+                </div>
+
+                {% if forloop.counter|divisibleby:3 %}
+            </div>
+            <hr>
+            <div class="row gy-3">
+                {% endif %}
+                {% endfor %}
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+<!-- Delete confirmation modal -->
+<div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="deleteModalLabel">Delete comment?</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Are you sure you want to delete your comment?
+                This action cannot be undone.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <a id="deleteConfirm" href="#" class="btn
+          btn-danger">Delete</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- index.html content ends here -->
+{% endblock %}
+<!--copyright block-->
+{% block copyright %}
+Copyright 2024 Marcopolo
+{% endblock %}

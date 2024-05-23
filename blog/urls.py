@@ -17,4 +17,6 @@ urlpatterns = [
          name='post_like'),
     path('unlike/<slug:slug>', views.post_unlike,
          name='post_unlike'),
+     path('myposts', views.UserPostList.as_view(),
+         name='myposts'),
 ]

@@ -9,126 +9,134 @@
 <!DOCTYPE html>
 <html class="h-100" lang="en">
 
-    <head>
-        <title>Explorer Blog</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="Explorer blog,designed to inspire and guide your adventures around the globe.">
-        <meta name="keywords" content="avel destinations, Travel tips, Budget travel">
-        <meta name="author" content="Rehan Ahmad Rai">
+<head>
+    <title>Explorer Blog</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Explorer blog,designed to inspire and guide your adventures around the globe.">
+    <meta name="keywords" content="avel destinations, Travel tips, Budget travel">
+    <meta name="author" content="Rehan Ahmad Rai">
 
     <!-- Google Fonts CSS -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Exo:wght@200&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lobster&family=Poetsen+One&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&family=Roboto+Slab:wght@100..900&family=Roboto:wght@100;300&display=swap"
-    rel="stylesheet">
-        <!-- Font Awesome CSS -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Exo:wght@200&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lobster&family=Poetsen+One&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&family=Roboto+Slab:wght@100..900&family=Roboto:wght@100;300&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
-        <!-- Bootstrap CSS -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
-            integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 
-        <!-- Custom CSS -->
-        <link rel="stylesheet" href="{% static 'css/style.css' %}">
-        <link rel="icon" type="image/x-icon" href="https://res.cloudinary.com/dodutelmv/image/upload/favicon_uqgyiz.ico">
-    </head>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="icon" type="image/x-icon" href="https://res.cloudinary.com/dodutelmv/image/upload/favicon_uqgyiz.ico">
+</head>
 
-    <body class="d-flex flex-column h-100 main-bg">
+<body class="d-flex flex-column h-100 main-bg">
 
-            <header>
-            <!--homepage wallpaper and text-->
-                <div class=".bg-image shadow p-1">
-                    <img src="https://res.cloudinary.com/dodutelmv/image/upload/BGexplorer2_fievey.png" alt="" style="width:100%;" class="img-responsive">
-                    <!--<div class="centered">Let's Discover the World</div>-->
-                </div>
-            </header>
-    
-        <!-- Navigation -->
+    <header>
+        <!--homepage wallpaper and text-->
+        <div class=".bg-image shadow p-1">
+            <img src="https://res.cloudinary.com/dodutelmv/image/upload/BGexplorer2_fievey.png" alt=""
+                style="width:100%;" class="img-responsive">
+            <!--<div class="centered">Let's Discover the World</div>-->
+        </div>
+    </header>
+
+    <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light shadow p-1 bg-white fixed-top">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="{% url 'home' %}">
-                    
-                    <span class="h2"><span><img src="https://res.cloudinary.com/dodutelmv/image/upload/compass_zuivot.webp"
-                        style="height:40px; transform: translateY(-4px);" alt=""></span>  EXPLORER</span>
-                    <span class="blue-o">  Blog</span></a>
-                            <!--<span class="navbar-text text-muted"
+        <div class="container-fluid">
+            <a class="navbar-brand" href="{% url 'home' %}">
+
+                <span class="h2"><span><img src="https://res.cloudinary.com/dodutelmv/image/upload/compass_zuivot.webp"
+                            style="height:40px; transform: translateY(-4px);" alt=""></span> EXPLORER</span>
+                <span class="blue-o"> Blog</span></a>
+            <!--<span class="navbar-text text-muted"
                         let's discover the world
                     </span>-->
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
-                    aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarText">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <a class="nav-link {% if request.path == home_url %}active{% endif %}" aria-current="page"
-                                href="{% url 'home' %}">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link {% if request.path == add_post %}active{%endif%}" aria-current="page"
-                                href="{% url 'add_post' %}">Add Post</a>
-                        </li>
-                        
-                        <li class="nav-item">
-                            <a class="nav-link
-                                        {% if request.path == about_url %}active{%endif%}" aria-current="page"
-                                href="{% url 'about' %}">About</a>
-                        </li>
-                        {% if user.is_authenticated %}
-                        <li class="nav-item">
-                            <a class="nav-link {% if request.path == logout_url %}active{% endif %}" aria-current="page"
-                                href="{% url 'account_logout' %}">Logout</a>
-                        </li>
-                        {% else %}
-                        <li class="nav-item">
-                            <a class="nav-link {% if request.path == signup_url %}active{% endif %}" aria-current="page"
-                                href="{% url 'account_signup' %}">Register</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link {% if request.path == login_url %}active{% endif %}" aria-current="page"
-                                href="{% url 'account_login' %}">Login</a>
-                        </li>
-                        {% endif %}
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+                aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.path == home_url %}active{% endif %}" aria-current="page"
+                            href="{% url 'home' %}">Home</a>
+                    </li>
 
-                    </ul>
-                    
-                </div>
-            </div>
-        </nav>
-    
-        <!-- displaying Django messages -->
-        <div class="container">
-            <div class="row">
-                <div class="col-md-8 offset-md-2">
-                    {% for message in messages %}
-                    <div class="alert alert-dark {{ message.tags }} alert-dismissible
-                fade show" id="msg" role="alert">
-                        {{ message | safe }}
-                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                    </div>
-                    {% endfor %}
-                </div>
+
+                    <li class="nav-item">
+                        <a class="nav-link
+                                        {% if request.path == about_url %}active{%endif%}" aria-current="page"
+                            href="{% url 'about' %}">About</a>
+                    </li>
+                    {% if user.is_authenticated %}
+
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.path == myposts %}active{%endif%}" aria-current="page"
+                            href="{% url 'myposts' %}">My Posts</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.path == add_post %}active{%endif%}" aria-current="page"
+                            href="{% url 'add_post' %}">Add Post</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.path == logout_url %}active{% endif %}" aria-current="page"
+                            href="{% url 'account_logout' %}">Logout</a>
+                    </li>
+                    {% else %}
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.path == signup_url %}active{% endif %}" aria-current="page"
+                            href="{% url 'account_signup' %}">Register</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.path == login_url %}active{% endif %}" aria-current="page"
+                            href="{% url 'account_login' %}">Login</a>
+                    </li>
+                    {% endif %}
+
+                </ul>
+
             </div>
         </div>
+    </nav>
 
-        <main class="flex-shrink-0 main-bg ">
-            <hr>
-            <!--{% if user.is_authenticated %}
+    <!-- displaying Django messages -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                {% for message in messages %}
+                <div class="alert alert-dark {{ message.tags }} alert-dismissible
+                fade show" id="msg" role="alert">
+                    {{ message | safe }}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+    <main class="flex-shrink-0 main-bg ">
+        <hr>
+        <!--{% if user.is_authenticated %}
             <p class="text-end m-3">{{ user }}</p>
             {% else %}
             <p class="text-end m-3"></p>
             {% endif %}-->
 
-            {% block content %}
-            <!-- Content Goes here -->
-            <p>This is my default paragraph</p>
-            {% endblock content %}
+        {% block content %}
+        <!-- Content Goes here -->
+        <p>This is my default paragraph</p>
+        {% endblock content %}
 
-        </main>
+    </main>
 
 
-        <!--footer-->
+    <!--footer-->
 
     <footer class="bg-body-tertiary shadow p-1 text-center mt-2">
         <!-- Grid container -->
@@ -136,27 +144,28 @@
             <!-- Section: Social media -->
             <div class="mb-2">
                 <!-- Facebook -->
-                <a data-mdb-ripple-init class="btn text-white btn-floating m-1" style="background-color: #3b5998; width: 40px;" href="https://www.facebook.com/"
-                    role="button"><i class="fab fa-facebook-f"></i></a>
+                <a data-mdb-ripple-init class="btn text-white btn-floating m-1"
+                    style="background-color: #3b5998; width: 40px;" href="https://www.facebook.com/" role="button"><i
+                        class="fab fa-facebook-f"></i></a>
 
                 <!-- Twitter -->
-                <a data-mdb-ripple-init class="btn text-white btn-floating m-1" style="background-color: #55acee;" href="https://twitter.com/"
-                    role="button"><i class="fab fa-twitter"></i></a>
+                <a data-mdb-ripple-init class="btn text-white btn-floating m-1" style="background-color: #55acee;"
+                    href="https://twitter.com/" role="button"><i class="fab fa-twitter"></i></a>
 
                 <!-- Google -->
-                <a data-mdb-ripple-init class="btn text-white btn-floating m-1" style="background-color: #dd4b39;" href="https://www.google.com/"
-                    role="button"><i class="fab fa-google"></i></a>
+                <a data-mdb-ripple-init class="btn text-white btn-floating m-1" style="background-color: #dd4b39;"
+                    href="https://www.google.com/" role="button"><i class="fab fa-google"></i></a>
 
                 <!-- Instagram -->
-                <a data-mdb-ripple-init class="btn text-white btn-floating m-1" style="background-color: #ac2bac;" href="https://www.instagram.com/"
-                    role="button"><i class="fab fa-instagram"></i></a>
+                <a data-mdb-ripple-init class="btn text-white btn-floating m-1" style="background-color: #ac2bac;"
+                    href="https://www.instagram.com/" role="button"><i class="fab fa-instagram"></i></a>
 
                 <!-- Linkedin -->
-                <a data-mdb-ripple-init class="btn text-white btn-floating m-1" style="background-color: #0082ca;" href="https://www.linkedin.com/"
-                    role="button"><i class="fab fa-linkedin-in"></i></a>
+                <a data-mdb-ripple-init class="btn text-white btn-floating m-1" style="background-color: #0082ca;"
+                    href="https://www.linkedin.com/" role="button"><i class="fab fa-linkedin-in"></i></a>
                 <!-- Github -->
-                <a data-mdb-ripple-init class="btn text-white btn-floating m-1" style="background-color: #333333;" href="https://github.com/"
-                    role="button"><i class="fab fa-github"></i></a>
+                <a data-mdb-ripple-init class="btn text-white btn-floating m-1" style="background-color: #333333;"
+                    href="https://github.com/" role="button"><i class="fab fa-github"></i></a>
             </div>
             <!-- Section: Social media -->
         </div>
@@ -171,13 +180,13 @@
     </footer>
 
 
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
-            </script>
-            
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
+        </script>
 
-            {% block extras %}
-            {% endblock %}
-    </body>
+
+    {% block extras %}
+    {% endblock %}
+</body>
 
 </html>
