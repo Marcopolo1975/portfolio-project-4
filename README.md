@@ -204,6 +204,7 @@ The code on the 'Explorer blog' site has been tested through W3C Markup Validati
 ### Markup Validation
 After fixing the inital errors that W3C Markup Validation Service reported, no errors were returned.
 
+### Html Validation
 <details><summary><b>HTML Validation Result</b></summary>
 
 ![HTML Result Home Page](docs/images/htmlvalidation.png)
@@ -213,9 +214,17 @@ After fixing the inital errors that W3C Markup Validation Service reported, no e
 ![HTML Result Login Page](docs/images/login.png)
 
 ![HTML Result Logout Page](docs/images/logout.png)
-
-
 </details><br/>
+
+#### Note 1: Summernote Errors
+When validating the Add Recipe and Edit Recipe forms I received a number of errors which were caused by the installed Summernote library which runs when using the form on these pages. I could not rectify these errors given that they weren't in my own code therefore they are unresolved. 
+
+ <details>
+
+ <summary>Summernote Errors</summary>
+
+![Summernote Errors](docs/images/summernote1.png)
+ </details>
 
 ### CSS Validaton
 When validating my own code the W3C CSS Validator reports no errors.
