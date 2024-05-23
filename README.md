@@ -481,7 +481,7 @@ Custom Error Pages were created to give the user more information on the error a
 
 ### Like or dislike Post 
 
-![header](docs/images/likes.png)
+![header](docs/images/likedislike.png)
 
 - Below the post details there are 2 buttons located in thumbs-up and thumb-down form.
 - The user can like or dislike the Post, the number of likes or dislikes are displayed near buttons.
