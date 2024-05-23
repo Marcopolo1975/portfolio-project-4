@@ -487,7 +487,7 @@ Custom Error Pages were created to give the user more information on the error a
 The following user stories were scoped out of the project due to time constraints. It is intended that these user stories will be implemented at a later date. 
 
 The following user stories were scoped out of the project due to time constraints. It is intended that these user stories will be implemented at a later date. 
-
+- as a Site User, i can creat my profile so that i can share information about me to other users.
 - As a Site User, I can bookmark a posts so that i can view my favorite posts later.
 - As a Site User, I can share the posts to the outher socialmedia platforms. 
 - As a Site User, I can search and filter posts so that I can find the one I want.
