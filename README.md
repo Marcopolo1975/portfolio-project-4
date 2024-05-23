@@ -430,6 +430,7 @@ Custom Error Pages were created to give the user more information on the error a
 
 
 ![header](docs/images/postdetail.png)
+![header](docs/images/postdetail2.png)
 
 - The Post header section at the top of the page shows the Post image, title, author, create date and time.
 - Post details a located right below the post image
@@ -470,7 +471,7 @@ Custom Error Pages were created to give the user more information on the error a
 
 ### Delete Post
 
- ![header](docs/images/postdelete.png) ![header](docs/images/postupdated.png)
+ ![header](docs/images/likes.png) ![header](docs/images/postdelete.png)
 
 - If the user is logged in and is the author or the post they can choose to delete the Post by clicking the delete button on the Post detail page.  
 - The user is asked to confirm if they wish to delete the Post or cancel.
