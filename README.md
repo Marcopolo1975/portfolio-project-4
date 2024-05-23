@@ -207,6 +207,14 @@ After fixing the inital errors that W3C Markup Validation Service reported, no e
 <details><summary><b>HTML Validation Result</b></summary>
 
 ![HTML Result Home Page](docs/images/htmlvalidation.png)
+
+![HTML Result Add Post Page](docs/images/addposttest.png)
+
+![HTML Result Login Page](docs/images/login.png)
+
+![HTML Result Logout Page](docs/images/logout.png)
+
+
 </details><br/>
 
 ### CSS Validaton
