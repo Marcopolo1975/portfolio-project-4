@@ -216,8 +216,8 @@ After fixing the inital errors that W3C Markup Validation Service reported, no e
 ![HTML Result Logout Page](docs/images/logout.png)
 </details><br/>
 
-#### Note 1: Summernote Errors
-When validating the Add Recipe and Edit Recipe forms I received a number of errors which were caused by the installed Summernote library which runs when using the form on these pages. I could not rectify these errors given that they weren't in my own code therefore they are unresolved. 
+### Summernote Errors
+When validating the About Page I received a number of errors which were caused by the installed Summernote library which runs when using the form on these pages. I could not rectify these errors given that they weren't in my own code therefore they are unresolved. 
 
  <details>
 
