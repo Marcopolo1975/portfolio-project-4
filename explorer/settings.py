@@ -33,9 +33,9 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '.herokuapp.com', '127.0.0.1', '8000-marcopolo19-portfoliopr-q2a1m9k5u76.ws-us114.gitpod.io']
+ALLOWED_HOSTS = ['localhost', '.herokuapp.com', '127.0.0.1', '8000-marcopolo19-portfoliopr-dzuxspnew36.ws.codeinstitute-ide.net']
 
 
 # Application definition
@@ -128,7 +128,7 @@ CSRF_TRUSTED_ORIGINS = [
     "https://*.codeanyapp.com",
     "https://*.herokuapp.com",
     'http://*localhost',
-    'https://8000-marcopolo19-portfoliopr-q2a1m9k5u76.ws-us114.gitpod.io',
+    'https://8000-marcopolo19-portfoliopr-dzuxspnew36.ws.codeinstitute-ide.net',
 ]
 
 # Password validation
