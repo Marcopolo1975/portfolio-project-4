@@ -217,6 +217,8 @@ The responsive design tests were carried out manually with [Google Chrome DevToo
 | Images     | pass                  | pass               | pass      | pass     |
 | Links      | pass                  | pass               | pass      | pass     |
 
+[Back to top](<#table-of-contents>)
+
 ### Pagespeed insights
 Google Pagespeed insights Chrome Developer Tools was used to test the application within the areas of *Performance*, *Accessibility*, *Best Practices* and *SEO*. I tested the 
 * Overall site performance for desktop - Performance: 99, Accessibility: 91, Best Practises: 96, SEO: 91
