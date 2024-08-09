@@ -33,7 +33,7 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['localhost', '.herokuapp.com', '127.0.0.1', '8000-marcopolo19-portfoliopr-t3q6xm1ollf.ws.codeinstitute-ide.net']
 
