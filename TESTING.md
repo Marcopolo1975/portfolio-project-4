@@ -49,6 +49,8 @@
 
 ![header](docs/images/navbar2.png)
 
+[Back to top](<#table-of-contents>)
+
 ### EPIC | User Navigation
  *As a User I can immediately understand the purpose of the site so that I can decide if it meets my needs*
 
@@ -79,6 +81,8 @@
 - Like or dislike icons are displayed underneath the Post details.
 
 ![header](docs/images/likes.png)
+
+[Back to top](<#table-of-contents>)
 
 ### EPIC | Post Management
 *As a Site User, I can view the posts and write a comment on Posts and like or dislike the Posts onto the app through an easy to use interface so that I can share my opinion  with other users.*
@@ -144,6 +148,7 @@
 ![header](docs/images/adminpage2.png)
 
 [Back to top](<#table-of-contents>)
+
 ## Validator Testing
 
 ## Code Validation
@@ -187,6 +192,7 @@ When validating my own code the W3C CSS Validator reports no errors.
 ### PEP Validation
 
 All Python files were run through Pep8 with no errors found.
+
 [Back to top](<#table-of-contents>)
 
 ### Responsiveness Test
@@ -307,6 +313,7 @@ In general this is OK results. The performance is affected in a negative way by 
 | Like Post Button               | Click               | Displays Change of colore of icone and updates number of likes                                                          | Pass      |
 | DisLike Post Button            | Click               | Displays Change of colore of icone and updates number of likes                                                          | Pass      |
 
+[Back to top](<#table-of-contents>)
 
 ### Add Post Page
 | Element                       | Action                | Expected Result                                                                                                     | Pass/Fail |
@@ -336,6 +343,8 @@ In general this is OK results. The performance is affected in a negative way by 
 | Update Button      | Click   | Success message appears telling the user that the Post has been successfully updated                                  | Pass      |
 | Update Button      | Click   | User is redirected back to the current Post page                                                                      | Pass      |
 | Cancel Button      | Click   | User is redirected back to the current Post page                                                                      | Pass      |
+
+[Back to top](<#table-of-contents>)
 
 ### Confirm Delete Post Page
 | Element       | Action | Expected Result                                                                                                        | Pass/Fail |
