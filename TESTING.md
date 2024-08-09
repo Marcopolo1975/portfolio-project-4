@@ -21,7 +21,6 @@
   * [Django All Auth Pages](#django-all-auth-pages)
 - [Bugs](#bugs)
   * [Fixed Bugs](#fixed-bugs)
-    + [Overwrite Meal Plan Items](#overwrite-meal-plan-items)
     + [Required fields using Summernote extension submit with just whitespace entered](#required-fields-using-summernote-extension-submit-with-just-whitespace-entered)
     + [No Reverse Match Error](#no-reverse-match-error)
     + [Cloudinary Images not Displaying](#cloudinary-images-not-displaying)
@@ -202,6 +201,7 @@ The responsive design tests were carried out manually with [Google Chrome DevToo
 | Images     | pass                  | pass               |
 | Links      | pass                  | pass               |
 
+### Device Testing
 | Tablet     | Samsung Galaxy Tab 10 | Amazon Kindle Fire | iPad Mini | iPad Pro |
 |------------|-----------------------|--------------------|-----------|----------|
 | Render     | pass                  | pass               | pass      | pass     |
@@ -442,7 +442,7 @@ there are No unfixed Errors
 ### Unfixed bugs:
 There are no known unfixed bugs.
 
-### Browser Compatibility
+### Browser Testing
 * Google Chrome Version (106.0.5249.119)
 * Mozilla Firefox (version 105.0.3)
 * Min (version 1.26.0)
