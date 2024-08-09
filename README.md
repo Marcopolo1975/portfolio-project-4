@@ -18,7 +18,7 @@ The live link can be found here - [The Explorer Blog](https://explorer-blog-530c
       - [Wireframes](#wireframes)
   * [Agile Methodology](#agile-methodology)
   * [Data Model](#data-model)
-  * [Testing](#testing)
+  * [Testing](/TESTING.md)
   * [Security Features and Defensive Design](#security-features-and-defensive-design)
     + [User Authentication](#user-authentication)
     + [Form Validation](#form-validation)
