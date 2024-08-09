@@ -7,7 +7,7 @@
   * [CSS Validaton](#css-validaton)
   * [Javascript](#javascript)
   * [Python](#python)
-  * [Lighthouse](#lighthouse)
+  * [Pagespeed insights](#pagespeed-insights)
 - [Browser Testing](#browser-testing)
 - [Device Testing](#device-testing)
 - [Manual Testing](#manual-testing)
