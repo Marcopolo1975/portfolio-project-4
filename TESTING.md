@@ -147,6 +147,7 @@
 ![header](docs/images/adminpage.png)
 ![header](docs/images/adminpage2.png)
 
+[Back to top](<#table-of-contents>)
 ## Validator Testing
 
 ## Code Validation
@@ -190,7 +191,7 @@ When validating my own code the W3C CSS Validator reports no errors.
 ### PEP Validation
 
 All Python files were run through Pep8 with no errors found.
-
+[Back to top](<#table-of-contents>)
 
 ### Responsiveness Test
 The responsive design tests were carried out manually with [Google Chrome DevTools](https://developer.chrome.com/docs/devtools/) and [Responsive Design Checker](https://techsini.com/multi-mockup/index.php).
@@ -224,6 +225,7 @@ Google Pagespeed insights Chrome Developer Tools was used to test the applicatio
 
 In general this is OK results. The performance is affected in a negative way by external scripts (connected to i.e. Bootstrap) and the lower result on SEO on the Index page and Admin Area Page is i.e. connected to the 'read more' links that is not a 100% optimal description from a SEO point of view. The lower accessibility result on the review details page is connected to the heading elements not being in sequentially-descending order, but this is an active design choice and not a big issue (but I thought it would be proper to highlight it here so that it's clear I'm aware of it).
 
+[Back to top](<#table-of-contents>)
 
 ## Manual Testing
 
@@ -272,9 +274,9 @@ In general this is OK results. The performance is affected in a negative way by 
 | Post Card | Pagination              | Site will paginate 6 Post cards to a page                                               | Pass      |
 | Post Card | Order                   | Posts are sorted by newest to oldest                                                    | Pass      |
 
+[Back to top](<#table-of-contents>)
 
 ### Post Detail Page
-
 | Element                        | Action              | Expected Result                                                                                                         | Pass/Fail |
 |--------------------------------|---------------------|-------------------------------------------------------------------------------------------------------------------------|-----------|
 | Post Content                   | Display             | Display correct Post image, title, author, Created on time, date                                                        | Pass      |
@@ -326,6 +328,7 @@ In general this is OK results. The performance is affected in a negative way by 
 | Add Post button(form valid)   | Click                 | Success message appears informing the user that the Post has been created                                           | Pass      |
 | Add Post button(form valid)   | Click                 | Success message                                                                                                     | Pass      |
 
+[Back to top](<#table-of-contents>)
 
 ### Update Post Page
 | Element            | Action  | Expected Result                                                                                                       | Pass/Fail |
@@ -360,6 +363,7 @@ In general this is OK results. The performance is affected in a negative way by 
 | Post Card     | Pagination           | Site will paginate 6 Post cards to a page                                                                           | Pass      |
 | Post Card     | Order                | Posts are sorted by newest to oldest                                                                                | Pass      |
 
+[Back to top](<#table-of-contents>)
 
 ### Django All Auth Pages
 | Element                    | Action                                    | Expected Result                            | Pass/Fail |
@@ -409,7 +413,7 @@ When validating Html I received an error there were  extra </p> tags in the 'pos
 ## Unfixed Errors
 there are No unfixed Errors
 
-[Back to top](<#table-of-content>)
+[Back to top](<#table-of-contents>)
 
 ## Fixed Bugs
  - #### No Reverse Match Error
@@ -449,4 +453,5 @@ There are no known unfixed bugs.
 * Apple Safari (version 16.0)
 * Microsoft Edge (version 106.0.1370.47)
 
+[Back to top](<#table-of-contents>)
 
