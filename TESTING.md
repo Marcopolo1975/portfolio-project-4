@@ -12,15 +12,12 @@
 - [Device Testing](#device-testing)
 - [Manual Testing](#manual-testing)
   * [Site Navigation](#site-navigation)
-  * [Home Page](#home-page)
-  * [Browse Posts Page](#browse-Posts-page)
-  * [Post Detail Page](#Post-detail-page)
+  * [Posts Page](#posts-page)
+  * [Post Detail Page](#post-detail-page)
   * [Add Post Page](#add-Post-page)
   * [Update Post Page](#update-Post-page)
   * [Confirm Delete Post Page](#confirm-delete-Post-page)
   * [My Posts Page](#my-Posts-page)
-  * [My Bookmarks Page](#my-bookmarks-page)
-  * [My Meal Plan Page](#my-meal-plan-page)
   * [Django All Auth Pages](#django-all-auth-pages)
 - [Bugs](#bugs)
   * [Fixed Bugs](#fixed-bugs)
@@ -151,7 +148,7 @@
 ![header](docs/images/adminpage.png)
 ![header](docs/images/adminpage2.png)
 
-
+## Validator Testing
 
 ## Code Validation
 The code on the 'Explorer blog' site has been tested through W3C Markup Validation Service, W3C CSS Validation Service and JSHint. Errors were at first found on the site in the W3C Markup Validation Service but could quite easily be fixed.
@@ -159,6 +156,7 @@ The code on the 'Explorer blog' site has been tested through W3C Markup Validati
 ### Markup Validation
 After fixing the inital errors that W3C Markup Validation Service reported, no errors were returned.
 
+### HTML
 ### Html Validation
 <details><summary><b>HTML Validation Result</b></summary>
 
@@ -246,7 +244,7 @@ In general this is OK results. The performance is affected in a negative way by 
 | My Posts Link         | Display    | Only visible if user in session                                    | Pass      |
 | Logout Link           | Click      | Open logout confirm page                                           | Pass      |
 | Logout Link           | Display    | Only visible if user in session                                    | Pass      |
-| All Nav Links         | Hover      | lighten text                                                       | Pass      |
+| All Nav Links         | Hover      | Darkens text                                                       | Pass      |
 | Mobile View           |            |                                                                    |           |
 | Hamburger Menu        | Responsive | Display when screen size reduces to medium size                    | Pass      | 
 | Site Name (logo area) | Click      | Redirect to home                                                   | Pass      |
@@ -266,23 +264,24 @@ In general this is OK results. The performance is affected in a negative way by 
 
 
 ### Posts Page
-| Element     | Action                  | Expected Result                                                                         | Pass/Fail |
-|-------------|-------------------------|-----------------------------------------------------------------------------------------|-----------|
-| Post Card | Display correct content | Display correct image,Post title, post author name,Time Date created on               | Pass      |         
-| Post Card | Click                   | Clicking Read more button on bottom of the Post card takes you to the                 | Pass      | 
-|                                     | correct Post's detail page.                                                           |           |
-| Post Card | Pagination              | Site will paginate 6 Post cards to a page                                             | Pass      |
-| Post Card | Order                   | Posts are sorted by newest to oldest                                                  | Pass      |
+| Element   | Action                  | Expected Result                                                                         | Pass/Fail |
+|-----------|-------------------------|-----------------------------------------------------------------------------------------|-----------|
+| Post Card | Display correct content | Display correct image,Post title, post author name,Time Date created on                 | Pass      |         
+| Post Card | Click                   | Clicking Read more button on bottom of the Post card takes you to the                   | Pass      | 
+|           |                         | correct Post's detail page.                                                             |           |
+| Post Card | Pagination              | Site will paginate 6 Post cards to a page                                               | Pass      |
+| Post Card | Order                   | Posts are sorted by newest to oldest                                                    | Pass      |
+
 
 ### Post Detail Page
 
 | Element                        | Action              | Expected Result                                                                                                         | Pass/Fail |
 |--------------------------------|---------------------|-------------------------------------------------------------------------------------------------------------------------|-----------|
 | Post Content                   | Display             | Display correct Post image, title, author, Created on time, date                                                        | Pass      |
-| Update Post button           | Click               | Opens Update Post Form                                                                                                | Pass      |
-| Update Post button           | Display             | Button only visible if user is the author                                                                               | Pass      |
-| Delete Post button           | Click               | Opens Delete Post confirmation page                                                                                   | Pass      |
-| Delete Post button           | Display             | Button only visible if user is the author                                                                               | Pass      |
+| Update Post button             | Click               | Opens Update Post Form                                                                                                  | Pass      |
+| Update Post button             | Display             | Button only visible if user is the author                                                                               | Pass      |
+| Delete Post button             | Click               | Opens Delete Post confirmation page                                                                                     | Pass      |
+| Delete Post button             | Display             | Button only visible if user is the author                                                                               | Pass      |
 | User Comments                  | Display             | Displays correct name date time and comment body                                                                        | Pass      |
 | User Comments                  | Display             | Comments are ordered oldest to newest                                                                                   | Pass      |
 | Update comment button          | Display             | Button only visible if user is the comment author                                                                       | Pass      |
@@ -298,74 +297,68 @@ In general this is OK results. The performance is affected in a negative way by 
 | Delete comment button          | Click               | Opens delete comment confirmation page                                                                                  | Pass      |
 | Confirm delete button          | Click               | Comment is removed from comment section                                                                                 | Pass      |
 | Confirm delete button          | Click               | Success message appears informing the user that the comment has been deleted                                            | Pass      |
-| Confirm delete button          | Click               | Success message fades after 3 seconds                                                                                   | Pass      |
-| Confirm delete button          | Click               | Redirect user back to Post page                                                                                       | Pass      |
-| Cancel delete button           | Click               | Redirect user back to Post page                                                                                       | Pass      |
+| Confirm delete button          | Click               | Redirect user back to Post page                                                                                         | Pass      |
+| Cancel delete button           | Click               | Redirect user back to Post page                                                                                         | Pass      |
 | Delete comment                 | Access              | If a user tries to delete another user's comment (by changing the url) they receive a custom 403 error.                 | Pass      |
 | Delete comment                 | Access              | If a user tries to delete a comment (by changing the url) without being signed in they are redirected to the login page | Pass      |
 | Add comment Form               | Display             | Form only visible if user in session                                                                                    | Pass      |
-| Add comment Form submit button | Leave empty               | On submit: form won't submit                                                                                            | Pass      |
-| Add comment Form submit button | Leave empty               | Error message displays                                                                                                  | Pass      |
-| Add comment Form submit button | Filled in               | Form submit - page updates and comment displays in comments section with correct content                                | Pass      |
+| Add comment Form submit button | Leave empty         | On submit: form won't submit                                                                                            | Pass      |
+| Add comment Form submit button | Leave empty         | Error message displays                                                                                                  | Pass      |
+| Add comment Form submit button | Filled in           | Form submit - page updates and comment displays in comments section with correct content                                | Pass      |
 | Add comment Form submit button | Click               | Success message appears informing the user that the comment has been added                                              | Pass      |
-| Add comment Form submit button | Click               | Success message fades after 3 seconds                                                                                   | Pass      |
-|                                |                     |                                                                                                                         |           |
-| Meal plan model                |                     |                                                                                                                         |           |
-| Modal cancel button            | Click               | Close modal                                                                                                             | Pass      |
-| Days drop down menu            | Click               | Display list of the days of the week                                                                                    | Pass      |
-| Days drop down menu            | Click               | Default day is Monday                                                                                                   | Pass      |
-| Add to Meal Plan submit button | Click               | Form Submit                                                                                                             | Pass      |
-| Add to Meal Plan submit button | Click               | Correct Post is added to the user's Meal Plan page for the correct day                                                | Pass      |
-| Add to Meal Plan submit button | Click               | Success message appears telling the user that the Post has been added to their meal plan                              | Pass      |
-| Add to Meal Plan submit button | Click               | Success message fades after 3 seconds                                                                                   | Pass      |
-| Add to Meal Plan submit button | Click               | If meal plan item already exists for that day, the success message tells the user that meal plan has been updated       | Pass      |
-| Add to Meal Plan submit button | Click               | Modal closes                                                                                                            | Pass      |
-| Meal Plan modal                | Click outside modal | Close modal                                                           
+| Like Post Button               | Click               | Displays Change of colore of icone and updates number of likes                                                          | Pass      |
+| DisLike Post Button            | Click               | Displays Change of colore of icone and updates number of likes                                                          | Pass      |
 
+
+### Add Post Page
 | Element                       | Action                | Expected Result                                                                                                     | Pass/Fail |
 |-------------------------------|-----------------------|---------------------------------------------------------------------------------------------------------------------|-----------|
-| Add Post                    | Access                | If a user tries to add a Post (by changing the url) without being signed in they are redirected to the login page | Pass      |
+| Add Post                      | Access                | If a user tries to add a Post (by changing the url) without being signed in they are redirected to the login page   | Pass      |
 | Form Text Input (if required) | Leave blank           | On Submit: Warning appears, form won't submit                                                                       | Pass      |
 | Form Text Input (if required) | Just input whitespace | On Submit: Form won't submit                                                                                        | Pass      |
-| Post Title                  | Duplicate Entry       | On Submit: Warning appears, form won't submit                                                                       | Pass      |
+| Post Title                    | Duplicate Entry       | On Submit: Warning appears, form won't submit                                                                       | Pass      |
 | Form image select button      | Click                 | Open device storage                                                                                                 | Pass      |
 | Form image select button      | Display               | Chosen image name displayed once selected                                                                           | Pass      |
 | Form image select button      | Display               | Default image is used if no image is selected                                                                       | Pass      |
-| Cancel button                 | Click                 | Redirect to Browse Posts page                                                                                     | Pass      |
-| Add Post button(form valid) | Click                 | Form submit                                                                                                         | Pass      |
-| Add Post button(form valid) | Click                 | Redirect to Post detail page for new Post with all information displaying correctly                             | Pass      |
-| Add Post button(form valid) | Click                 | Success message appears informing the user that the Post has been created                                         | Pass      |
-| Add Post button(form valid) | Click                 | Success message                                                                               | Pass      |
+| Cancel button                 | Click                 | Redirect to Browse Posts page                                                                                       | Pass      |
+| Add Post button(form valid)   | Click                 | Form submit                                                                                                         | Pass      |
+| Add Post button(form valid)   | Click                 | Redirect to Post detail page for new Post with all information displaying correctly                                 | Pass      |
+| Add Post button(form valid)   | Click                 | Success message appears informing the user that the Post has been created                                           | Pass      |
+| Add Post button(form valid)   | Click                 | Success message                                                                                                     | Pass      |
+
+
 ### Update Post Page
-| Element            | Action  | Expected Result                                                                                                         | Pass/Fail |
-|--------------------|---------|-------------------------------------------------------------------------------------------------------------------------|-----------|
-| Update Post      | Access  | If a user tries to edit another user's Post (by changing the url) they receive a custom 403 error. (forbidden access) | Pass      |
-| Update Post      | Access  | If a user tries to edit a Post (by changing the url) without being signed in they are redirected to the login page    | Pass      |
-| Update Post Form | Display | Form has all the fields filled out with the original content                                                            | Pass      |
+| Element            | Action  | Expected Result                                                                                                       | Pass/Fail |
+|--------------------|---------|-----------------------------------------------------------------------------------------------------------------------|-----------|
+| Update Post        | Access  | If a user tries to edit another user's Post (by changing the url) they receive a custom 403 error. (forbidden access) | Pass      |
+| Update Post        | Access  | If a user tries to edit a Post (by changing the url) without being signed in they are redirected to the login page    | Pass      |
+| Update Post Form   | Display | Form has all the fields filled out with the original content                                                          | Pass      |
 | Update Button      | Click   | Updated Post is saved                                                                                                 | Pass      |
 | Update Button      | Click   | Success message appears telling the user that the Post has been successfully updated                                  | Pass      |
 | Update Button      | Click   | User is redirected back to the current Post page                                                                      | Pass      |
 | Cancel Button      | Click   | User is redirected back to the current Post page                                                                      | Pass      |
+
 ### Confirm Delete Post Page
 | Element       | Action | Expected Result                                                                                                        | Pass/Fail |
 |---------------|--------|------------------------------------------------------------------------------------------------------------------------|-----------|
-| Delete Post | Access | If a user tries to delete another user's Post (by changing the url) they receive a custom 403 error.                 | Pass      |
-| Delete Post | Access | If a user tries to delete a Post (by changing the url) without being signed in they are redirected to the login page | Pass      |
-| Delete Button | Click  | Post is deleted and removed from user Posts page                                                                   | Pass      |
-| Delete Button | Click  | Success message appears telling the user that the Post has been successfully deleted                                 | Pass      |
-| Delete Button | Click  | User is redirected back to the My Posts page                                                                         | Pass      |
-| Cancel Button | Click  | Redirect to current Post page                                                                                        | Pass      |
+| Delete Post   | Access | If a user tries to delete another user's Post (by changing the url) they receive a custom 403 error.                   | Pass      |
+| Delete Post   | Access | If a user tries to delete a Post (by changing the url) without being signed in they are redirected to the login page   | Pass      |
+| Delete Button | Click  | Post is deleted and removed from user Posts page                                                                       | Pass      |
+| Delete Button | Click  | Success message appears telling the user that the Post has been successfully deleted                                   | Pass      |
+| Delete Button | Click  | User is redirected back to the My Posts page                                                                           | Pass      |
+| Cancel Button | Click  | Redirect to current Post page                                                                                          | Pass      |
+
 
 ### My Posts Page
-| Element         | Action               | Expected Result                                                                                                  | Pass/Fail |
-|-----------------|----------------------|------------------------------------------------------------------------------------------------------------------|-----------|
+| Element       | Action               | Expected Result                                                                                                     | Pass/Fail |
+|---------------|----------------------|---------------------------------------------------------------------------------------------------------------------|-----------|
 | My Posts Page | Access               | If a user tries to access this page (by changing url) without being signed in they are redirected to the Login page | Pass      |
-| My Posts Page | Display              | Only displays the Posts that the user is the author for                                                        | Pass      |
-| Post Card     | Show Status          | Show if Post is draft                                                                             | Pass      |
-| Post Card     | Card Content Display | Display correct image, Post title and cooktime                                                                 | Pass      |
-| Post Card     | Click                | Clicking anywhere inside the Post card takes you to the correct Post's detail page.                          | Pass      |
-| Post Card     | Pagination           | Site will paginate 6 Post cards to a page                                                                      | Pass      |
-| Post Card     | Order                | Posts are sorted by newest to oldest                                                                           | Pass      |
+| My Posts Page | Display              | Only displays the Posts that the user is the author for                                                             | Pass      |
+| Post Card     | Show Status          | Show if Post is draft                                                                                               | Pass      |
+| Post Card     | Card Content Display | Display correct image, Post title and cooktime                                                                      | Pass      |
+| Post Card     | Click                | Clicking anywhere inside the Post card takes you to the correct Post's detail page.                                 | Pass      |
+| Post Card     | Pagination           | Site will paginate 6 Post cards to a page                                                                           | Pass      |
+| Post Card     | Order                | Posts are sorted by newest to oldest                                                                                | Pass      |
 
 
 ### Django All Auth Pages
@@ -392,8 +385,6 @@ In general this is OK results. The performance is affected in a negative way by 
 | Sign Up button(form valid) | Click                                     | Form submit                                | Pass      |
 | Sign Up button(form valid) | Click                                     | Redirect to home page                      | Pass      |
 | Sign Up button(form valid) | Click                                     | Success message confirming login appears   | Pass      |
-| Sign Up button(form valid) | Click                                     | Success message fades after 3 seconds      | Pass      |
-|                            |                                           |                                            |           |
 | Log in                     |                                           |                                            |           |
 | Sign up link               | Click                                     | Redirect to sign up page                   | Pass      |
 | Username field             | Leave empty                               | On submit: form won't submit               | Pass      |
@@ -407,18 +398,16 @@ In general this is OK results. The performance is affected in a negative way by 
 | Login button(form valid)   | Click                                     | Form submit                                | Pass      |
 | Login button(form valid)   | Click                                     | Redirect to home page                      | Pass      |
 | Login button(form valid)   | Click                                     | Success message confirming login appears   | Pass      |
-| Login button(form valid)   | Click                                     | Success message fades after 3 seconds      | Pass      |
-|                            |                                           |                                            |           |
 | Log Out Confirmation       |                                           |                                            |           |
 | Logout button              | Click                                     | Redirect to homepage                       | Pass      |
 | Logout button              | Click                                     | Success message confirming log out appears | Pass      |
-| Logout button              | Click                                     | Success message fades after 3 seconds      | Pass      |
 
 
 ## Fixed Errors
 When validating Html I received an error there were  extra </p> tags in the 'post detail' and in base.html files, field which had been created using the summernote editor. The issue was due to Summernote including < /p> tags around the form field. I resolved the error by removing the surrounding < /p> tags in my HTML when rendering a summernote field in my post Detail page.
 
-
+## Unfixed Errors
+there are No unfixed Errors
 
 [Back to top](<#table-of-content>)
 
