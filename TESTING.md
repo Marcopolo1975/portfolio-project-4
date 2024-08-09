@@ -274,6 +274,7 @@ In general this is OK results. The performance is affected in a negative way by 
 | Post Card | Pagination              | Site will paginate 6 Post cards to a page                                             | Pass      |
 | Post Card | Order                   | Posts are sorted by newest to oldest                                                  | Pass      |
 
+
 ### Post Detail Page
 
 | Element                        | Action              | Expected Result                                                                                                         | Pass/Fail |
@@ -311,7 +312,6 @@ session                                                                         
 | Add comment Form submit button | Filled in             | Form submit - page updates and comment displays in comments section with correct content                                | Pass      |
 | Add comment Form submit button | Click                | Success message appears informing the user that the comment has been added                                              | Pass      |
 
-### Add Post Page
 | Element                       | Action                | Expected Result                                                                                                     | Pass/Fail |
 |-------------------------------|-----------------------|---------------------------------------------------------------------------------------------------------------------|-----------|
 | Add Post                    | Access                | If a user tries to add a Post (by changing the url) without being signed in they are redirected to the login page | Pass      |
