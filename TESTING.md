@@ -21,10 +21,6 @@
   * [Django All Auth Pages](#django-all-auth-pages)
 - [Bugs](#bugs)
   * [Fixed Bugs](#fixed-bugs)
-    + [Required fields using Summernote extension submit with just whitespace entered](#required-fields-using-summernote-extension-submit-with-just-whitespace-entered)
-    + [No Reverse Match Error](#no-reverse-match-error)
-    + [Cloudinary Images not Displaying](#cloudinary-images-not-displaying)
-    + [Footer not staying at bottom of screen](#footer-not-staying-at-bottom-of-screen)
   * [Unfixed bugs:](#unfixed-bugs-)
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
