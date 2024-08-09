@@ -4,7 +4,7 @@
   * [HTML](#html)
     + [Fixed Errors](#fixed-errors)
     + [Unfixed Errors](#unfixed-errors)
-  * [CSS](#css)
+  * [CSS Validaton](#css-validaton)
   * [Javascript](#javascript)
   * [Python](#python)
   * [Lighthouse](#lighthouse)
@@ -187,7 +187,7 @@ When validating my own code the W3C CSS Validator reports no errors.
 ![CSS Result](docs/images/cssvalidation.png)
 </details><br/>
 
-
+### Python
 ### PEP Validation
 
 All Python files were run through Pep8 with no errors found.
