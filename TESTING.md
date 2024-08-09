@@ -227,6 +227,184 @@ Google Pagespeed insights Chrome Developer Tools was used to test the applicatio
 In general this is OK results. The performance is affected in a negative way by external scripts (connected to i.e. Bootstrap) and the lower result on SEO on the Index page and Admin Area Page is i.e. connected to the 'read more' links that is not a 100% optimal description from a SEO point of view. The lower accessibility result on the review details page is connected to the heading elements not being in sequentially-descending order, but this is an active design choice and not a big issue (but I thought it would be proper to highlight it here so that it's clear I'm aware of it).
 
 
+## Manual Testing
+
+### Site Navigation
+| Element               | Action     | Expected Result                                                    | Pass/Fail |
+|-----------------------|------------|--------------------------------------------------------------------|-----------|
+| NavBar                |            |                                                                    |           |
+| Site Name (logo area) | Click      | Redirect to home                                                   | Pass      |
+| Home Link             | Click      | Redirect to home                                                   | Pass      |
+| Browse Posts Link     | Click      | Open Browse Posts Page                                             | Pass      |
+| Add Post Link         | Click      | Open Add Post Form                                                 | Pass      |
+| Add Post Link         | Display    | Only visible if user in session                                    | Pass      |
+| Sign Up Link          | Click      | Open Sign up page                                                  | Pass      |
+| Sign Up Link          | Display    | Not visible if user in session                                     | Pass      |
+| Log In Link           | Click      | Open Login page                                                    | Pass      |
+| Log In Link           | Display    | Not visible if user in session                                     | Pass      |
+| My Posts Link         | Click      | Open My Posts page                                                 | Pass      |
+| My Posts Link         | Display    | Only visible if user in session                                    | Pass      |
+| Logout Link           | Click      | Open logout confirm page                                           | Pass      |
+| Logout Link           | Display    | Only visible if user in session                                    | Pass      |
+| All Nav Links         | Hover      | lighten text                                                       | Pass      |
+| Mobile View           |            |                                                                    |           |
+| Hamburger Menu        | Responsive | Display when screen size reduces to medium size                    | Pass      | 
+| Site Name (logo area) | Click      | Redirect to home                                                   | Pass      |
+| Home Link             | Click      | Redirect to home                                                   | Pass      |
+| Sign Up Link          | Click      | Open Sign up page                                                  | Pass      |
+| Sign Up Link          | Display    | Not visible if user in session                                     | Pass      |
+| Log In Link           | Click      | Open Login page                                                    | Pass      |
+| Log In Link           | Display    | Not visible if user in session                                     | Pass      |
+| Add Post Link         | Click      | Open Add Post Form                                                 | Pass      |
+| Add Post Link         | Display    | Only visible if user in session                                    | Pass      |
+| My Posts Link         | Click      | Open My Posts page                                                 | Pass      |
+| My Posts Link         | Display    | Only visible if user in session                                    | Pass      |
+| Logout Link           | Click      | Open logout confirm page                                           | Pass      |
+| Logout Link           | Display    | Only visible if user in session                                    | Pass      |
+| Footer                |            |                                                                    |           |
+| All links             | Click      | Open in new tab and to correct location                            | Pass      |
+
+
+### Posts Page
+| Element     | Action                  | Expected Result                                                                         | Pass/Fail |
+|-------------|-------------------------|-----------------------------------------------------------------------------------------|-----------|
+| Post Card | Display correct content | Display correct image,Post title, post author name,Time Date created on               | Pass      |         
+| Post Card | Click                   | Clicking Read more button on bottom of the Post card takes you to the                 | Pass      | 
+|                                     | correct Post's detail page.                                                           |           |
+| Post Card | Pagination              | Site will paginate 6 Post cards to a page                                             | Pass      |
+| Post Card | Order                   | Posts are sorted by newest to oldest                                                  | Pass      |
+
+### Post Detail Page
+
+| Element                        | Action              | Expected Result                                                                                                         | Pass/Fail |
+|--------------------------------|---------------------|-------------------------------------------------------------------------------------------------------------------------|-----------|
+| Post Content                 | Display             | Display correct Post image, title, author, created on time and date,                 | Pass      |
+
+| Add to Meal Plan button        | Display             | Button only visible if user in 
+session                                                                                  | Pass      |
+| Update Post button           | Click               | Opens Update Post Form                                                                                                | Pass      |
+| Update Post button           | Display             | Button only visible if user is the author                                                                               | Pass      |
+| Delete Post button           | Click               | Opens Delete Post confirmation page                                                                                   | Pass      |
+| Delete Post button           | Display             | Button only visible if user is the author                                                                               | Pass      |
+| User Comments                  | Display             | Displays correct name date time and comment body                                                                        | Pass      |
+| User Comments                  | Display             | Comments are ordered oldest to newest                                                                                   | Pass      |
+| Update comment button          | Display             | Button only visible if user is the comment author                                                                       | Pass      |
+| Update comment button          | Click               | Opens Update Comment Form                                                                                               | Pass      |
+| Update comment form            | Leave empty         | On submit: form won't submit                                                                                            | Pass      |
+| Update comment form            | Leave empty         | Error message displays                                                                                                  | Pass      |
+| Update comment submit button   | Click               | Form submit - page updates and comment displays in comments section with correct content                                | Pass      |
+| Update comment submit button   | Click               | Success message appears informing the user that the comment has been updated                                            | Pass      |
+| Update comment submit button   | Click               | Success message fades after 3 seconds                                                                                   | Pass      |
+| Update comment form            | Access              | If a user tries to edit another user's comment (by changing the url) they receive a 403 error.                           | Pass      |
+| Update comment form            | Access              | If a user tries to edit a comment (by changing the url) without being signed in they are redirected to the login page   | Pass      |
+| Delete comment button          | Display             | Button only visible if user is the comment author                                                                       | Pass      |
+| Delete comment button          | Click               | Opens delete comment confirmation page                                                                                  | Pass      |
+| Confirm delete button          | Click               | Comment is removed from comment section                                                                                 | Pass      |
+| Confirm delete button          | Click               | Success message appears informing the user that the comment has been deteled  | pass |
+| Confirm delete button          | Click               | Redirect user back to Post page                                                                                       | Pass      |
+| Cancel delete button           | Click               | Redirect user back to Post page                                                                                       | Pass      |
+| Delete comment                 | Access              | If a user tries to delete another user's comment (by changing the url) they receive a custom 403 error.                 | Pass      |
+| Delete comment                 | Access              | If a user tries to delete a comment (by changing the url) without being signed in they are redirected to the login page | Pass      |
+| Add comment Form               | Display             | Form only visible if user in session                                                                                    | Pass      |
+| Add comment Form submit button | Leave empty          | On submit: form won't submit                                                                                            | Pass      |
+| Add comment Form submit button | Leave empty           | Error message displays                                                                                                  | Pass      |
+| Add comment Form submit button | Filled in             | Form submit - page updates and comment displays in comments section with correct content                                | Pass      |
+| Add comment Form submit button | Click                | Success message appears informing the user that the comment has been added                                              | Pass      |
+
+### Add Post Page
+| Element                       | Action                | Expected Result                                                                                                     | Pass/Fail |
+|-------------------------------|-----------------------|---------------------------------------------------------------------------------------------------------------------|-----------|
+| Add Post                    | Access                | If a user tries to add a Post (by changing the url) without being signed in they are redirected to the login page | Pass      |
+| Form Text Input (if required) | Leave blank           | On Submit: Warning appears, form won't submit                                                                       | Pass      |
+| Form Text Input (if required) | Just input whitespace | On Submit: Form won't submit                                                                                        | Pass      |
+| Post Title                  | Duplicate Entry       | On Submit: Warning appears, form won't submit                                                                       | Pass      |
+| Form image select button      | Click                 | Open device storage                                                                                                 | Pass      |
+| Form image select button      | Display               | Chosen image name displayed once selected                                                                           | Pass      |
+| Form image select button      | Display               | Default image is used if no image is selected                                                                       | Pass      |
+| Cancel button                 | Click                 | Redirect to Browse Posts page                                                                                     | Pass      |
+| Add Post button(form valid) | Click                 | Form submit                                                                                                         | Pass      |
+| Add Post button(form valid) | Click                 | Redirect to Post detail page for new Post with all information displaying correctly                             | Pass      |
+| Add Post button(form valid) | Click                 | Success message appears informing the user that the Post has been created                                         | Pass      |
+| Add Post button(form valid) | Click                 | Success message                                                                               | Pass      |
+### Update Post Page
+| Element            | Action  | Expected Result                                                                                                         | Pass/Fail |
+|--------------------|---------|-------------------------------------------------------------------------------------------------------------------------|-----------|
+| Update Post      | Access  | If a user tries to edit another user's Post (by changing the url) they receive a custom 403 error. (forbidden access) | Pass      |
+| Update Post      | Access  | If a user tries to edit a Post (by changing the url) without being signed in they are redirected to the login page    | Pass      |
+| Update Post Form | Display | Form has all the fields filled out with the original content                                                            | Pass      |
+| Update Button      | Click   | Updated Post is saved                                                                                                 | Pass      |
+| Update Button      | Click   | Success message appears telling the user that the Post has been successfully updated                                  | Pass      |
+| Update Button      | Click   | User is redirected back to the current Post page                                                                      | Pass      |
+| Cancel Button      | Click   | User is redirected back to the current Post page                                                                      | Pass      |
+### Confirm Delete Post Page
+| Element       | Action | Expected Result                                                                                                        | Pass/Fail |
+|---------------|--------|------------------------------------------------------------------------------------------------------------------------|-----------|
+| Delete Post | Access | If a user tries to delete another user's Post (by changing the url) they receive a custom 403 error.                 | Pass      |
+| Delete Post | Access | If a user tries to delete a Post (by changing the url) without being signed in they are redirected to the login page | Pass      |
+| Delete Button | Click  | Post is deleted and removed from user Posts page                                                                   | Pass      |
+| Delete Button | Click  | Success message appears telling the user that the Post has been successfully deleted                                 | Pass      |
+| Delete Button | Click  | User is redirected back to the My Posts page                                                                         | Pass      |
+| Cancel Button | Click  | Redirect to current Post page                                                                                        | Pass      |
+
+### My Posts Page
+| Element         | Action               | Expected Result                                                                                                  | Pass/Fail |
+|-----------------|----------------------|------------------------------------------------------------------------------------------------------------------|-----------|
+| My Posts Page | Access               | If a user tries to access this page (by changing url) without being signed in they are redirected to the Login page | Pass      |
+| My Posts Page | Display              | Only displays the Posts that the user is the author for                                                        | Pass      |
+| Post Card     | Show Status          | Show if Post is draft                                                                             | Pass      |
+| Post Card     | Card Content Display | Display correct image, Post title and cooktime                                                                 | Pass      |
+| Post Card     | Click                | Clicking anywhere inside the Post card takes you to the correct Post's detail page.                          | Pass      |
+| Post Card     | Pagination           | Site will paginate 6 Post cards to a page                                                                      | Pass      |
+| Post Card     | Order                | Posts are sorted by newest to oldest                                                                           | Pass      |
+
+
+### Django All Auth Pages
+| Element                    | Action                                    | Expected Result                            | Pass/Fail |
+|----------------------------|-------------------------------------------|--------------------------------------------|-----------|
+| Sign Up                    |                                           |                                            |           |
+| Log in link                | Click                                     | Redirect to login page                     | Pass      |
+| Username field             | Leave empty                               | On submit: form won't submit               | Pass      |
+| Username field             | Leave empty                               | Error message displays                     | Pass      |
+| Username field             | Insert correct format                     | On submit: form submit                     | Pass      |
+| Username field             | Insert duplicate username                 | On submit: form won't submit               | Pass      |
+| Username field             | Insert duplicate username                 | Error message displays                     | Pass      |
+| Email field                | Insert incorrect format                   | On submit: form won't submit               | Pass      |
+| Email field                | Insert incorrect format                   | Error message displays                     | Pass      |
+| Email field                | Insert correct format                     | On submit: form submit                     | Pass      |
+| Email field                | Leave empty                               | On submit: form submit                     | Pass      |
+| Email field                | Insert duplicate email                    | On submit: form won't submit               | Pass      |
+| Email field                | Insert duplicate email                    | Error message displays                     | Pass      |
+| Password field             | Insert incorrect format                   | On submit: form won't submit               | Pass      |
+| Password field             | Insert incorrect format                   | Error message displays                     | Pass      |
+| Password field             | Passwords don't match                     | On submit: form won't submit               | Pass      |
+| Password field             | Passwords don't match                     | Error message displays                     | Pass      |
+| Password field             | Insert correct format and passwords match | On submit: form submit                     | Pass      |
+| Sign Up button(form valid) | Click                                     | Form submit                                | Pass      |
+| Sign Up button(form valid) | Click                                     | Redirect to home page                      | Pass      |
+| Sign Up button(form valid) | Click                                     | Success message confirming login appears   | Pass      |
+| Sign Up button(form valid) | Click                                     | Success message fades after 3 seconds      | Pass      |
+|                            |                                           |                                            |           |
+| Log in                     |                                           |                                            |           |
+| Sign up link               | Click                                     | Redirect to sign up page                   | Pass      |
+| Username field             | Leave empty                               | On submit: form won't submit               | Pass      |
+| Username field             | Leave empty                               | Error message displays                     | Pass      |
+| Username field             | Insert wrong username                     | On submit: form won't submit               | Pass      |
+| Username field             | Insert wrong username                     | Error message displays                     | Pass      |
+| Password field             | Leave empty                               | On submit: form won't submit               | Pass      |
+| Password field             | Leave empty                               | Error message displays                     | Pass      |
+| Password field             | Insert wrong password                     | On submit: form won't submit               | Pass      |
+| Password field             | Insert wrong password                     | Error message displays                     | Pass      |
+| Login button(form valid)   | Click                                     | Form submit                                | Pass      |
+| Login button(form valid)   | Click                                     | Redirect to home page                      | Pass      |
+| Login button(form valid)   | Click                                     | Success message confirming login appears   | Pass      |
+| Login button(form valid)   | Click                                     | Success message fades after 3 seconds      | Pass      |
+|                            |                                           |                                            |           |
+| Log Out Confirmation       |                                           |                                            |           |
+| Logout button              | Click                                     | Redirect to homepage                       | Pass      |
+| Logout button              | Click                                     | Success message confirming log out appears | Pass      |
+| Logout button              | Click                                     | Success message fades after 3 seconds      | Pass      |
+
+
 ## Fixed Errors
 When validating Html I received an error there were  extra </p> tags in the 'post detail' and in base.html files, field which had been created using the summernote editor. The issue was due to Summernote including < /p> tags around the form field. I resolved the error by removing the surrounding < /p> tags in my HTML when rendering a summernote field in my post Detail page.
 
