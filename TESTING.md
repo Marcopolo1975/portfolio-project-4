@@ -279,10 +279,10 @@ In general this is OK results. The performance is affected in a negative way by 
 | Element                        | Action              | Expected Result                                                                                                         | Pass/Fail |
 |--------------------------------|---------------------|-------------------------------------------------------------------------------------------------------------------------|-----------|
 | Post Content                   | Display             | Display correct Post image, title, author, Created on time, date                                                        | Pass      |
-| Update recipe button           | Click               | Opens Update Recipe Form                                                                                                | Pass      |
-| Update recipe button           | Display             | Button only visible if user is the author                                                                               | Pass      |
-| Delete recipe button           | Click               | Opens Delete Recipe confirmation page                                                                                   | Pass      |
-| Delete recipe button           | Display             | Button only visible if user is the author                                                                               | Pass      |
+| Update Post button           | Click               | Opens Update Post Form                                                                                                | Pass      |
+| Update Post button           | Display             | Button only visible if user is the author                                                                               | Pass      |
+| Delete Post button           | Click               | Opens Delete Post confirmation page                                                                                   | Pass      |
+| Delete Post button           | Display             | Button only visible if user is the author                                                                               | Pass      |
 | User Comments                  | Display             | Displays correct name date time and comment body                                                                        | Pass      |
 | User Comments                  | Display             | Comments are ordered oldest to newest                                                                                   | Pass      |
 | Update comment button          | Display             | Button only visible if user is the comment author                                                                       | Pass      |
@@ -299,8 +299,8 @@ In general this is OK results. The performance is affected in a negative way by 
 | Confirm delete button          | Click               | Comment is removed from comment section                                                                                 | Pass      |
 | Confirm delete button          | Click               | Success message appears informing the user that the comment has been deleted                                            | Pass      |
 | Confirm delete button          | Click               | Success message fades after 3 seconds                                                                                   | Pass      |
-| Confirm delete button          | Click               | Redirect user back to recipe page                                                                                       | Pass      |
-| Cancel delete button           | Click               | Redirect user back to recipe page                                                                                       | Pass      |
+| Confirm delete button          | Click               | Redirect user back to Post page                                                                                       | Pass      |
+| Cancel delete button           | Click               | Redirect user back to Post page                                                                                       | Pass      |
 | Delete comment                 | Access              | If a user tries to delete another user's comment (by changing the url) they receive a custom 403 error.                 | Pass      |
 | Delete comment                 | Access              | If a user tries to delete a comment (by changing the url) without being signed in they are redirected to the login page | Pass      |
 | Add comment Form               | Display             | Form only visible if user in session                                                                                    | Pass      |
@@ -315,8 +315,8 @@ In general this is OK results. The performance is affected in a negative way by 
 | Days drop down menu            | Click               | Display list of the days of the week                                                                                    | Pass      |
 | Days drop down menu            | Click               | Default day is Monday                                                                                                   | Pass      |
 | Add to Meal Plan submit button | Click               | Form Submit                                                                                                             | Pass      |
-| Add to Meal Plan submit button | Click               | Correct recipe is added to the user's Meal Plan page for the correct day                                                | Pass      |
-| Add to Meal Plan submit button | Click               | Success message appears telling the user that the recipe has been added to their meal plan                              | Pass      |
+| Add to Meal Plan submit button | Click               | Correct Post is added to the user's Meal Plan page for the correct day                                                | Pass      |
+| Add to Meal Plan submit button | Click               | Success message appears telling the user that the Post has been added to their meal plan                              | Pass      |
 | Add to Meal Plan submit button | Click               | Success message fades after 3 seconds                                                                                   | Pass      |
 | Add to Meal Plan submit button | Click               | If meal plan item already exists for that day, the success message tells the user that meal plan has been updated       | Pass      |
 | Add to Meal Plan submit button | Click               | Modal closes                                                                                                            | Pass      |
