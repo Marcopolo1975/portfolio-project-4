@@ -52,7 +52,6 @@
 
 *As a Site User, I can login or logout of my account so that I can keep my account secure.*
 - If the user has registered an account they can access the login and logout buttons in the My Account section of the Navbar. 
-![header](docs/images/navbar.png)
 ![header](docs/images/signin.png)
 ![header](docs/images/signinsuccess.png)
 
