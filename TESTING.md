@@ -171,6 +171,23 @@ success message pops up.
 
 ![header](docs/images/commentupdatesuccess.png)
 
+*As a Potential Collaborator I can fill in a contact form so that I can submit a request for collaboration.
+
+- Site Users can send collaboration requests to the page Admin through an easy to use intarface on the page.
+- User can send collaboration requests through a Form available on the About page.
+
+![header](docs/images/about.png)
+
+- Users Can send Collaboration requests By filling out the Collaboration form located bellow the About me section on the About page.
+
+
+![header](docs/images/collab.png)
+
+- By clicking the Submit Button on bottom of the Collaboration form , the collaboration request is sent and success message pops up.
+
+![header](docs/images/Collabreqsuccsess.png)
+
+
 ### EPIC | Site Administration
 *As a Site Administrator, I can create, read, update and delete Posts, and comments so that I can manage the app content*
 -  Admins have full access to CRUD functionality for all Posts,and comments in the admin panel.
