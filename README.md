@@ -72,26 +72,24 @@ user satisfaction:
 - As a Site User, I can edit and delete my posts that I have created so that I can easily make changes without having to start over.
 
 #### EPIC | Post Interaction
+- As a Site User I can click on a post so that I can read the full text.
 - As a Site User, I can comment on other people's posts so I can give my feedback.
 - As a Site User, I can edit and delete comments that I have created so that I can easily make changes if I have made a mistake.
-- As a Site User, I can read  other User's comments, so that I can read and participate in the conversations.
+ -As a Site User, I can view comments on an individual post so that I can read the conversation.
 
 
 
 
 #### EPIC | Site Administration
+- As a Site Administrator, I have full access to the site through the Admin page.
 - As a Site Administrator, I can create, read, update and delete posts so that I can manage my blog content.
-- As a Site Administrator, I have Given a logged in user, they can create a blog post.
-- As a Site Administrator, I have Given a logged in user, they can read a blog post.
-- As a Site Administrator, I have Given a logged in user, they can update their blog post.
-- As a Site Administrator, I have Given a logged in user, they can delete a blog post.
 - As a Site Administrator, I can view comments on an individual post so that I can read the conversation.
 - As a Site Administrator, I can create or update the about page content so that it is available on the site.
 - As a Site Administrator, I can approve or disapprove comments so that I can filter out objectionable comments.
-- As a Site Administrator, I can create or update the about page content so that it is available on the site.
 - As a Site Administrator, I can create draft posts so that I can finish writing the content later.
 - As a Site Administrator, I can store collaboration requests in the database so that I can review them.
 - As a Site Administrator, I can read the collaboration requests and reply to them for further collaboration.
+- As a Site Administrator, I can delete a User's account.
  
 
 
