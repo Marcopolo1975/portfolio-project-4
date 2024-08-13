@@ -53,34 +53,35 @@ user satisfaction:
 
 ### User Stories
 
-#### View paginated list of posts
+#### EPIC | User Profile
+- As a Site User, i can register an account by giving a user name or email and password.
+- As a Site User, I can log in to the app.
+- As a Site User, I can  logged in then i can comment on posts, like or unlike the posts and creat my own posts to share with other Users.
+- As a Site User, I can Add a new Post so that so that i can share my experience with other users
 - As a site user I can view a paginated list of posts so that I can select which post I want to view
-- Acceptance criteria
-- Given more than one post in the database, these multiple posts are listed.
-- When a user opens the main page a list of posts is seen.
-  Then the user sees all post titles with pagination to choose what to read.
-#### User Navigation
+- As a Site User, I can fill in a contact form so that I can submit a request for collaboration.
+- As a Site Administrator, I can store collaboration requests in the database so that I can review them.
+- As a Site Administrator, i can read the collaboration requests and reply to them for further collaboration.
+- As a Site User, I can click on the About link so that I can read about the site.
+- As a Site Administrator, I can create or update the about page content so that it is available on the site.
+
+#### EPIC | User Navigation
 - As a Site User I can immediately understand the purpose of the site so that I can decide if it meets my needs.
 - As a Site User, I can intuitively navigate around the site so that I can find content and understand where I am on the site.
 - As a Site User, I can view a paginated list of posts so that I can select a post to view.
 - As a Site User, I can click on a post so that I can read the full post, view comments left by users.
 
-#### Post Management
-- As a Site User, I can add my  post onto the app through an easy to use interface so that I can share them with other users.
+#### EPIC | Post Management
+- As a Site User, I can add my post onto the app through an easy to use interface so that I can share them with other users.
 - As a Site User, I can edit and delete my posts that I have created so that I can easily make changes without having to start over.
 
-#### Post Interaction
+#### EPIC | Post Interaction
 - As a Site User, I can comment on other people's posts so I can give my feedback.
 - As a Site User, I can edit and delete comments that I have created so that I can easily make changes if I have made a mistake.
 - As a Site User / Admin I can view comments on an individual post so that I can read the conversation
 
-#### Account registration
-- As a Site User, i can register an account by giving a user name or email and password.
-- As a Site User, I can log in to the app.
-- As a Site User, I can  logged in then i can comment on posts, like or unlike the posts and creat my own posts to share with other Users.
-- As a Site User, I can Add a new Post so that so that i can share my experience with other users
 
-#### Site Administration
+#### EPIC | Site Administration
 - As a Site Administrator, I can create, read, update and delete posts so that I can manage my blog content.
 - As a Site Administrator, i have Given a logged in user, they can create a blog post.
 - As a Site Administrator, i have Given a logged in user, they can read a blog post.
@@ -91,14 +92,6 @@ user satisfaction:
 - As a Site Administrator, I can create or update the about page content so that it is available on the site.
 - As a Site Administrator, I can create draft posts so that I can finish writing the content later.
 
-#### Read about the site
-- As a Site User, I can click on the About link so that I can read about the site.
-- As a Site Administrator, I can create or update the about page content so that it is available on the site.
-
-#### Potential Collaboration
-- As a Site User, I can fill in a contact form so that I can submit a request for collaboration.
-- As a Site Administrator, I can store collaboration requests in the database so that I can review them.
-- As a Site Administrator, i can read the collaboration requests and reply to them for further collaboration.
 
 #### User stories not yet implemented
 
