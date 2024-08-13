@@ -131,7 +131,7 @@
 
 - By submitting edit Post for success message pops up.
 
-![header](docs/images/postupdateform.png)
+![header](docs/images/postupdatesubmit.png)
 
 ![header](docs/images/postupdatesuccess.png)
 
