@@ -44,6 +44,10 @@
 
 ![header](docs/images/signinsuccess.png)
 
+*As a Site User I can see my login status so that I know if I'm logged in or out.*
+- Once the user has logged into their account their username displays on the Navbar beside a profile icon.
+
+![header](docs/images/navbar2.png)
 
 
 *As a Site User, I can login or logout of my account so that I can keep my account secure.*
@@ -51,14 +55,18 @@
 ![header](docs/images/navbar.png)
 ![header](docs/images/signin.png)
 ![header](docs/images/signinsuccess.png)
+
+
+- If the User is signed in, a logout button apears for User beside the User name on the Nav bar. 
+- if signed in User clicks on logout Button, a sign out confirmation apears. 
+
 ![header](docs/images/navbar2.png)
 ![header](docs/images/signout.png)
+
+- by confirming the sign out , User will be sign out and a success message pops up.
+
 ![header](docs/images/signoutsuccess.png)
 
-*As a Site User I can see my login status so that I know if I'm logged in or out.*
-- Once the user has logged into their account their username displays on the Navbar beside a profile icon.
-
-![header](docs/images/navbar2.png)
 
 [Back to top](<#table-of-contents>)
 
