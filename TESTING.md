@@ -30,19 +30,28 @@
 ### EPIC | User Profile
 *As a Site User I can register an account so that I can add/edit/delete my Posts and comment on and like or dislike other people's Posts and add Posts to my Explorer Blog.*
 
-![header](docs/images/navbar.png)
+
 
 - A registration up button is immediately visible on the navigation Bar for the user to sign up to get started. When the user clicks the button they are taken to the sign up page.
 
+![header](docs/images/homeregister.png)
+
 ![header](docs/images/signup.png)
 
-- Once the user has registered an account they can perform all the actions listed above.
+- Once the user has registered an account they are login automatically and  can perform all the actions listed above.
+
+![header](docs/images/signinsuccess.png)
+
+
 
 *As a Site User, I can login or logout of my account so that I can keep my account secure.*
 - If the user has registered an account they can access the login and logout buttons in the My Account section of the Navbar. 
 ![header](docs/images/navbar.png)
 ![header](docs/images/signin.png)
+![header](docs/images/signinsuccess.png)
+![header](docs/images/navbar2.png)
 ![header](docs/images/signout.png)
+![header](docs/images/signoutsuccess.png)
 
 *As a Site User I can see my login status so that I know if I'm logged in or out.*
 - Once the user has logged into their account their username displays on the Navbar beside a profile icon.
@@ -68,7 +77,9 @@
 ![header](docs/images/posts2.png)
 
 *As a Site User, I can click on a post so that I can read the full Post, and view comments left by users.*
-- Clicking anywhere inside the Post card will take you directly to that Post's detailed page which displays the full Post details. 
+- Clicking on Read More Buttons on the Bottom of the Post card will take you directly to that Post's detailed page which displays the full Post details. 
+
+![header](docs/images/readmorebutton.png)
 
 ![header](docs/images/postdetail.png)
 
@@ -80,40 +91,44 @@
 
 - Like or dislike icons are displayed underneath the Post details.
 
-![header](docs/images/likes.png)
+![header](docs/images/likedislikebuttons.png)
 
 [Back to top](<#table-of-contents>)
 
 ### EPIC | Post Management
-*As a Site User, I can view the posts and write a comment on Posts and like or dislike the Posts onto the app through an easy to use interface so that I can share my opinion  with other users.*
+
+*As a Site User, I can view my Posts so that I can see and manage all Posts I have created in the one location.*
+- All the user's created Posts are available to see on the 'My Posts' page.
+
+![header](docs/images/myposts.png)
+
+*As a Site User, I can add new Posts onto the app through an easy to use interface so that I can share my experience with other users.*
 - Once the user has logged in, an Add Post Option is immediately available on the Navbar as a call to action for the user to add a Post. When the user clicks the button they are taken to the add Post form.
 
-![header](docs/images/navbar2.png)
+
+![header](docs/images/createpostbutton.png)
 
 ![header](docs/images/addpost.png)
 
 
 - The 'Add Post' button on the Nav bar is visible on every page.
 
-![header](docs/images/navbar2.png)
+![header](docs/images/createpostbutton.png)
 
 - Once the user has filled out the form details they can choose to 'Submit Button' which adds the Post to the Posts page.
 
-*As a Site User, I can edit and delete my  Posts that I have created so that I can easily make changes without having to start over.*
-- If the logged in user is the Post author, edit and delete Post icon buttons will display on the Post detail page for each Post allowing the user to edit and delete their Posts.
-
-![header](docs/images/createpostbutton.png)
-
+![header](docs/images/addpostsubmit.png)
 ![header](docs/images/postcreated.png)
 
+*As a Site User, I can edit and delete my  Posts that I have created so that I can easily make changes without having to start over.*
+- If the logged in user is the Post author, edit and delete Post icon buttons will display on the Post detail page for each Post allowing the user to edit and delete their Posts.
+![header](docs/images/postupdate2.png)
+- by clicking on delete Button apears a delete confirmation modal so user can choose delete the Post or cancel deletion.
 ![header](docs/images/postdelete.png)
+- if User confirms delete the Post will be deleted and Popp up a delete success message.
 ![header](docs/images/postdeleted.png)
 
 
-*As a Site User, I can view my Posts so that I can see and manage all Posts I have created in the one location.*
-- All the user's created Posts are available to see on the 'My Posts' page.
-
-![header](docs/images/myposts.png)
 
 
 ### EPIC | Post Interaction
@@ -126,19 +141,35 @@
 - Each Post has a comment section where logged in users can leave comments on the Post.
 
 ![header](docs/images/comments.png)
+- filling in comment field and submit the comment by clicking the submit Button, comment is posted and awaiting for admin approval.
+success message pops up.
 
 ![header](docs/images/commentaprovel.png)
 
 
-### EPIC | Posts Management
+
 *As a Site User, I can edit and delete comments that I have created so that I can easily make changes if I have made a mistake.*
 - If the logged in user is the comment author, edit and delete icon buttons will display bellow the comment  allowing the user to edit or delete their comments.
 
 ![header](docs/images/editcommnet.png)
+- User can edit or delete their comments by clicking edit or delete Button below the Comment,
 
 ![header](docs/images/deletecomment.png)
+- if user confirms delete. the comment is deleted and a success message pops up.
 
 ![header](docs/images/commentdeleted.png)
+
+- User can Update their Comments, by clicking on the edit button bellow the Comment.
+
+![header](docs/images/editcommnet.png)
+
+- if User Clicks edit Button, editing is enabled on comments form. 
+
+![header](docs/images/commentupdate.png)
+
+- by clickin on Update Button the comments content is updated and a success message pops up.
+
+![header](docs/images/commentupdatesuccess.png)
 
 ### EPIC | Site Administration
 *As a Site Administrator, I can create, read, update and delete Posts, and comments so that I can manage the app content*
