@@ -36,6 +36,8 @@
 
 ![header](docs/images/homeregister.png)
 
+- If User clicks on register button located on navbar , it takes the User to the Registration form. by filling up necessary filleds of the Form and clicking on sign up button, User gets a succsess message.
+
 ![header](docs/images/signup.png)
 
 - Once the user has registered an account they are login automatically and  can perform all the actions listed above.
