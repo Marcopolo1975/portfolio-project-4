@@ -121,6 +121,21 @@
 ![header](docs/images/postcreated.png)
 
 *As a Site User, I can edit and delete my  Posts that I have created so that I can easily make changes without having to start over.*
+
+- If the User clicks on edit Button bellow the post details, the Post will be open in Post Edit form.
+![header](docs/images/postupdate2.png)
+
+![header](docs/images/postupdateform.png)
+
+- User can update Post content after editing information or attached Image by clicking the submitt Button.
+
+- By submitting edit Post for success message pops up.
+
+![header](docs/images/postupdateform.png)
+
+![header](docs/images/postupdatesuccess.png)
+
+
 - If the logged in user is the Post author, edit and delete Post icon buttons will display on the Post detail page for each Post allowing the user to edit and delete their Posts.
 ![header](docs/images/postupdate2.png)
 - by clicking on delete Button apears a delete confirmation modal so user can choose delete the Post or cancel deletion.
