@@ -494,8 +494,8 @@ To clone this repository follow the below steps:
 
 ## Acknowledgments
 
-Many thanks to my mentor **Antonio Rodriguez** for his support and guidance throughout my Course spacialy for creating portfolio projects.
-Many thanks to my facilitator **Kay Welfare** for helping me always in all kinds of circumstances. 
-Thanks to The Code Institute slack community for their quick responses and very helpful feedback in particular **Tomas_K**.
+- Many thanks to my mentor **Antonio Rodriguez** for his support and guidance throughout my Course spacialy for creating portfolio projects.
+- Many thanks to my facilitator **Kay Welfare** for helping me always in all kinds of circumstances. 
+- Thanks to The Code Institute slack community for their quick responses and very helpful feedback in particular **Tomas_K**.
 
 
