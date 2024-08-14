@@ -436,7 +436,6 @@ In general this is OK results. The performance is affected in a negative way by 
 |---------------|----------------------|---------------------------------------------------------------------------------------------------------------------|-----------|
 | My Posts Page | Access               | If a user tries to access this page (by changing url) without being signed in they are redirected to the Login page | Pass      |
 | My Posts Page | Display              | Only displays the Posts that the user is the author for                                                             | Pass      |
-| Post Card     | Show Status          | Show if Post is draft                                                                                               | Pass      |
 | Post Card     | Card Content Display | Display correct image, Post title and cooktime                                                                      | Pass      |
 | Post Card     | Click                | Clicking anywhere inside the Post card takes you to the correct Post's detail page.                                 | Pass      |
 | Post Card     | Pagination           | Site will paginate 6 Post cards to a page                                                                           | Pass      |
