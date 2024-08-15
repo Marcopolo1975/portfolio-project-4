@@ -349,15 +349,6 @@ Custom Error Pages were created to give the user more information on the error a
 - Below the post details there are 2 buttons located in thumbs-up and thumb-down form.
 - The user can like or dislike the Post, the number of likes or dislikes are displayed near buttons.
 
-### Error Pages
-
-Custom Error Pages were created to give the user more information on the error and to guide them back to the site.
-
-- 400 Bad Request - The explorer blog is unable to handle this request.
-- 403 Page Forbidden - Looks like you're trying to access forbidden content. Please log out and sign in to the correct account.
-- 404 Page Not Found - The page you're looking for doesn't exist.
-- 500 Server Error - The Explorer blog is currently unable to handle this request
-
 ### Future Features
 The following user stories were scoped out of the project due to time constraints. It is intended that these user stories will be implemented at a later date. 
 
