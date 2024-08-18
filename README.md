@@ -181,6 +181,11 @@ The diagram below details the database schema.
 
 [Back to top](<#table-of-content>)
 
+## Testing
+
+Testing and results can be found [here](/TESTING.md)
+
+
 ## Security Features and Defensive Design
 
 ### User Authentication
