@@ -311,7 +311,6 @@ In general this is OK results. The performance is affected in a negative way by 
 | NavBar                |            |                                                                    |           |
 | Site Name (logo area) | Click      | Redirect to home                                                   | Pass      |
 | Home Link             | Click      | Redirect to home                                                   | Pass      |
-| Browse Posts Link     | Click      | Open Browse Posts Page                                             | Pass      |
 | Add Post Link         | Click      | Open Add Post Form                                                 | Pass      |
 | Add Post Link         | Display    | Only visible if user in session                                    | Pass      |
 | Sign Up Link          | Click      | Open Sign up page                                                  | Pass      |
@@ -383,7 +382,7 @@ In general this is OK results. The performance is affected in a negative way by 
 | Add comment Form submit button | Leave empty         | On submit: form won't submit                                                                                            | Pass      |
 | Add comment Form submit button | Leave empty         | Error message displays                                                                                                  | Pass      |
 | Add comment Form submit button | Filled in           | Form submit - page updates and comment displays in comments section with correct content                                | Pass      |
-| Add comment Form submit button | Click               | Success message appears informing the user that the comment has been added                                              | Pass      |
+| Add comment Form submit button | Click               | Success message appears informing the user that the comment has been added and awaiting Admin approval.                 | Pass      |
 | Like Post Button               | Click               | Displays Change of colore of icone and updates number of likes                                                          | Pass      |
 | DisLike Post Button            | Click               | Displays Change of colore of icone and updates number of likes                                                          | Pass      |
 
@@ -437,7 +436,7 @@ In general this is OK results. The performance is affected in a negative way by 
 | My Posts Page | Access               | If a user tries to access this page (by changing url) without being signed in they are redirected to the Login page | Pass      |
 | My Posts Page | Display              | Only displays the Posts that the user is the author for                                                             | Pass      |
 | Post Card     | Card Content Display | Display correct image, Post title and cooktime                                                                      | Pass      |
-| Post Card     | Click                | Clicking anywhere inside the Post card takes you to the correct Post's detail page.                                 | Pass      |
+| Post Card     | Click                | Clicking Read more Button on the Post card takes you to the correct Post's detail page.                                 | Pass      |
 | Post Card     | Pagination           | Site will paginate 6 Post cards to a page                                                                           | Pass      |
 | Post Card     | Order                | Posts are sorted by newest to oldest                                                                                | Pass      |
 
