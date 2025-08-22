@@ -182,19 +182,19 @@ p {
 }
 
 .btn-like {
-    color: #E84610;
+    color: #2bd028;
     border: none;
     background: transparent;
 }
 
 .btn-delete {
     color: #fff;
-    background: #E84610;
+    background: #6a10e8;
 }
 
 .btn-like:hover,
 .btn-like:active {
-    color: #E84610;
+    color: #2bd028;
     background: transparent;
     border: none;
 }
